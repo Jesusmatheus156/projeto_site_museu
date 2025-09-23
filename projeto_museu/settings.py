@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'projeto_museu.wsgi.application'
 }'''
 
 
-# banco de dados usando MySQL
+'''# banco de dados usando MySQL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -96,7 +96,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
     }
-}
+}'''
 
 
 # Password validation
