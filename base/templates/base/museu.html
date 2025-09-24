@@ -1,240 +1,79 @@
+{% extends 'base/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
+{% block title %}Nossa História - Museu Luiza Cantofa{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museu do Índio Luiza Cantofa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="shortcut icon" href="{% static 'base/img/logo_real.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+{% block content %}
 
-</head>
-
-<body>
-
-
-    <!-- HEADER -->
-    <header>
-        <!-- Barra de Navegação -->
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="{% static 'base/img/logo_real.png' %}" alt="Logo do Museu" class="logo mb-1">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'home_page' %}">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'museu' %}">Museu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'acervo' %}">Acervo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'visitar' %}">Visitar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'CHCTPLA' %}">CHCTPLA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'usuario_login' %}">Entrar</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Banner Section -->
-        <section id="banner" class="banner">
-            <div class="container-flex">
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <img src="{% static 'base/img/Museu_do_Indio.jpg' %}"
-                            class="img-fluid banner-image shadow-lg rounded" alt="Banner do Museu">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre o Museu Section -->
-        <section id="about" class="about my-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="content-item">
-                            <h3 class="titulo">Sobre o Museu</h3>
-                            <p class="lead">
-                                O museu do Lajedo de Soledade foi inaugurado em novembro de 1993, após a realização do
-                                trabalho
-                                de conscientização da população acerca da preservação do Lajedo. O projeto
-                                arquitetônico,
-                                elaborado pelo arquiteto Adler Fontenelle, é uma estilização das caieiras (fornos para
-                                calcinação do cal) da região, transmitindo a ideia de que a preservação do Lajedo e a
-                                sua
-                                exploração econômica racional podem coexistir harmoniosamente.
-                            </p>
-                            <p class="lead">
-                                O acervo do museu contém fragmentos de animais da Era Paleozóica e peças de material
-                                lítico e
-                                cerâmico utilizadas pelas tribos indígenas que habitavam o território. Essas peças eram
-                                utilizadas como tecnologia para suprir necessidades como caça e defesa. O acervo se
-                                divide em
-                                dois grupos principais: arqueologia (artefatos e peças) e paleontologia (fósseis).
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="{% static 'base\img\MUSEU LUIZA C. (1).jpg' %}" class="img-fluid shadow-lg rounded"
-                            alt="Museu Luiza Cantofa" style="width: 700px; height: 350px; object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ocupação Section -->
-        <section id="occupation" class="occupation mb-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="{% static 'base/img/Antes&depois.png' %}" class="img-fluid shadow-lg rounded"
-                            alt="Antes e Depois" style="width: 700px; height: 350px; object-fit: cover;">
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content-item">
-                            <h3 class="titulo">Ocupação</h3>
-                            <p class="lead">
-                                Sentindo a necessidade de um espaço mais amplo para alocar as peças líticas e também
-                                para receber professores, estudantes, pesquisadores e comunidade em geral, o Povo Tapuia
-                                Paiacu ocupou um prédio pertencente ao Governo do Estado, abandonado há 32 anos,
-                                conhecido como a “Casa das Máquinas”, uma antiga estação de bomba de água da época do
-                                ex-governador Geraldo Melo, que nunca chegou a funcionar. A reforma completa do prédio
-                                durou dois anos e foi patrocinada pelo parente Sidney Ferreira de Oliveira Medeiros,
-                                atualmente residente nos Estados Unidos. O Museu Luiza Cantofa foi reinaugurado no dia
-                                26 de julho de 2023, tornando-se um marco histórico na região e no Estado.
-
-                            </p>
-                            <p class="lead">
-                                A comunidade indígena dos Tapuias Paiacus, símbolo de luta e resistência alcançou
-                                reconhecimento pela organização política e pela retomada de sua identidade étnica e
-                                território tradicional. A reinauguração contou com a presença de lideranças indígenas,
-                                pesquisadores, estudantes, autoridades governamentais, a reitora Cicilia Maia da
-                                Universidade do Estado do Rio Grande do Norte (UERN) acompanhada do Professor Valdeci
-                                dos Santos e a comunidade em geral.
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <div>
-            <iframe style="width: 1100px; height:500px; display: block; margin: 0 auto;"
-                src="https://www.youtube.com/embed/AkXISOwzh9c?si=yf1__fzRXa5VCkVT" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </main>
-
-
-    <!-- Footer -->
-    <div style="background-color: #e1e1e164; color: black; padding: 20px 10px;">
-        <div class="container">
-            <div class="row">
-                <!-- Informações sobre o Museu -->
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <h4 style="color: #C6142B; font-weight: bolder;">MUSEU DO ÍNDIO LUIZA CANTOFA</h4>
-                    <p>
-                        O Museu Indígena Luiza Cantofa é um espaço cultural dedicado à preservação e valorização da
-                        história e das tradições do povo Tapuia Paiacu. Localizado em Apodi, no Rio Grande do Norte, é o
-                        primeiro museu indígena do estado. O espaço abriga uma rica coleção de artefatos e relatos que
-                        promovem o reconhecimento e a valorização da cultura Tapuia Paiacu, contribuindo para a
-                        preservação de sua identidade e memória ancestral.
-                    </p>
-                    <p>
-                        <a href="https://wa.me/5584999142282" target="_blank" rel="noopener noreferrer"
-                            style="color: black; font-weight: 300; text-decoration: none;">Telefone: (84) 9914-2282<br>
-                        </a>
-                        <a href="mailto:contato@museuluizacantofa.org.br" target="_blank" rel="noopener noreferrer"
-                            style="color: black; font-weight: 300; text-decoration: none;">Email:contato@museuluizacantofa.org.br<br>
-                        </a>
-                        <a href="https://www.instagram.com/museudoindioluizacantofaofc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            target="_blank" rel="noopener noreferrer"
-                            style="color: black; font-weight: 300; text-decoration: none;">Instagram:@museudoindioluizacantofaofc</a>
-                    </p>
-                </div>
-
-                <!-- Links úteis -->
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <h4 style="color:#C6142B; font-weight: bolder;">LINKS ÚTEIS</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'museu' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">INÍCIO</a>
-                        </li>
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'museu' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">MUSEU</a>
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'acervo' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">ACERVO</a>
-                        </li>
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'visitar' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">VISITAR</a>
-                        </li>
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'CHCTPLA' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">CHCTPLA</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Redes Sociais -->
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <h4 style="color: #C6142B; font-weight: bolder;">REDES SOCIAIS</h4>
-                    <p>Fique por dentro das novidades e acompanhe nossas redes sociais:</p>
-
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/museudoindioluizacantofaofc" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/MuseuIndioLuizaCantofa/" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="history-banner" style="background-image: url('{% static "base/img/Museu_do_Indio.jpg" %}');">
+    <div class="history-banner-overlay">
+        <h1>História</h1>
+        <p>Conheça a trajetória e a importância cultural do nosso espaço</p>
     </div>
+</section>
 
+<div class="page-container">
+    <section class="history-section">
+        <div class="history-content-grid">
+            <div class="history-text">
+                <h2>Um pouco da nossa trajetória</h2>
+                <p>Lorem ipsum dolor sit amet. Ea sunt officia non mollitia libero et quia omnis aut voluptatem cupiditate hic facere obcaecati ut recusandae voluptatum quo officia distinctio. Eum quaerat laudantium ut debitis dolorem ea delectus voluptate est illum quibusdam ea blanditiis saepe sed provident
+                cupiditate. Ut enim galisum qui voluptatem voluptas et quidem galisum aut voluptatem quia qui mollitia dolores sed distinctio nulla. Non nostrum recusandae vel aliquid molestiae est illum obcaecati non harum voluptatem et rerum quia. Sit rerum error vel iste corrupti et dolorum consequatur et incidunt provident et placeat laudantium.
+                </p>
+            </div>
+            <div class="history-image">
+                <img src="{% static 'base/img/placeholder.jpg' %}" alt="Imagem da trajetória do museu">
+            </div>
+        </div>
+    </section>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>&copy; Copyright Site esenvolvido por estudantes de infornática do IFRN - Campus Apodi</p>
-    </footer>
+    <section class="history-section">
+        <h2>Linha do tempo</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>1900</h3>
+                <p>Fundação</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1950</h3>
+                <p>Reformas e ampliações</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2000</h3>
+                <p>Reconhecimento como patrimônio</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2020</h3>
+                <p>Abertura de novas exposições</p>
+            </div>
+        </div>
+    </section>
 
+    <section class="history-section">
+        <h2>Galeria Histórica</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="{% static 'base/img/placeholder.jpg' %}" alt="Imagem histórica 1">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'base/img/placeholder.jpg' %}" alt="Imagem histórica 2">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'base/img/placeholder.jpg' %}" alt="Imagem histórica 3">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
+    <section class="history-section">
+        <h2>Legado Cultural</h2>
+        <p class="legacy-text">
+            Lorem ipsum dolor sit amet. Et sunt officia non mollitia libero et quia omnis aut quod adipisci est delectus Quis sit autem rerum et dicta tempore eos beatae voluptate ut fugit consequuntur. Ab enim Quis non quibusdam laudantium sed unde galisum eos excepturi in debitis.
+            Ad asperiores quas aut doloremque ipsa ut consequuntur nostrum hic minima architecto et voluptas fugit ea enim galisum. Et quia in molestiae in saepe voluptatem aut consequatur fuga qui nisi voluptatem.
+        </p>
+    </section>
+</div>
 
-</html>
+{% endblock %}

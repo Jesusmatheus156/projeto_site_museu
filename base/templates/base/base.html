@@ -5,22 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museu Luiza Cantofa - História e Cultura Colonial</title>
+    <title>{% block title %}Museu Luiza Cantofa{% endblock %}</title>
     
-    <meta name="description" content="Descubra a rica história colonial brasileira no Museu Luiza Cantofa. Explore exposições de arte, mobiliário, documentos e artefatos históricos em Apodi, RN.">
+    <meta name="description" content="Descubra a rica história do Museu Luiza Cantofa em Apodi, RN.">
     <meta name="author" content="Museu Luiza Cantofa">
-    <meta name="keywords" content="museu, história, colonial, Brasil, arte, cultura, Apodi, RN, exposições">
+    <meta name="keywords" content="museu, história, cultura, Apodi, RN, exposições">
     
     <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    {% block extra_css %}{% endblock %}
 </head>
 
 <body>
 <header class="header">
     <div class="header-content">
         <div class="header-top-row">
-            <!-- Seção Esquerda com as Bandeiras -->
             <div class="header-left">
                 <div class="language-selector">
                     <a href="#"><img src="{% static 'base/img/flag_brazil.png' %}" alt="Português"></a>
@@ -29,12 +30,10 @@
                 </div>
             </div>
 
-            <!-- Logo Centralizado -->
             <div class="logo-container">
                 <img src="{% static 'base/img/logo_real.png' %}" alt="Logo Museu Luiza Cantofa" class="logo-img">
             </div>
 
-            <!-- Seção Direita com a Barra de Pesquisa -->
             <div class="header-right">
                 <div class="search-container">
                     <input type="text" placeholder="SEARCH" class="search-input">
@@ -66,52 +65,12 @@
     </div>
 </header>
 
-    <section>
-        <div class="carrossel">
-            <div class="carrossel-seta">
-                <img src="{% static 'base/img/museu.jpg' %}" alt="Museu">
-                <img src="{% static 'base/img/territorio.jpg' %}" alt="Território">
-                <img src="{% static 'base/img/lucia.jpg' %}" alt="Lúcia apresentando">
-            </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
-    </section>
-    <script src="{% static 'base/js/script.js' %}"></script>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
-    <section class="conteudo">
-        <section>
-        <h2>Visita</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Amet tincidunt et turpis habitasse ultrices condimentum velit. 
-            At nulla eu urna cras sed odio mauris vivamus erat. 
-            Elit mi massa nisl enim. Tristique massa sit est in senectus amet, ut nullam.
-        </p>
-        </section>
-
-        <section>
-        <h2>Agendamento</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Amet tincidunt et turpis habitasse ultrices condimentum velit. 
-            At nulla eu urna cras sed odio mauris vivamus erat. 
-            Elit mi massa nisl enim. Tristique massa sit est in senectus amet, ut nullam.
-        </p>
-        </section>
-
-        <section>
-        <h2>Preços</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Amet tincidunt et turpis habitasse ultrices condimentum velit. 
-            At nulla eu urna cras sed odio mauris vivamus erat. 
-            Elit mi massa nisl enim. Tristique massa sit est in senectus amet, ut nullam.
-        </p>
-        </section>
-    </section>
-
-<footer class="footer" style="background-image: url('{% static "base/img/foto_carrossel2.0.jpg" %}');">
+    <footer class="footer" style="background-image: url('{% static "base/img/foto_carrossel2.0.jpg" %}');">
         <div class="footer-overlay"></div>
         <div class="footer-content">
             <div class="footer-info">
@@ -144,5 +103,7 @@
             </div>
         </div>
     </footer>
+
+    {% block extra_js %}{% endblock %}
 </body>
 </html>
