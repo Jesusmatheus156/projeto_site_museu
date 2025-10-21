@@ -1,148 +1,182 @@
-{% load static %}
+{% extends "base/base.html" %}
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museu Luiza Cantofa - História e Cultura Colonial</title>
-    
-    <meta name="description" content="Descubra a rica história colonial brasileira no Museu Luiza Cantofa. Explore exposições de arte, mobiliário, documentos e artefatos históricos em Apodi, RN.">
-    <meta name="author" content="Museu Luiza Cantofa">
-    <meta name="keywords" content="museu, história, colonial, Brasil, arte, cultura, Apodi, RN, exposições">
-    
-    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+{% block title %}Museu Luiza Cantofa - Agendamento Interativo{% endblock %}
 
-<body>
-<header class="header">
-    <div class="header-content">
-        <div class="header-top-row">
-            <!-- Seção Esquerda com as Bandeiras -->
-            <div class="header-left">
-                <div class="language-selector">
-                    <a href="#"><img src="{% static 'base/img/flag_brazil.png' %}" alt="Português"></a>
-                    <a href="#"><img src="{% static 'base/img/flag_spain.png' %}" alt="Espanhol"></a>
-                    <a href="#"><img src="{% static 'base/img/bandeira-estados-unidos.webp' %}" alt="Inglês"></a>
-                </div>
+{% block extra_css %}
+<style>
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    margin-top: 40px;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #56070C;
+    margin-bottom: 25px;
+}
+
+.form-container label {
+    font-weight: 500;
+    color: #333;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #56070C;
+    outline: none;
+    box-shadow: 0 0 5px rgba(86,7,12,0.3);
+}
+
+.form-container button {
+    background-color: #56070C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #EFB810;
+    color: #333;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+.fc-event {
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.fc-timegrid-event {
+    height: 25px;
+}
+
+input[readonly] {
+    background-color: #e9ecef;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+    <div class="form-container">
+        <h2>Agende sua visita ao Museu Luiza Cantofa</h2>
+        <form method="post" action="{% url 'visitar' %}" id="form-agendamento">
+            {% csrf_token %}
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="tipo_visitante">Tipo de Visitante:</label>
+            <select name="tipo_visitante" id="tipo_visitante" required>
+                <option value="individual">Individual</option>
+                <option value="grupo">Grupo de Amigos</option>
+                <option value="instituicao">Instituição de Ensino</option>
+            </select>
+
+            <div id="campo_instituicao" style="display:none;">
+                <label for="instituicao">Nome da Instituição:</label>
+                <input type="text" name="instituicao">
             </div>
 
-            <!-- Logo Centralizado -->
-            <div class="logo-container">
-                <img src="{% static 'base/img/logo_real.png' %}" alt="Logo Museu Luiza Cantofa" class="logo-img">
-            </div>
+            <label for="quantidade_visitantes">Quantidade de Visitantes:</label>
+            <input type="number" name="quantidade_visitantes" value="1" required>
 
-            <!-- Seção Direita com a Barra de Pesquisa -->
-            <div class="header-right">
-                <div class="search-container">
-                    <input type="text" placeholder="SEARCH" class="search-input">
-                    <button class="search-button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+            <label for="data">Data da Visita:</label>
+            <input type="date" name="data" id="data" readonly required>
 
-        <nav class="navigation">
-            <a href="{% url 'home_page' %}" class="nav-item">
-                <i class="fa-solid fa-house nav-icon"></i>
-                <span>INÍCIO</span>
-            </a>
-            <a href="{% url 'acervo' %}" class="nav-item">
-                <i class="fa-solid fa-folder-open nav-icon"></i>
-                <span>ACERVO</span>
-            </a>
-            <a href="{% url 'museu' %}" class="nav-item">
-                <i class="fa-solid fa-book-open nav-icon"></i>
-                <span>HISTÓRIA</span>
-            </a>
-            <a href="{% url 'visitar' %}" class="nav-item">
-                <i class="fa-solid fa-calendar-days nav-icon"></i>
-                <span>VISITE</span>
-            </a>
-        </nav>
+            <label for="horario">Horário da Visita:</label>
+            <input type="time" name="horario" id="horario" readonly required>
+
+            <button type="submit">Agendar Visita</button>
+        </form>
     </div>
-</header>
 
-    <section>
-        <div class="carrossel">
-            <div class="carrossel-seta">
-                <img src="{% static 'base/img/museu.jpg' %}" alt="Museu">
-                <img src="{% static 'base/img/territorio.jpg' %}" alt="Território">
-                <img src="{% static 'base/img/lucia.jpg' %}" alt="Lúcia apresentando">
-            </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
-    </section>
-    <script src="{% static 'base/js/script.js' %}"></script>
+    <div id="calendar"></div>
+</main>
+{% endblock %}
 
-    <section class="conteudo">
-        <section>
-        <h2>Visita</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Amet tincidunt et turpis habitasse ultrices condimentum velit. 
-            At nulla eu urna cras sed odio mauris vivamus erat. 
-            Elit mi massa nisl enim. Tristique massa sit est in senectus amet, ut nullam.
-        </p>
-        </section>
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 
-        <section>
-        <h2>Agendamento</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Amet tincidunt et turpis habitasse ultrices condimentum velit. 
-            At nulla eu urna cras sed odio mauris vivamus erat. 
-            Elit mi massa nisl enim. Tristique massa sit est in senectus amet, ut nullam.
-        </p>
-        </section>
+<script>
+const horariosManha = ['08:00', '09:00', '10:00', '11:00'];
+const horariosTarde = ['13:00', '14:00', '15:00', '16:00'];
 
-        <section>
-        <h2>Preços</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Amet tincidunt et turpis habitasse ultrices condimentum velit. 
-            At nulla eu urna cras sed odio mauris vivamus erat. 
-            Elit mi massa nisl enim. Tristique massa sit est in senectus amet, ut nullam.
-        </p>
-        </section>
-    </section>
+// Recebe os agendamentos do contexto do Django
+const agendamentosOcupados = {{ agendamentos_json|safe }};
 
-<footer class="footer" style="background-image: url('{% static "base/img/foto_carrossel2.0.jpg" %}');">
-        <div class="footer-overlay"></div>
-        <div class="footer-content">
-            <div class="footer-info">
-                <div class="footer-section">
-                    <i class="fa-solid fa-location-dot footer-icon"></i>
-                    <div>
-                        <p><strong>VISITE-NOS</strong></p>
-                        <p>Sítio Missão I</p>
-                        <p>1001 - Zona rural</p>
-                        <p>Apodi - RN</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <i class="fa-solid fa-phone footer-icon"></i>
-                    <div>
-                        <p><strong>CONTATE-NOS</strong></p>
-                        <p>84 99999-9999</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <i class="fa-solid fa-users footer-icon"></i>
-                    <div>
-                        <p><strong>SIGA-NOS</strong></p>
-                        <p><i class="fa-brands fa-instagram"></i> Instagram</p>
-                        <p><i class="fa-brands fa-facebook"></i> Facebook</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+function gerarEventos(agendamentos) {
+    const eventos = [];
+    const hoje = new Date();
+    for (let i = 0; i < 7; i++) {
+        const data = new Date();
+        data.setDate(hoje.getDate() + i);
+        const yyyy = data.getFullYear();
+        const mm = String(data.getMonth() + 1).padStart(2, '0');
+        const dd = String(data.getDate()).padStart(2, '0');
+        const strData = `${yyyy}-${mm}-${dd}`;
+
+        [...horariosManha, ...horariosTarde].forEach(horario => {
+            const ocupado = agendamentos[strData]?.includes(horario) || false;
+            eventos.push({
+                title: ocupado ? 'Ocupado' : 'Livre',
+                start: `${strData}T${horario}`,
+                display: 'block',
+                backgroundColor: ocupado ? '#ff4d4d' : '#28a745',
+                borderColor: ocupado ? '#ff4d4d' : '#28a745',
+                extendedProps: { ocupado },
+            });
+        });
+    }
+    return eventos;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const calendarEl = document.getElementById('calendar');
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'timeGridWeek',
+        allDaySlot: false,
+        slotMinTime: "08:00:00",
+        slotMaxTime: "17:00:00",
+        slotDuration: "01:00:00",
+        events: gerarEventos(agendamentosOcupados),
+        height: 500,
+        eventClick: function(info) {
+            if (!info.event.extendedProps.ocupado) {
+                document.getElementById('data').value = info.event.startStr.slice(0,10);
+                document.getElementById('horario').value = info.event.startStr.slice(11,16);
+                window.scrollTo({ top: document.getElementById('form-agendamento').offsetTop, behavior: 'smooth' });
+            } else {
+                alert('Este horário já está ocupado.');
+            }
+        }
+    });
+    calendar.render();
+});
+</script>
+
+{% endblock %}
