@@ -61,17 +61,55 @@
 #calendar {
     max-width: 900px;
     margin: 0 auto 50px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 15px;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+    border: none;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.fc-toolbar {
+    background-color: #56070C;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.fc-toolbar-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.fc-button {
+    background-color: #EFB810 !important;
+    border: none !important;
+    color: #333 !important;
+    font-weight: 600;
+    border-radius: 6px !important;
+    transition: all 0.3s;
+}
+
+.fc-button:hover {
+    background-color: #c99b0d !important;
+    color: white !important;
 }
 
 .fc-event {
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: 500;
 }
 
-.fc-timegrid-event {
-    height: 25px;
+.fc-timegrid-slot {
+    border-color: #eee;
 }
 
 input[readonly] {
@@ -121,12 +159,11 @@ input[readonly] {
 
 {% block extra_js %}
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales-all.global.min.js"></script>
 
 <script>
 const horariosManha = ['08:00', '09:00', '10:00', '11:00'];
 const horariosTarde = ['13:00', '14:00', '15:00', '16:00'];
-
-// Recebe os agendamentos do contexto do Django
 const agendamentosOcupados = {{ agendamentos_json|safe }};
 
 function gerarEventos(agendamentos) {
@@ -158,6 +195,7 @@ function gerarEventos(agendamentos) {
 document.addEventListener('DOMContentLoaded', function () {
     const calendarEl = document.getElementById('calendar');
     const calendar = new FullCalendar.Calendar(calendarEl, {
+        locale: 'pt-br',
         initialView: 'timeGridWeek',
         allDaySlot: false,
         slotMinTime: "08:00:00",
@@ -178,5 +216,4 @@ document.addEventListener('DOMContentLoaded', function () {
     calendar.render();
 });
 </script>
-
 {% endblock %}
