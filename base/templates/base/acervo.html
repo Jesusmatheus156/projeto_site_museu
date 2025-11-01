@@ -1,268 +1,117 @@
+{% extends 'base/base.html' %} 
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
+{% block title %}Acervo - Museu Luiza Cantofa{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museu do Índio Luiza Cantofa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="shortcut icon" href="{% static 'base/img/logo_real.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+{% block extra_css %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'base/css/acervo.css' %}">
+{% endblock %}
 
-<body>
 
-    <!-- HEADER -->
-    <header>
-        <!-- Barra de Navegação -->
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="{% static 'base/img/logo_real.png' %}" alt="Logo do Museu" class="logo mb-1">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'home_page' %}">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'museu' %}">Museu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'acervo' %}">Acervo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'visitar' %}">Visitar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'CHCTPLA' %}">CHCTPLA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'usuario_login' %}">Entrar</a></li>
-                    </ul>
-                </div>
+{% block content %}
+
+<section class="acervo-banner">
+    <div class="acervo-banner-image" style="background-image: url('{% static 'base/img/25b9c524-cdfc-405f-b6ba-d5710608c8cd.jpg' %}')"></div>
+    <div class="acervo-banner-overlay">
+        <h1>ACERVO</h1>
+    </div>
+</section>
+
+
+<section class="acervo-descricao py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h2 class="titulo-secao">ACERVO</h2>
+                <p class="texto-secao" style="text-align: justify;">
+                    Para a formação do acervo, a princípio foi feito um levantamento histórico-cultural do
+                    lugar, no qual, foi possível identificar a presença dos indígenas Tapuias Paiacus. A
+                    partir dessas informações, Lúcia investigou afundo sua origem, por meio de visitas nas
+                    comunidades, buscando conhecer as famílias e juntar arquivos vivos como peças e
+                    documentos que representam a história e a cultura desse povo. Conforme membro do CHCTPLA
+                    (2019), as peças do acervo são adquiridas de todos os lugares do município de Apodi e de
+                    regiões próximas. Sendo também obtidas através de famílias que tinham peças guardadas
+                    dos seus avós, peças essas de forma líticas, como: machadinhas, cachimbos.
+                </p>
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
+</section>
 
-    <main>
 
-        <section id="barnner" class="barnner">
-            <div class="container-flex">
-                <div class="row banner">
-                    <div class="col d-flex justify-content-center">
-                        <img src="{% static 'base\img\25b9c524-cdfc-405f-b6ba-d5710608c8cd.jpg' %}"
-                            class="banner-paginas" alt="banner-museu">
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="acervo-grid py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 class="titulo-secao text-center mb-5">PEÇAS EM DESTAQUE</h2>
 
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class=" mt-4 mt-lg-0">
-                            <h3 class="titulo">Acervo</h3>
-                            <p class="lead">
-                                Para a formação do acervo, a princípio foi feito um levantamento histórico-cultural do
-                                lugar, no qual, foi possível identificar a presença dos indígenas Tapuias Paiacus. A
-                                partir dessas informações, Lúcia investigou afundo sua origem, por meio de visitas nas
-                                comunidades, buscando conhecer as famílias e juntar arquivos vivos como peças e
-                                documentos que representam a história e a cultura desse povo. Conforme membro do CHCTPLA
-                                (2019), as peças do acervo são adquiridas de todos os lugares do município de Apodi e de
-                                regiões próximas. Sendo também obtidas através de famílias que tinham peças guardadas
-                                dos seus avós, peças essas de forma líticas, como: machadinhas, cachimbos.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="{%static 'base\img\artefato5.jpg'%}" class="img-fluid" alt="artefato"
-                            style="object-fit: cover;">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="acervo-card">
+                    <img src="{% static 'base/img/artefato1.jpg' %}" class="acervo-card-img" alt="Artefato 1">
+                    <div class="acervo-card-body">
+                        <h5 class="acervo-card-title">Corpo de vértebra</h5>
+                        <p class="acervo-card-text">Corpo de vértebra caudal de preguiça gigante.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <hr class="featurette-divider">
-
-
-        <section class="py-5">
-            <div class="container">
-                <h3 class="titulo text-center mb-4">Peças Acervo</h3>
-
-                <div class="row g-4">
-                    <!-- Item 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'base\img\artefato1.jpg'%}" class="card-img-top"
-                                alt="Corpo de vértebra caudal de preguiça gigante.">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'base\img\artefato2.jpg'%}" class="card-img-top"
-                                alt="Vértebra lombar de preguiça gigante.">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'base\img\artefato3.jpg'%}" class="card-img-top"
-                                alt="Fragmento de um fêmur de mastodonte.">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row g-4">
-                    <!-- Item 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'base\img\artefato4.jpg'%}" class="card-img-top"
-                                alt="Corpo de vértebra caudal de preguiça gigante.">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'base\img\44303576_1109005955939874_7233283654464569344_n.jpg'%}"
-                                class="card-img-top" alt="Vértebra lombar de preguiça gigante.">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card shadow-sm">
-                            <img src="{%static 'base\img\52333433_1187883691385433_8087103761132027904_n.jpg'%}"
-                                class="card-img-top" alt="Fragmento de um fêmur de mastodonte.">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="acervo-card">
+                    <img src="{% static 'base/img/artefato2.jpg' %}" class="acervo-card-img" alt="Artefato 2">
+                    <div class="acervo-card-body">
+                        <h5 class="acervo-card-title">Vértebra lombar</h5>
+                        <p class="acervo-card-text">Vértebra lombar de preguiça gigante.</p>
                     </div>
                 </div>
             </div>
-    </main>
 
-
-    <!-- Footer -->
-    <div style="background-color: #e1e1e164; color: black; padding: 20px 10px;">
-        <div class="container">
-            <div class="row">
-                <!-- Informações sobre o Museu -->
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <h4 style="color: #C6142B; font-weight: bolder;">MUSEU DO ÍNDIO LUIZA CANTOFA</h4>
-                    <p>
-                        O Museu Indígena Luiza Cantofa é um espaço cultural dedicado à preservação e valorização da
-                        história e das tradições do povo Tapuia Paiacu. Localizado em Apodi, no Rio Grande do Norte, é o
-                        primeiro museu indígena do estado. O espaço abriga uma rica coleção de artefatos e relatos que
-                        promovem o reconhecimento e a valorização da cultura Tapuia Paiacu, contribuindo para a
-                        preservação de sua identidade e memória ancestral.
-                    </p>
-                    <p>
-                        <a href="https://wa.me/5584999142282" target="_blank" rel="noopener noreferrer"
-                            style="color: black; font-weight: 300; text-decoration: none;">Telefone: (84) 9914-2282<br>
-                        </a>
-                        <a href="mailto:contato@museuluizacantofa.org.br" target="_blank" rel="noopener noreferrer"
-                            style="color: black; font-weight: 300; text-decoration: none;">Email:contato@museuluizacantofa.org.br<br>
-                        </a>
-                        <a href="https://www.instagram.com/museudoindioluizacantofaofc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            target="_blank" rel="noopener noreferrer"
-                            style="color: black; font-weight: 300; text-decoration: none;">Instagram:@museudoindioluizacantofaofc</a>
-                    </p>
+            <div class="col-lg-4 col-md-6">
+                <div class="acervo-card">
+                    <img src="{% static 'base/img/artefato3.jpg' %}" class="acervo-card-img" alt="Artefato 3">
+                    <div class="acervo-card-body">
+                        <h5 class="acervo-card-title">Fragmento de fêmur</h5>
+                        <p class="acervo-card-text">Fragmento de um fêmur de mastodonte.</p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Links úteis -->
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <h4 style="color:#C6142B; font-weight: bolder;">LINKS ÚTEIS</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'museu' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">INÍCIO</a>
-                        </li>
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'museu' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">MUSEU</a>
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'acervo' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">ACERVO</a>
-                        </li>
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'visitar' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">VISITAR</a>
-                        </li>
-                        <li style="margin-bottom: 10px;">
-                            <i class="bx bx-chevron-right" style="color: #C6142B;"></i>
-                            <a href="{% url 'CHCTPLA' %}"
-                                style="color: black; font-weight: 300; text-decoration: none;">CHCTPLA</a>
-                        </li>
-                    </ul>
+            <div class="col-lg-4 col-md-6">
+                <div class="acervo-card">
+                    <img src="{% static 'base/img/artefato4.jpg' %}" class="acervo-card-img" alt="Artefato 4">
+                    <div class="acervo-card-body">
+                        <h5 class="acervo-card-title">Artefato Lítico</h5>
+                        <p class="acervo-card-text">Ponta de artefato lítico.</p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Redes Sociais -->
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <h4 style="color: #C6142B; font-weight: bolder;">REDES SOCIAIS</h4>
-                    <p>Fique por dentro das novidades e acompanhe nossas redes sociais:</p>
+            <div class="col-lg-4 col-md-6">
+                <div class="acervo-card">
+                    <img src="{% static 'base/img/44303576_1109005955939874_7233283654464569344_n.jpg' %}" class="acervo-card-img" alt="Artefato 5">
+                    <div class="acervo-card-body">
+                        <h5 class="acervo-card-title">Urna Funerária</h5>
+                        <p class="acervo-card-text">Urna funerária indígena encontrada na região.</p>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/museudoindioluizacantofaofc" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/MuseuIndioLuizaCantofa/" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+            <div class="col-lg-4 col-md-6">
+                <div class="acervo-card">
+                    <img src="{% static 'base/img/52333433_1187883691385433_8087103761132027904_n.jpg' %}" class="acervo-card-img" alt="Artefato 6">
+                    <div class="acervo-card-body">
+                        <h5 class="acervo-card-title">Machadinha</h5>
+                        <p class="acervo-card-text">Machadinha de pedra polida.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
+{% endblock %}
 
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>&copy; Copyright Site esenvolvido por estudantes de infornática do IFRN - Campus Apodi</p>
-    </footer>
-
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% block extra_js %}
+{% endblock %}

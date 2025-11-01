@@ -1,0 +1,126 @@
+/* ================================== */
+/* CSS DA PÁGINA ACERVO (Baseado no Frame 22.jpg) */
+/* ================================== */
+
+/* FONTES USADAS (Saira Condensed e Work Sans) */
+
+/* 1. BANNER SUPERIOR COM TÍTULO */
+.acervo-banner {
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+.acervo-banner-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.acervo-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acervo-banner h1 {
+    font-family: 'Saira Condensed', sans-serif; /* Fonte do Título */
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+}
+
+/* 2. ESTILO UNIFICADO PARA TÍTULOS E TEXTOS */
+.titulo-secao {
+    font-family: 'Saira Condensed', sans-serif; /* Fonte do Título */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.texto-secao {
+    font-family: 'Work Sans', sans-serif; /* Fonte do Texto */
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* 3. GRID DE PEÇAS EM DESTAQUE */
+.acervo-card {
+    border: 1px solid #e9ecef; /* Borda suave */
+    border-radius: 8px;
+    overflow: hidden; 
+    background-color: #ffffff;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centraliza o conteúdo do card */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra suave padrão */
+}
+
+.acervo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.acervo-card-img {
+    width: 100%;
+    height: 300px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.acervo-card-body {
+    padding: 25px;
+}
+
+.acervo-card-title {
+    font-family: 'Saira Condensed', sans-serif; /* Fonte do Título */
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #C6142B; /* Cor vermelha do seu footer */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.acervo-card-text {
+    font-family: 'Work Sans', sans-serif; /* Fonte do Texto */
+    font-size: 1rem;
+    color: #444;
+}
+
+/* 4. RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .acervo-banner {
+        height: 300px;
+    }
+    .acervo-banner h1 {
+        font-size: 3rem;
+    }
+    
+    .titulo-secao {
+        font-size: 2rem;
+    }
+
+    .acervo-card-img {
+        height: 250px; /* Altura menor em telas menores */
+    }
+}

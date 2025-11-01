@@ -8,7 +8,6 @@ Este projeto tem como objetivo desenvolver um site institucional para o Museu do
 - HTML5, CSS3, JavaScript
 - Python / Django
 - MySQL
-- Bootstrap
 - Git / GitHub
 
 ## 📦 Como Rodar o Projeto Localmente
@@ -67,3 +66,53 @@ python manage.py runserver
 ```
 Depois, abra o navegador no seguinte endereço:
 http://127.0.0.1:8000
+
+## Estrutura do Projeto
+
+PROJECT_MUSEU/
+├── base/        <-- app base
+│   ├── static/
+│   │   └── base/
+│   │       └── css/
+│   │       └── img/
+│   │       └── js/
+│   ├── templates/
+│   │   └── base/
+│   │       └── acervo.html
+│   │       └── base.html
+│   │       └── CHCTPLA.html
+│   │       └── home.html
+│   │       └── museu.html
+│   │       └── visitar.html
+│   ├── _init_.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+├── projeto_museu/ <--projeto django
+│   │   └── _pycache_/
+│   ├── _init_.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── wsgi.py
+├── usuario/ <-- app usuario
+│   │   └── _pycache_/
+│   │   └── migrations/
+│   │   └── static/
+│   │       └── usuario
+│   │   │       └── css/
+│   │   │       └── img/
+│   ├── templates/
+│   │       └── usuario
+│   │   │       └── agendarvisitar.html
+│   ├── admin.py
+│   ├── apps.py      
+│   └── models.py
+│   └── tests.py
+│   └── urls.py
+│   └── views.py
+└── manage.py
+└── README.md
+└── requirements.txt

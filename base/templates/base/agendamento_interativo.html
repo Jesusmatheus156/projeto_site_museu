@@ -1,0 +1,190 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Agendar sua Visita{% endblock %}
+
+{% block extra_css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    #calendar { max-width: 900px; margin: 40px auto; }
+    .timeslot { border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 8px; background-color: #f9f9f9; }
+    .fc-day-past { background-color: #f5f5f5; }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container" style="padding-top: 80px;">
+    <h1 class="my-4 text-center">Agende sua Visita</h1>
+    <p class="text-center text-muted">Selecione um dia no calendário para ver os horários disponíveis.</p>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div id="calendar"></div>
+    <div id="timeslot-container" class="mt-4 mb-5"></div>
+
+    <form id="booking-form" method="POST" action="{% url 'processar_agendamento' %}" class="d-none">
+        {% csrf_token %}
+        <input type="hidden" name="horario_id" id="form-horario-id">
+        <input type="hidden" name="quantidade_inteira" id="form-quantidade-inteira">
+        <input type="hidden" name="quantidade_meia" id="form-quantidade-meia">
+        <input type="hidden" name="quantidade_gratuidade" id="form-quantidade-gratuidade">
+        <input type="hidden" name="nome_instituicao" id="form-instituicao">
+        <input type="hidden" name="nome_completo" id="form-nome">
+        <input type="hidden" name="email" id="form-email">
+        <input type="hidden" name="telefone" id="form-telefone">
+    </form>
+</div>
+{% endblock %}
+
+
+{% block extra_js %}
+<div class="modal fade" id="agendamentoModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Finalizar Agendamento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Horário:</strong> <span id="modal-horario-texto" class="fw-bold"></span></p>
+        <hr>
+        <h6>Preencha seus dados de contato:</h6>
+        <div class="row">
+            <div class="col-md-12 mb-3"><label for="modal-nome" class="form-label">Nome Completo <span class="text-danger">*</span></label><input type="text" class="form-control" id="modal-nome" required></div>
+            <div class="col-md-6 mb-3"><label for="modal-email" class="form-label">E-mail <span class="text-danger">*</span></label><input type="email" class="form-control" id="modal-email" required></div>
+            <div class="col-md-6 mb-3"><label for="modal-telefone" class="form-label">Telefone (WhatsApp) <span class="text-danger">*</span></label><input type="tel" class="form-control" id="modal-telefone" required placeholder="(00) 00000-0000"></div>
+        </div>
+        <hr>
+        <h6>Detalhes da visita: <small class="text-muted fw-bold">(Total: <span id="total-visitantes-modal">1</span> pessoa)</small></h6>
+        <div class="row">
+            <div class="col-sm-4 mb-3">
+                <label for="modal-qtd-inteira" class="form-label">Público Geral (R$ 20)</label>
+                <input type="number" class="form-control visitor-input" id="modal-qtd-inteira" value="1" min="0">
+            </div>
+            <div class="col-sm-4 mb-3">
+                <label for="modal-qtd-meia" class="form-label">Meia-Entrada (R$ 10)</label>
+                <input type="number" class="form-control visitor-input" id="modal-qtd-meia" value="0" min="0">
+            </div>
+            <div class="col-sm-4 mb-3">
+                <label for="modal-qtd-gratuidade" class="form-label">Gratuidade (R$ 0)</label>
+                <input type="number" class="form-control visitor-input" id="modal-qtd-gratuidade" value="0" min="0">
+            </div>
+        </div>
+        <div class="form-text">Estudantes, professores e idosos pagam meia. Crianças até 6 anos e PCDs têm gratuidade.</div>
+        <div class="mb-3 mt-3">
+            <label for="modal-instituicao" class="form-label">Nome da Instituição (opcional):</label>
+            <input type="text" class="form-control" id="modal-instituicao">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="confirmar-agendamento-btn">Confirmar Agendamento</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/locales-all.global.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const calendarEl = document.getElementById('calendar');
+    const timeslotContainer = document.getElementById('timeslot-container');
+    const bookingForm = document.getElementById('booking-form');
+    const agendamentoModal = new bootstrap.Modal(document.getElementById('agendamentoModal'));
+    const confirmarBtn = document.getElementById('confirmar-agendamento-btn');
+    let currentHorarioId = null;
+
+    // --- REGRA DE 3 DIAS DE ANTECEDÊNCIA (FRONTEND) ---
+    const hoje = new Date();
+    const dataMinima = new Date(new Date().setDate(hoje.getDate() + 3));
+
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'pt-br',
+        headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth' },
+        validRange: {
+            start: dataMinima.toISOString().split('T')[0]
+        },
+        dateClick: function(info) {
+            // ... (o resto da função fetch continua igual)
+            if (info.dayEl.classList.contains('fc-day-past')) return false;
+            let dataClicada = info.dateStr;
+            timeslotContainer.innerHTML = '<div class="text-center"><div class="spinner-border text-danger" role="status"></div></div>';
+            let apiUrl = `{% url 'api_horarios_do_dia' 'YYYY-MM-DD' %}`.replace('YYYY-MM-DD', dataClicada);
+            fetch(apiUrl).then(response => response.json()).then(data => {
+                timeslotContainer.innerHTML = '';
+                if(data && data.length > 0) {
+                    let dataFormatada = new Date(dataClicada + 'T00:00:00').toLocaleDateString('pt-BR');
+                    timeslotContainer.innerHTML = `<h3 class="mb-3">Horários para ${dataFormatada}</h3>`;
+                    data.forEach(horario => {
+                        const horarioDiv = document.createElement('div');
+                        horarioDiv.className = 'timeslot d-flex justify-content-between align-items-center';
+                        horarioDiv.innerHTML = `<div><strong>${horario.titulo}</strong><br><small class="text-muted">${horario.hora_inicio} – ${horario.hora_fim} | ${horario.vagas} vaga(s) | Até ${horario.capacidade} pessoas</small></div><button class="btn btn-danger book-btn" data-horario-id="${horario.id}" data-horario-texto="${horario.hora_inicio} de ${dataFormatada}" data-capacidade="${horario.capacidade}">Agendar</button>`;
+                        timeslotContainer.appendChild(horarioDiv);
+                    });
+                } else {
+                    timeslotContainer.innerHTML = '<div class="alert alert-info">Não há horários disponíveis para esta data.</div>';
+                }
+            });
+        }
+    });
+    calendar.render();
+    
+    timeslotContainer.addEventListener('click', function(event) {
+        if (event.target.classList.contains('book-btn')) {
+            currentHorarioId = event.target.dataset.horarioId;
+            document.getElementById('modal-horario-texto').innerText = event.target.dataset.horarioTexto;
+            document.getElementById('modal-qtd-inteira').max = event.target.dataset.capacidade;
+            document.getElementById('modal-qtd-meia').max = event.target.dataset.capacidade;
+            document.getElementById('modal-qtd-gratuidade').max = event.target.dataset.capacidade;
+            agendamentoModal.show();
+        }
+    });
+
+    // --- LÓGICA ATUALIZADA DO BOTÃO DE CONFIRMAÇÃO ---
+    confirmarBtn.addEventListener('click', function() {
+        const nome = document.getElementById('modal-nome').value;
+        const email = document.getElementById('modal-email').value;
+        const telefone = document.getElementById('modal-telefone').value;
+        const qtdInteira = document.getElementById('modal-qtd-inteira').value;
+        const qtdMeia = document.getElementById('modal-qtd-meia').value;
+        const qtdGratuidade = document.getElementById('modal-qtd-gratuidade').value;
+        const totalVisitantes = parseInt(qtdInteira) + parseInt(qtdMeia) + parseInt(qtdGratuidade);
+
+        if (nome && email && telefone && totalVisitantes > 0) {
+            document.getElementById('form-horario-id').value = currentHorarioId;
+            document.getElementById('form-nome').value = nome;
+            document.getElementById('form-email').value = email;
+            document.getElementById('form-telefone').value = telefone;
+            document.getElementById('form-quantidade-inteira').value = qtdInteira;
+            document.getElementById('form-quantidade-meia').value = qtdMeia;
+            document.getElementById('form-quantidade-gratuidade').value = qtdGratuidade;
+            document.getElementById('form-instituicao').value = document.getElementById('modal-instituicao').value;
+            bookingForm.submit();
+        } else {
+            alert('Por favor, preencha todos os campos de contato e informe ao menos 1 visitante.');
+        }
+    });
+
+    // Função para atualizar o total de visitantes no modal
+    function updateTotal() {
+        const total = (parseInt(document.getElementById('modal-qtd-inteira').value) || 0) +
+                      (parseInt(document.getElementById('modal-qtd-meia').value) || 0) +
+                      (parseInt(document.getElementById('modal-qtd-gratuidade').value) || 0);
+        document.getElementById('total-visitantes-modal').innerText = total;
+    }
+    document.querySelectorAll('.visitor-input').forEach(input => input.addEventListener('input', updateTotal));
+});
+</script>
+{% endblock %}
