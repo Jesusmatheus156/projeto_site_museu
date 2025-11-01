@@ -1,5 +1,5 @@
 
-# 🌐 Projeto Website do Museu do Índio de Apodi/RN
+# 🌐 Projeto Museu na Web: Divulgação e Preservação da Cultura Indígena por Meio de um Website Interativo
 
 Este projeto tem como objetivo desenvolver um site institucional para o Museu do Índio de Apodi/RN. A iniciativa busca valorizar a cultura indígena local e facilitar o acesso da comunidade às informações do museu, como seu acervo, eventos e história.
 
