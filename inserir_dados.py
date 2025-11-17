@@ -65,9 +65,9 @@ try:
         for i, nome in enumerate(nomes):
             data_criacao = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             agendamentos.append((
-                nome, f"{nome.lower().replace(' ', '.')}@emailteste.com", f"849{random.randint(98000000,99999999)}",
+                nome, f"{nome.lower().replace(' ', '.')}@escolar.ifrn.edu.br", f"849{random.randint(98000000,99999999)}",
                 horarios_ids[i][0], 'Pendente', random.randint(1,5), random.randint(5,30), random.randint(0,3),
-                f'Instituição de Teste {i+1}', 200.00, data_criacao
+                f'IFRN - Campus Apodi {i+1}', 200.00, data_criacao
             ))
         
         cursor.executemany("""

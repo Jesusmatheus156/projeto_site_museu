@@ -6,10 +6,19 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    zoom: 0.85;
+}
+
+h1, h2, h3, h4, h5, h6,
+.titulo-secao,
+.acervo-card-title,
+.footer-section strong {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 300; /* Padrão para títulos Saira */
 }
 
 /* ================================== */
@@ -26,7 +35,7 @@ body {
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     position: relative;
 }
@@ -58,8 +67,8 @@ body {
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -69,8 +78,8 @@ body {
 }
 
 .logo-img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -136,8 +145,9 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 20px;
+    font-family: 'saira condensed', sans-serif;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -196,7 +206,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 400px;
+    height: 500px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -226,19 +236,18 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
 }
 
 .about-image {
     flex: 1;
-    max-width: 450px;
+    max-width: 500px;
 }
 
 .about-image img {
+    padding-top: 30px;
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
@@ -246,16 +255,15 @@ body {
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
+    color: #000000;
 }
 
 .about-text p {
     font-size: 1rem;
     line-height: 1.8;
-    color: #555;
+    color: #3A3A3A;
     text-align: justify;
 }
 
@@ -748,5 +756,510 @@ body {
 
     .acervo-card-img {
         height: 250px; /* Altura menor em telas menores */
+    }
+}
+
+/*-------------------------------------*/
+/* Estilos da Página "Nosso Acervo"    */
+/*-------------------------------------*/
+
+/* Hero Slider (Banner) */
+.hero-slider {
+    width: 100%;
+    /* Altura do banner. Ajuste conforme necessário. */
+    height: 400px; 
+    overflow: hidden;
+    position: relative;
+    background-color: #333; /* Cor de fallback */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* Efeito de "slide" sutil, se houver */
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Conteúdo Principal do Acervo */
+.acervo-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.acervo-container h2 {
+    font-size: 2.5rem;
+    color: #56070C; /* Cor principal do tema */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.acervo-container > p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+/* Botões de Filtro */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    color: #555;
+    background-color: #f9f9f9;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #eee;
+    border-color: #ccc;
+}
+
+.filter-btn.active {
+    background-color: #56070C;
+    color: #ffffff;
+    border-color: #56070C;
+}
+
+/* Grid de Itens do Acervo */
+.acervo-grid {
+    display: grid;
+    /* 3 colunas em desktop */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    text-align: left;
+}
+
+.acervo-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 15px; /* Espaço para o botão */
+}
+
+.acervo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.acervo-card img {
+    width: 100%;
+    height: 250px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área */
+}
+
+.acervo-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 15px 20px 5px 20px;
+    font-weight: 700;
+}
+
+.acervo-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0 20px 15px 20px;
+    line-height: 1.5;
+}
+
+.btn-details {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #333;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-details:hover {
+    background-color: #56070C;
+}
+
+/* Responsividade do Grid */
+@media (max-width: 992px) {
+    .acervo-grid {
+        /* 2 colunas em tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 250px;
+    }
+    .acervo-grid {
+        /* 1 coluna em celulares */
+        grid-template-columns: 1fr;
+    }
+    .acervo-container {
+        margin-top: 20px;
+    }
+}
+
+/*-------------------------------------*/
+/* Estilos do NOVO Footer (Rodapé)     */
+/*-------------------------------------*/
+
+.footer {
+    background-color: #56070C;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    /* Remover o 'background-color' inline do base.html se houver */
+}
+
+.footer-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-logo {
+    flex-basis: 200px; /* Largura para o logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+    /* Se o logo for escuro, pode ser necessário um filtro */
+    /* filter: brightness(0) invert(1); */ 
+}
+
+.footer-info-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-width: 300px; /* Evita que as colunas fiquem muito espremidas */
+}
+
+.footer-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    min-width: 200px; /* Largura mínima para cada seção de info */
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #f0f0f0;
+}
+
+.footer-section div {
+    line-height: 1.6;
+}
+
+.footer-section p {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+}
+
+.footer-section strong {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-section p i {
+    margin-right: 8px; /* Espaço entre ícone do social e texto */
+}
+
+.footer-copyright {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.footer-copyright p {
+    margin: 5px 0;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+    .footer-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-info-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .footer-section {
+        justify-content: center;
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+    }
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+}
+
+#partners-banner {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* ================================== */
+/* CSS DA PÁGINA VISITE-NOS           */
+/* ================================== */
+
+/* Banner Estático */
+.page-banner {
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    background-color: #333; /* Cor de fallback */
+}
+
+.page-banner-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* Ajusta a posição da imagem do banner (centro-30% para cima) */
+    background-position: center 30%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.page-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-banner h1 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+}
+
+/* Container Principal */
+.visite-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.visite-section {
+    margin-bottom: 40px;
+}
+.visite-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Título da Seção (Horários, Localização) */
+.visite-titulo-secao {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Grid de 2 Colunas */
+.visite-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.visite-col p, .visite-col ul {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #3A3A3A;
+    margin-bottom: 20px;
+}
+
+.visite-col h3 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #56070C; /* Vermelho do tema */
+    margin-bottom: 15px;
+}
+
+/* Seção Horários */
+#horarios .visite-destaque strong {
+    color: #56070C;
+}
+
+#horarios h4 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Seção Ingressos */
+#ingressos ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#ingressos ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+#ingressos ul li::before {
+    content: '•';
+    color: #56070C; /* Cor do bullet */
+    font-size: 1.5rem;
+    position: absolute;
+    left: 5px;
+    top: -4px; /* Ajuste vertical */
+}
+
+/* Divisor <hr> */
+.visite-divider {
+    border: 0;
+    height: 1px;
+    background-color: #eeeeee;
+    margin: 50px auto;
+}
+
+/* Cabeçalho da Seção Localização (com botão) */
+.visite-header-com-botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.visite-header-com-botao .visite-titulo-secao {
+    margin-bottom: 0;
+}
+
+.btn-agendar {
+    display: inline-block;
+    background-color: #56070C;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+.btn-agendar i {
+    margin-right: 10px;
+}
+.btn-agendar:hover {
+    background-color: #3d0508;
+}
+
+#mapa img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#endereco p {
+    text-align: justify;
+}
+
+/* Responsividade da Página Visite-nos */
+@media (max-width: 992px) {
+    .visite-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .visite-container {
+        margin: 40px auto;
+        padding: 30px;
+    }
+    .visite-header-com-botao {
+        justify-content: center; /* Centraliza o título e o botão */
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        height: 300px;
+    }
+    .page-banner h1 {
+        font-size: 3rem;
+    }
+    .visite-container {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+    .visite-titulo-secao {
+        font-size: 2.2rem;
+        text-align: center; /* Centraliza títulos em telas pequenas */
+    }
+    .visite-header-com-botao .visite-titulo-secao {
+         width: 100%; /* Faz o título ocupar a largura */
+    }
+    .btn-agendar {
+        width: 100%;
+        text-align: center;
     }
 }

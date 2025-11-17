@@ -1,179 +1,50 @@
+{% extends 'base/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museu Luiza Cantofa - História e Cultura Colonial</title>
-    
-    <meta name="description" content="Descubra a rica história colonial brasileira no Museu Luiza Cantofa. Explore exposições de arte, mobiliário, documentos e artefatos históricos em Apodi, RN.">
-    <meta name="author" content="Museu Luiza Cantofa">
-    <meta name="keywords" content="museu, história, colonial, Brasil, arte, cultura, Apodi, RN, exposições">
-    
-    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+{# Este bloco substitui o <title> do base.html #}
+{% block title %}Museu Luiza Cantofa - História e Cultura Colonial{% endblock %}
 
-<body>
-<header class="header">
-    <div class="header-content">
-        <div class="header-top-row">
-            <!-- Seção Esquerda com as Bandeiras -->
-            <div class="header-left">
-                <div class="language-selector">
-                    <a href="#"><img src="{% static 'base/img/flag_brazil.png' %}" alt="Português"></a>
-                    <a href="#"><img src="{% static 'base/img/flag_spain.png' %}" alt="Espanhol"></a>
-                    <a href="#"><img src="{% static 'base/img/bandeira-estados-unidos.webp' %}" alt="Inglês"></a>
-                </div>
+{# Este bloco insere o conteúdo principal dentro da tag <main> do base.html #}
+{% block content %}
+    <section class="hero" style="background-image: url('{% static "base/img/NovaImgTelaHome.jpg" %}');">
+        <div class="hero-overlay"></div>
+    </section>
+
+    <section class="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="{% static 'base/img/Img_home.jpg' %}" alt="Vista do museu e paisagem rural">
             </div>
-
-            <!-- Logo Centralizado -->
-            <div class="logo-container">
-                <img src="{% static 'base/img/logo_real.png' %}" alt="Logo Museu Luiza Cantofa" class="logo-img">
-            </div>
-
-            <!-- Seção Direita com a Barra de Pesquisa -->
-            <div class="header-right">
-                <div class="search-container">
-                    <input type="text" placeholder="SEARCH" class="search-input">
-                    <button class="search-button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
+            <div class="about-text">
+                <h2>Um pouco sobre</h2>
+                    <p>Bem-vindo ao Museu Indígena Luiza Cantofa, reconhecido como o primeiro museu indígena do Rio Grande do Norte. Fundado em 2013 pela liderança e cacica Lúcia Paiacu Tabajara, o museu é uma entidade cultural vinculada ao Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA).
+                    <br>A instituição dedica-se ao resgate e à reconstrução da cultura do povo Tapuia Paiacu de Apodi. O nome homenageia Luiza Cantofa, uma das líderes indígenas dos Paiacus na revolta de 1825. Seu acervo reúne peças líticas, como machadinhas, cachimbos e pilões de pedra, além de peças de cerâmica, encontradas em Apodi e região.
+                    </p>
             </div>
         </div>
+    </section>
 
-        <nav class="navigation">
-            <a href="{% url 'home_page' %}" class="nav-item">
-                <i class="fa-solid fa-house nav-icon"></i>
-                <span>INÍCIO</span>
-            </a>
-            <a href="{% url 'acervo' %}" class="nav-item">
-                <i class="fa-solid fa-folder-open nav-icon"></i>
-                <span>ACERVO</span>
-            </a>
-            <a href="{% url 'museu' %}" class="nav-item">
-                <i class="fa-solid fa-book-open nav-icon"></i>
-                <span>HISTÓRIA</span>
-            </a>
-            <a href="{% url 'visitar' %}" class="nav-item">
-                <i class="fa-solid fa-calendar-days nav-icon"></i>
-                <span>VISITE</span>
-            </a>
-        </nav>
-    </div>
-</header>
-
-    <main>
-        <section class="hero" style="background-image: url('{% static "base/img/NovaImgTelaHome.jpg" %}');">
-            <div class="hero-overlay"></div>
-        </section>
-
-        <section class="about">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="{% static 'base/img/70374348_2904268699601179_9064056899388833792_n.jpg' %}" alt="Vista do museu e paisagem rural">
-                </div>
-                    <div class="about-text">
-                        <h2>Um pouco sobre</h2>
-                           <p>Bem-vindo ao Museu Indígena Luiza Cantofa, reconhecido como o primeiro museu indígena do Rio Grande do Norte. 
-                            Fundado em 2013 pela liderança e cacica Lúcia Paiacu Tabajara, o museu é uma entidade cultural vinculada ao Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA).
-                           </p>
-                            <p>A instituição dedica-se ao resgate e à reconstrução da cultura do povo Tapuia Paiacu de Apodi. 
-                               O nome homenageia Luiza Cantofa, uma das líderes indígenas dos Paiacus na revolta de 1825. 
-                               Seu acervo reúne peças líticas, como machadinhas, cachimbos e pilões de pedra, além de peças de cerâmica, encontradas em Apodi e região.
-                            </p>
-                    </div>
+    <section class="exhibitions">
+        <div class="exhibitions-content">
+            <h2>Exibições</h2>
+            <div style="height: 30px"></div>
+            <div class="about-image">
+                <img src="{% static 'base/img/Img_home.jpg' %}" alt="Vista do museu e paisagem rural">
             </div>
-        </section>
-
-<section class="exhibitions">
-    <div class="exhibitions-content">
-        <h2>Exibições</h2>
-        <div class="exhibitions-grid">
-            
-            <div class="exhibition-item">
-                <img src="{% static 'base/img/IMG_20250915_134742.jpg' %}" alt="Pintura a óleo de uma cena colonial" class="exhibition-image">
-                <p class="exhibition-description">Coleção de pinturas coloniais do século XVIII.</p>
+            <div class="about-text">
+                    <p>Bem-vindo ao Museu Indígena Luiza Cantofa, reconhecido como o primeiro museu indígena do Rio Grande do Norte. Fundado em 2013 pela liderança e cacica Lúcia Paiacu Tabajara, o museu é uma entidade cultural vinculada ao Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA).
+                    <br>A instituição dedica-se ao resgate e à reconstrução da cultura do povo Tapuia Paiacu de Apodi. O nome homenageia Luiza Cantofa, uma das líderes indígenas dos Paiacus na revolta de 1825. Seu acervo reúne peças líticas, como machadinhas, cachimbos e pilões de pedra, além de peças de cerâmica, encontradas em Apodi e região.
+                    </p>
             </div>
-
-            <div class="exhibition-item">
-                <img src="{% static 'base/img/IMG_20250915_134749.jpg' %}" alt="Mobiliário de jacarandá antigo" class="exhibition-image">
-                <p class="exhibition-description">Mobiliário de jacarandá utilizado por barões do café.</p>
-            </div>
-
-            <div class="exhibition-item">
-                <img src="{% static 'base/img/IMG_20250915_141449.jpg' %}"  alt="Artefatos indígenas de cerâmica" class="exhibition-image">
-                <p class="exhibition-description">Artefatos e cerâmicas dos povos originários da região.</p>
-            </div>
-
-            <div class="exhibition-item">
-                <img src="{% static 'base/img/IMG_20250915_141526.jpg' %}"  alt="Artefatos indígenas de cerâmica" class="exhibition-image">
-                <p class="exhibition-description">Artefatos e cerâmicas dos povos originários da região.</p>
-            </div>
-
-            <div class="exhibition-item">
-                <img src="{% static 'base/img/IMG_20250915_141531.jpg' %}"  alt="Artefatos indígenas de cerâmica" class="exhibition-image">
-                <p class="exhibition-description">Artefatos e cerâmicas dos povos originários da região.</p>
-            </div>
-
-            <div class="exhibition-item">
-                <img src="{% static 'base/img/artefato1.jpg' %}"  alt="Artefatos indígenas de cerâmica" class="exhibition-image">
-                <p class="exhibition-description">Artefatos e cerâmicas dos povos originários da região.</p>
-            </div>
-
-            <div class="exhibition-item">
-                <img src="{% static 'base/img/Museu_do_Indio.jpg' %}"  alt="Artefatos indígenas de cerâmica" class="exhibition-image">
-                <p class="exhibition-description">Artefatos e cerâmicas dos povos originários da região.</p>
-            </div>
-            
-            <div class="exhibition-item">
-                <img src="{% static 'base/img/teste_img.jpg' %}"  alt="Artefatos indígenas de cerâmica" class="exhibition-image">
-                <p class="exhibition-description">Artefatos e cerâmicas dos povos originários da região.</p>
-            </div>
-
-            </div>
-        <p class="exhibitions-more">
-            Para ver mais exibições: <a href="#" class="acervo-link">Acervo</a>
-        </p>
-    </div>
-</section>
-    </main>
-
-    <footer class="footer" style="background-image: url('{% static "base/img/foto_carrossel2.0.jpg" %}');">
-        <div class="footer-overlay"></div>
-        <div class="footer-content">
-            <div class="footer-info">
-                <div class="footer-section">
-                    <i class="fa-solid fa-location-dot footer-icon"></i>
-                    <div>
-                        <p><strong>VISITE-NOS</strong></p>
-                        <p>Sítio Missão I</p>
-                        <p>1001 - Zona rural</p>
-                        <p>Apodi - RN</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <i class="fa-solid fa-phone footer-icon"></i>
-                    <div>
-                        <p><strong>CONTATE-NOS</strong></p>
-                        <p>84 99999-9999</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <i class="fa-solid fa-users footer-icon"></i>
-                    <div>
-                        <p><strong>SIGA-NOS</strong></p>
-                        <p><i class="fa-brands fa-instagram"></i> Instagram</p>
-                        <p><i class="fa-brands fa-facebook"></i> Facebook</p>
-                    </div>
-                </div>
-            </div>
+            <p class="exhibitions-more">
+                Para ver mais exibições: <a href="{% url 'acervo' %}" class="acervo-link">Acervo</a>
+            </p>
         </div>
-    </footer>
-</body>
-</html>
+    </section>
+
+    <section>
+        <h2 style="font-family: 'saira condensed', sans-serif; font-weight: 600; font-size: 2.5em; text-align: center; margin-top: 50px;">Parceiros</h2>
+        <img src="{% static 'base/img/LOGOMARCA_UERN_PNG/Parceria Museu.svg' %}" alt="Banner de parceiros" style="margin: 0 auto;">
+    </section>
+{% endblock %}
+<!--id="partners-banner"-->

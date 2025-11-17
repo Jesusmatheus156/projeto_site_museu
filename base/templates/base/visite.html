@@ -1,0 +1,71 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Visite-nos - {{ block.super }}{% endblock %}
+
+{% block content %}
+
+<section class="page-banner">
+    <div class="page-banner-image" style="background-image: url('{% static 'base/img/Início.png' %}');"></div>
+    <div class="page-banner-overlay">
+        <h1>Visite-nos</h1>
+    </div>
+</section>
+
+<div class="visite-container">
+    
+    <section class="visite-section" id="horarios-ingressos">
+        <h2 class="visite-titulo-secao">Horários e Ingressos</h2>
+        <div class="visite-grid-2col">
+            
+            <div class="visite-col" id="horarios">
+                <h3>Horários de visitação</h3>
+                <p>De segunda a sexta-feira<br>Das 8h às 17h<br>Última entrada às 16:30</p>
+                <p class="visite-destaque"><strong>As visitas devem ser agendadas com pelo menos 3 dias de antecedência, conforme indicado no calendário de agendamento.</strong></p>
+                
+                <h4>Fechamento</h4>
+                <p>O museu fecha aos sábados e domingos, bem como em feriados municipais e nacionais.</p>
+            </div>
+            
+            <div class="visite-col" id="ingressos">
+                <h3>Ingressos</h3>
+                <p>Os ingressos são vendidos mediante agendamento prévio, com dia e horário escolhidos no calendário de agendamento. O pagamento deve ser realizado no dia da visita, podendo ser feito em dinheiro ou via Pix.</p>
+                <p>O número máximo de pessoas por visita é de 35 e os valores dos ingressos são:</p>
+                <ul>
+                    <li><strong>R$ 10,00 para estudantes (de escolas públicas ou privadas);</strong></li>
+                    <li><strong>R$ 15,00 para visitantes (pesquisadores, turistas, entre outros).</strong></li>
+                </ul>
+                <p>Todas as visitas são guiadas, garantindo uma experiência completa e educativa.</p>
+            </div>
+            
+        </div> </section>
+
+    <hr class="visite-divider">
+
+    <section class="visite-section" id="localizacao">
+        
+        <div class="visite-header-com-botao">
+            <h2 class="visite-titulo-secao">Localização</h2>
+            <a href="{% url 'agendar_visita' %}" class="btn-agendar">
+                <i class="fa-solid fa-calendar-days"></i> Agende aqui!!
+            </a>
+        </div>
+        
+        <div class="visite-grid-2col">
+            
+            <div class="visite-col" id="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7185.8395754924895!2d-37.8059121!3d-5.6688773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7baf7a39041a701%3A0x420ce995ba5d6bf2!2sMuseu%20do%20%C3%8Dndio%20Luiza%20Cantofa!5e1!3m2!1spt-BR!2sbr!4v1737290730038!5m2!1spt-BR!2sbr"
+                    width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div class="visite-col" id="endereco">
+                <p>O Museu do Índio Luiza Cantofa está localizado no Sítio Missão 1, nº 1001, na zona rural de Apodi (RN), às margens da Lagoa do Apodi, próximo ao balneário da lagoa. Envolvido por um cenário de tranquilidade e natureza exuberante, o museu oferece uma experiência imersiva na história e cultura dos povos indígenas Tapuias Paiacus.</p>
+                <p>A cidade de Apodi é reconhecida por suas tradições e paisagens naturais, tornando o museu um destino imperdível para quem deseja comprovar e valorizar a herança indígena do Rio Grande do Norte. O local está a cerca de 80 km de Mossoró e 340 km da capital, Natal, com acesso facilitado pela BR-405.</p>
+            </div>
+            
+        </div> </section>
+    
+</div> {% endblock %}

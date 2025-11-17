@@ -7,17 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Museu Luiza Cantofa{% endblock %}</title>
     
-    <meta name="description" content="Descubra a rica história do Museu Luiza Cantofa em Apodi, RN.">
-    <meta name="author" content="Museu Luiza Cantofa">
-    <meta name="keywords" content="museu, história, cultura, Apodi, RN, exposições">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     {% block extra_css %}{% endblock %}
 </head>
-
 <body>
 <header class="header">
     <div class="header-content">
@@ -57,7 +54,7 @@
                 <i class="fa-solid fa-book-open nav-icon"></i>
                 <span>HISTÓRIA</span>
             </a>
-            <a href="{% url 'visitar' %}" class="nav-item">
+            <a href="{% url 'visite' %}" class="nav-item">
                 <i class="fa-solid fa-calendar-days nav-icon"></i>
                 <span>VISITE</span>
             </a>
@@ -69,41 +66,58 @@
         {% block content %}
         {% endblock %}
     </main>
-
-    <footer class="footer" style="background-image: url('{% static "base/img/foto_carrossel2.0.jpg" %}');">
-        <div class="footer-overlay"></div>
-        <div class="footer-content">
-            <div class="footer-info">
-                <div class="footer-section">
-                    <i class="fa-solid fa-location-dot footer-icon"></i>
-                    <div>
-                        <p><strong>VISITE-NOS</strong></p>
-                        <p>Sítio Missão I</p>
-                        <p>1001 - Zona rural</p>
-                        <p>Apodi - RN</p>
-                    </div>
+<footer class="footer">
+    <div class="footer-content-wrapper">
+        <div class="footer-logo">
+            <img src="{% static 'base/img/Frame 28.png' %}" alt="Logo Museu Luiza Cantofa">
+        </div>
+        
+        <div class="footer-info-container">
+            <div class="footer-section">
+                <i class="fa-solid fa-location-dot footer-icon"></i>
+                <div>
+                    <p><strong>VISITE-NOS</strong></p>
+                    <p>Sítio Missão 1</p>
+                    <p>1001 - Zona rural</p>
+                    <p>Apodi - RN</p>
                 </div>
-                
-                <div class="footer-section">
-                    <i class="fa-solid fa-phone footer-icon"></i>
-                    <div>
-                        <p><strong>CONTATE-NOS</strong></p>
-                        <p>84 99999-9999</p>
-                    </div>
+            </div>
+            
+            <div class="footer-section">
+                <i class="fa-solid fa-phone footer-icon"></i>
+                <div>
+                    <p><strong>CONTATE-NOS</strong></p>
+                    <p><a href="tel:84999142282" style="color: white; text-decoration: none;">84 99914-2282</a></p>
                 </div>
-                
-                <div class="footer-section">
-                    <i class="fa-solid fa-users footer-icon"></i>
-                    <div>
-                        <p><strong>SIGA-NOS</strong></p>
-                        <p><i class="fa-brands fa-instagram"></i> Instagram</p>
-                        <p><i class="fa-brands fa-facebook"></i> Facebook</p>
-                    </div>
+            </div>
+            
+            <div class="footer-section">
+                <i class="fa-solid fa-users footer-icon"></i>
+                <div>
+                    <p><strong>SIGA-NOS</strong></p>
+                    <p><a href="https://www.instagram.com/museuindigenaluizacantofa/" target="_blank" style="color: white; text-decoration: none;"><i class="fa-brands fa-instagram" style="color: white;"></i> INSTAGRAM</a></p>
+                    <p><a href="https://www.facebook.com/luizacantofa" target="_blank" style="color: white; text-decoration: none;"><i class="fa-brands fa-facebook" style="color: white;"></i> FACEBOOK</a></p>
                 </div>
             </div>
         </div>
-    </footer>
-
+    </div>
+    
+    <div class="footer-copyright">
+        <p>© Copyright Museu Indígena Luiza Cantofa, todos os direitos reservados.</p>
+        <p>Desenvolvido em projeto de extensão do IFRN - Campus Apodi</p>
+    </div>
+</footer>
     {% block extra_js %}{% endblock %}
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
 </body>
 </html>

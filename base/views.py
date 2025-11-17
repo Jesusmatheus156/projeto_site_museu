@@ -8,8 +8,8 @@ from datetime import datetime, date, timedelta
 def home(request):
     return render(request, 'base/home.html')
 
-def visitar(request):
-    return render(request, 'base/visitar.html')
+def visite(request):
+    return render(request, 'base/visite.html')
 
 def museu(request):
     return render(request, 'base/museu.html')
@@ -21,8 +21,8 @@ def CHCTPLA(request):
     return render(request, 'base/CHCTPLA.html')
 
 # View da página de agendamento
-def agendamento_interativo_view(request):
-    return render(request, 'base/agendamento_interativo.html')
+def agendar_visita(request):
+    return render(request, 'base/agendar_visita.html')
 
 # API que retorna os horários
 def obter_horarios_do_dia(request, data_selecionada):

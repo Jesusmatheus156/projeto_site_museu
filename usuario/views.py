@@ -58,10 +58,10 @@ def processar_agendamento(request):
             horario.save()
             
             messages.success(request, 'Seu pedido de agendamento foi enviado com sucesso! A equipe do museu entrará em contato para confirmação.')
-            return redirect('agendamento_interativo')
+            return redirect('agendar_visita')
 
         except HorariosDisponiveis.DoesNotExist:
             messages.error(request, "Desculpe, este horário ficou indisponível.")
-            return redirect('agendamento_interativo')
-    
-    return redirect('agendamento_interativo')
+            return redirect('agendar_visita')
+
+    return redirect('agendar_visita')

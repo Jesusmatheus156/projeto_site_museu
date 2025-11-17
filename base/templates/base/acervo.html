@@ -1,117 +1,67 @@
-{% extends 'base/base.html' %} 
+{% extends 'base/base.html' %}
 {% load static %}
 
-{% block title %}Acervo - Museu Luiza Cantofa{% endblock %}
-
-{% block extra_css %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="{% static 'base/css/acervo.css' %}">
-{% endblock %}
-
+{% block title %}Acervo - {{ block.super }}{% endblock %}
 
 {% block content %}
 
-<section class="acervo-banner">
-    <div class="acervo-banner-image" style="background-image: url('{% static 'base/img/25b9c524-cdfc-405f-b6ba-d5710608c8cd.jpg' %}')"></div>
-    <div class="acervo-banner-overlay">
-        <h1>ACERVO</h1>
+    <section class="hero" style="background-image: url('{% static "base/img/tela_acervo.png" %}');">
+        <div class="hero-overlay"></div>
+    </section>
+
+<div class="acervo-container">
+    <h2>Nosso Acervo</h2>
+    <p>Explore os artefatos que contam a nossa história. Cada peça lítica, cada caco de cerâmica e cada cachimbo foi encontrado em nosso território (Apodi/RN) e preservado por famílias da comunidade. São as provas vivas da nossa ancestralidade e resistência.</p>
+
+    <div class="filter-buttons">
+        <a href="#" class="filter-btn active">Mostrar Todos</a>
+        <a href="#" class="filter-btn">Peças Líticas</a>
+        <a href="#" class="filter-btn">Cerâmicas</a>
+        <a href="#" class="filter-btn">Outros Artefatos</a>
     </div>
-</section>
 
-
-<section class="acervo-descricao py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
-                <h2 class="titulo-secao">ACERVO</h2>
-                <p class="texto-secao" style="text-align: justify;">
-                    Para a formação do acervo, a princípio foi feito um levantamento histórico-cultural do
-                    lugar, no qual, foi possível identificar a presença dos indígenas Tapuias Paiacus. A
-                    partir dessas informações, Lúcia investigou afundo sua origem, por meio de visitas nas
-                    comunidades, buscando conhecer as famílias e juntar arquivos vivos como peças e
-                    documentos que representam a história e a cultura desse povo. Conforme membro do CHCTPLA
-                    (2019), as peças do acervo são adquiridas de todos os lugares do município de Apodi e de
-                    regiões próximas. Sendo também obtidas através de famílias que tinham peças guardadas
-                    dos seus avós, peças essas de forma líticas, como: machadinhas, cachimbos.
-                </p>
-            </div>
+    <div class="acervo-grid">
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/acervo_cachimbo.jpg' %}" alt="Cachimbos de madeira">
+            <h3>Cachimbos de madeira</h3>
+            <p>Ferramenta de pedra polida, usada tradicionalmente</p>
+            <a href="#" class="btn-details">Ver detalhes +</a>
         </div>
-    </div>
-</section>
-
-
-<section class="acervo-grid py-5" style="background-color: #f8f9fa;">
-    <div class="container">
-        <h2 class="titulo-secao text-center mb-5">PEÇAS EM DESTAQUE</h2>
-
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="acervo-card">
-                    <img src="{% static 'base/img/artefato1.jpg' %}" class="acervo-card-img" alt="Artefato 1">
-                    <div class="acervo-card-body">
-                        <h5 class="acervo-card-title">Corpo de vértebra</h5>
-                        <p class="acervo-card-text">Corpo de vértebra caudal de preguiça gigante.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="acervo-card">
-                    <img src="{% static 'base/img/artefato2.jpg' %}" class="acervo-card-img" alt="Artefato 2">
-                    <div class="acervo-card-body">
-                        <h5 class="acervo-card-title">Vértebra lombar</h5>
-                        <p class="acervo-card-text">Vértebra lombar de preguiça gigante.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="acervo-card">
-                    <img src="{% static 'base/img/artefato3.jpg' %}" class="acervo-card-img" alt="Artefato 3">
-                    <div class="acervo-card-body">
-                        <h5 class="acervo-card-title">Fragmento de fêmur</h5>
-                        <p class="acervo-card-text">Fragmento de um fêmur de mastodonte.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="acervo-card">
-                    <img src="{% static 'base/img/artefato4.jpg' %}" class="acervo-card-img" alt="Artefato 4">
-                    <div class="acervo-card-body">
-                        <h5 class="acervo-card-title">Artefato Lítico</h5>
-                        <p class="acervo-card-text">Ponta de artefato lítico.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="acervo-card">
-                    <img src="{% static 'base/img/44303576_1109005955939874_7233283654464569344_n.jpg' %}" class="acervo-card-img" alt="Artefato 5">
-                    <div class="acervo-card-body">
-                        <h5 class="acervo-card-title">Urna Funerária</h5>
-                        <p class="acervo-card-text">Urna funerária indígena encontrada na região.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="acervo-card">
-                    <img src="{% static 'base/img/52333433_1187883691385433_8087103761132027904_n.jpg' %}" class="acervo-card-img" alt="Artefato 6">
-                    <div class="acervo-card-body">
-                        <h5 class="acervo-card-title">Machadinha</h5>
-                        <p class="acervo-card-text">Machadinha de pedra polida.</p>
-                    </div>
-                </div>
-            </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/acervo_pote.jpg' %}" alt="Pote de Argila (Fragmento)">
+            <h3>Pote de Argila (Fragmento)</h3>
+            <p>Fragmento de cerâmica com detalhes decorativos</p>
+            <a href="#" class="btn-details">Ver detalhes +</a>
         </div>
-    </div>
-</section>
-
-{% endblock %}
-
-{% block extra_js %}
-{% endblock %}
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/acervo_luiza.jpg' %}" alt="Fotografia de Luiza Cantofa">
+            <h3>Fotografia de Luiza Cantofa</h3>
+            <p>Representação de Luiza Cantofa</p>
+            <a href="#" class="btn-details">Ver detalhes +</a>
+        </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/acervo_machadinha.jpg' %}" alt="Machadinha Polida (Pedra)">
+            <h3>Machadinha Polida (Pedra)</h3>
+            <p>Ferramenta de pedra polida, usada tradicionalmente</p>
+            <a href="#" class="btn-details">Ver detalhes +</a>
+        </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/acervo_preguica.jpg' %}" alt="Preguiça feita de coco">
+            <h3>Preguiça feita de coco</h3>
+            <p>Fragmento de cerâmica com detalhes decorativos</p>
+            <a href="#" class="btn-details">Ver detalhes +</a>
+        </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/acervo_pilao.jpg' %}" alt="Pilão feito de pedra">
+            <h3>Pilão feito de pedra</h3>
+            <p>Fragmento de cerâmica com detalhes decorativos</p>
+            <a href="#" class="btn-details">Ver detalhes +</a>
+        </div>
+        
+    </div> </div> {% endblock %}
