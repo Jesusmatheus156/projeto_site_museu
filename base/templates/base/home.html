@@ -13,7 +13,7 @@
     <section class="about">
         <div class="about-content">
             <div class="about-image">
-                <img src="{% static 'base/img/Img_home.jpg' %}" alt="Vista do museu e paisagem rural">
+                <img src="{% static 'base/img/placa.jpg' %}" alt="Placa do Museu Luiza Cantofa">                
             </div>
             <div class="about-text">
                 <h2>Um pouco sobre</h2>
@@ -26,19 +26,18 @@
 
     <section class="exhibitions">
         <div class="exhibitions-content">
-            <h2>Exibições</h2>
-            <div style="height: 30px"></div>
-            <div class="about-image">
-                <img src="{% static 'base/img/Img_home.jpg' %}" alt="Vista do museu e paisagem rural">
+            <div class="exhibition-image">
+                <img src="{% static 'base/img/Img_home.jpg' %}" alt="A morte do Padre Filipe Bourel">
             </div>
             <div class="about-text">
+                <h2>Exibições</h2>
                     <p>Bem-vindo ao Museu Indígena Luiza Cantofa, reconhecido como o primeiro museu indígena do Rio Grande do Norte. Fundado em 2013 pela liderança e cacica Lúcia Paiacu Tabajara, o museu é uma entidade cultural vinculada ao Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA).
                     <br>A instituição dedica-se ao resgate e à reconstrução da cultura do povo Tapuia Paiacu de Apodi. O nome homenageia Luiza Cantofa, uma das líderes indígenas dos Paiacus na revolta de 1825. Seu acervo reúne peças líticas, como machadinhas, cachimbos e pilões de pedra, além de peças de cerâmica, encontradas em Apodi e região.
                     </p>
+                    <p class="exhibitions-more">
+                        Para ver mais exibições: <a href="{% url 'acervo' %}" class="acervo-link">Acervo</a>
+                    </p>
             </div>
-            <p class="exhibitions-more">
-                Para ver mais exibições: <a href="{% url 'acervo' %}" class="acervo-link">Acervo</a>
-            </p>
         </div>
     </section>
 

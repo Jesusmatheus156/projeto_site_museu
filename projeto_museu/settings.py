@@ -89,9 +89,9 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Banco_museu',
-        'USER': 'matheusjesus',
-        'PASSWORD': '30042005',
+        'NAME': 'schemas',
+        'USER': 'root',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '3306',
     }
