@@ -1,0 +1,93 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+<section class="page-banner">
+    <div class="page-banner-image" style="background-image: url('{% static 'base/img/territorio.jpg' %}');"></div>
+    <div class="page-banner-overlay">
+        <h1>{% trans "Notícias" %}</h1>
+    </div>
+</section>
+
+<div class="grafismo-divider-full"></div>
+
+<div class="container noticias-container" style="padding-top: 50px;">
+    <header class="page-header">
+        <h1 class="titulo-secao" style="text-align: center;">{% trans "Últimas Notícias" %}</h1>
+    </header>
+    
+    <section class="main-news-list">
+        {% for noticia in page_obj %}
+        <article class="news-card">
+            <a href="{% url 'detalhe_noticia' slug=noticia.slug %}" class="news-link">
+                <div class="news-card-image">
+                    {# Verifica se existe imagem de capa #}
+                    {% if noticia.capa %}
+                        <img 
+                            src="{{ noticia.capa.url }}" 
+                            alt="{% if noticia.legenda_capa %}{{ noticia.legenda_capa }}{% else %}{{ noticia.titulo }}{% endif %}"
+                        >
+                    {% else %}
+                        {# Fallback para imagem default #}
+                        <img src="{% static 'base/img/default_news_capa.jpg' %}" alt="{% trans 'Capa padrão para notícia' %}">
+                    {% endif %}
+                </div>
+                <div class="news-card-content">
+                    
+                    {# Título Principal #}
+                    <h3>{{ noticia.titulo }}</h3>
+                    
+                    {# NOVO: Chamada/Subtítulo #}
+                    {% if noticia.chamada %}
+                        <p class="news-chamada">{{ noticia.chamada|truncatechars:150 }}</p>
+                    {% endif %}
+                    
+                    <p class="data-publicacao">
+                        {% trans "Publicado em" %} {{ noticia.data_publicacao|date:"d/m/Y" }}
+                    </p>
+                    
+                </div>
+            </a>
+        </article>
+        {% empty %}
+            <div class="col-12 text-center" style="grid-column: 1 / -1; padding: 50px 0;">
+                <div class="alert alert-info">{% trans "Nenhuma notícia publicada encontrada." %}</div>
+            </div>
+        {% endfor %}
+    </section>
+
+    {# SISTEMA DE PAGINAÇÃO (Mantido) #}
+    {% if page_obj.has_other_pages %}
+    <nav class="pagination-container" aria-label="Navegação de Notícias">
+        <ul class="pagination">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Anterior">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            {% endif %}
+
+            {% for i in page_obj.paginator.page_range %}
+                {% if page_obj.number == i %}
+                <li class="page-item active" aria-current="page"><span class="page-link">{{ i }}</span></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Próxima">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+
+</div>
+{% endblock %}

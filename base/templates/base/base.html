@@ -1,0 +1,293 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Museu Indígena Luiza Cantofa" %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="{% static 'base/img/Favicon do site.png' %}" type="image/x-icon">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+<header class="header">
+
+        <nav class="navigation">
+            <div class="header-left">
+                <div class="language-selector">
+                    <form action="{% url 'set_language' %}" method="post" id="language-form">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.path }}">
+                        <input name="language" type="hidden" id="language-code-input">
+ 
+                        <img src="{% static 'base/img/flag_brazil.png' %}" alt="Português" class="flag-icon"
+                            data-lang="pt-br"
+                            aria-pressed="{% if LANGUAGE_CODE == 'pt-br' %}true{% else %}false{% endif %}">
+
+                        <img src="{% static 'base/img/flag_eua.png' %}" alt="English" class="flag-icon"
+                            data-lang="en"
+                            aria-pressed="{% if LANGUAGE_CODE == 'en' %}true{% else %}false{% endif %}">
+
+                        <img src="{% static 'base/img/flag_spain.png' %}" alt="Español" class="flag-icon"
+                            data-lang="es"
+                            aria-pressed="{% if LANGUAGE_CODE == 'es' %}true{% else %}false{% endif %}">
+                    </form>
+                </div>
+            </div>
+
+                <div class="nav-left">
+                    <a href="{% url 'home_page' %}" class="nav-item {% if request.resolver_match.url_name == 'home_page' %}active-link{% endif %}"><i class="fa-solid fa-house"></i><span>{% trans 'INÍCIO' %}</span></a>
+                    <a href="{% url 'museu' %}" class="nav-item {% if request.resolver_match.url_name == 'museu' %}active-link{% endif %}"><i class="fa-solid fa-museum"></i><span>{% trans 'MUSEU' %}</span></a>
+                    <a href="{% url 'acervo' %}" class="nav-item {% if request.resolver_match.url_name == 'acervo' %}active-link{% endif %}"><i class="fa-solid fa-folder-open"></i><span>{% trans 'ACERVO' %}</span></a>
+                </div>
+
+                <div class="logo-container">
+                    <a href="{% url 'home_page' %}">
+                        <img src="{% static 'base/img/logo_real.png' %}" alt="{% trans 'Logo Museu Luiza Cantofa' %}" class="logo-img">
+                    </a>
+                </div>
+
+
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="nav-right">
+                    <a href="{% url 'noticias' %}" class="nav-item {% if request.resolver_match.url_name == 'noticias' %}active-link{% endif %}"><i class="fa-solid fa-newspaper"></i><span>{% trans 'NOTÍCIAS' %}</span></a>
+                    <a href="{% url 'pesquisa' %}" class="nav-item {% if request.resolver_match.url_name == 'pesquisa' %}active-link{% endif %}"><i class="fa-solid fa-book-open"></i><span>{% trans 'PESQUISA' %}</span></a>
+                    <a href="{% url 'visitar' %}" class="nav-item {% if request.resolver_match.url_name == 'visitar' %}active-link{% endif %}"><i class="fa-solid fa-calendar-days"></i><span>{% trans 'VISITA' %}</span></a>
+                </div>
+                
+                
+                <div class="header-right">
+                    <div class="search-container">
+                        <form action="{% url 'search_results_page' %}" method="get" class="search-form">
+                            <button type="submit" class="search-button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="text" name="q" placeholder="{% trans 'Pesquisar' %}" class="search-input" 
+                                value="{{ request.GET.q|default_if_none:'' }}">
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+
+<main id="main-content">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="footer-content-wrapper">
+
+        <div class="footer-logo footer-column">
+            <a href="{% url 'home_page' %}">
+                <img src="{% static 'base/img/Frame 28.png' %}" alt="{% trans 'Logo Museu' %}" class="small-logo">
+            </a>
+        </div>
+
+        <div class="footer-column footer-navigation">
+            <p class="footer-heading"><strong>{% trans "NAVEGAÇÃO" %}</strong></p>
+            <a href="{% url 'home_page' %}" class="footer-link">{% trans 'INÍCIO' %}</a>
+            <a href="{% url 'museu' %}" class="footer-link">{% trans 'MUSEU' %}</a>
+            <a href="{% url 'acervo' %}" class="footer-link">{% trans 'ACERVO' %}</a>
+            <a href="{% url 'noticias' %}" class="footer-link">{% trans 'NOTÍCIAS' %}</a>
+            <a href="{% url 'pesquisa' %}" class="footer-link">{% trans 'PESQUISA' %}</a>
+            <a href="{% url 'visitar' %}" class="footer-link">{% trans 'VISITA' %}</a>
+        </div>
+
+        <div class="footer-column footer-contact-info">
+            <p class="footer-heading"><strong>{% trans "CONTATO E LOCAL" %}</strong></p>
+
+            <div class="info-item">
+                <i class="fa-solid fa-location-dot footer-icon"></i>
+                <div>
+                    <p>{% trans "Sítio Missão 1" %}</p>
+                    <p>{% trans "Zona rural - Apodi/RN" %}</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fa-solid fa-phone footer-icon"></i>
+                <div>
+                    <p>{% trans "Fale Conosco" %}</p>
+                    <p><a href="tel:84999142282" class="footer-link">(84) 99914-2282</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-column footer-social">
+            <p class="footer-heading"><strong>{% trans "SIGA-NOS" %}</strong></p>
+            
+            <div class="social-icons-container">
+                <a href="https://instagram.com/museuindigenaluizacantofa" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com/luizacantofa" target="_blank" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://youtube.com/@luciapaiacutabajara394?si=c4-mChpCKCnzYdsc" target="_blank" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/84999142282" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>© {% trans "2025 CHCTPLA. Todos os direitos reservados." %}</p>
+        <p>{% trans "Desenvolvido em projeto de extensão do IFRN - Campus Apodi." %}</p>
+    </div>
+</footer>
+
+{% block extra_js %}{% endblock %}
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+<div id="accessibility-widget">
+    <button id="btn-acess" class="btn-access-float" aria-controls="menu-acess" aria-expanded="false" title="Abrir Menu de Acessibilidade">
+        <i class="fa-solid fa-universal-access"></i>
+    </button>
+
+    <div id="menu-acess" class="access-menu-container" role="menu" aria-hidden="true">
+
+        <h6 class="access-title">{% trans "Acessibilidade" %}</h6>
+
+        <button class="access-btn" id="btn-contraste" role="menuitem" title="Alternar Alto Contraste">
+            <i class="fa-solid fa-circle-half-stroke"></i> {% trans "Alto Contraste" %}
+        </button>
+
+        <div class="font-control">
+            <button class="access-btn" id="btn-font-aumentar" role="menuitem" title="Aumentar Tamanho da Fonte">
+                <i class="fa-solid fa-plus"></i> A+
+            </button>
+            <button class="access-btn" id="btn-font-diminuir" role="menuitem" title="Diminuir Tamanho da Fonte">
+                <i class="fa-solid fa-minus"></i> A-
+            </button>
+        </div>
+
+        <button class="access-btn reset" id="btn-font-reset" role="menuitem" title="Restaurar Configurações Padrão">
+            <i class="fa-solid fa-rotate-left"></i> {% trans "Resetar" %}
+        </button>
+    </div>
+</div>
+
+
+<script>
+/* --------------------
+    CONFIGURAÇÕES INICIAIS
+---------------------*/
+// Tenta carregar as configurações salvas no localStorage ao carregar a página
+if (localStorage.getItem("contraste") === "on") {
+    document.body.classList.add("high-contrast");
+}
+if (localStorage.getItem("audioDesc") === "on") {
+    document.body.classList.add("audio-description-on");
+}
+let fonte = parseFloat(localStorage.getItem("fontSize")) || 1;
+document.documentElement.style.fontSize = fonte + "em";
+
+
+/* --------------------
+    Abrir/fechar menu
+---------------------*/
+const btnFloat = document.getElementById("btn-acess");
+const menu = document.getElementById("menu-acess");
+
+btnFloat.addEventListener("click", () => {
+    const isExpanded = menu.classList.toggle("show");
+    // Atualiza atributos ARIA
+    btnFloat.setAttribute("aria-expanded", isExpanded);
+    menu.setAttribute("aria-hidden", !isExpanded);
+});
+
+/* --------------------
+    ALTO CONTRASTE
+---------------------*/
+const contrasteBtn = document.getElementById("btn-contraste");
+
+contrasteBtn.addEventListener("click", () => {
+    document.body.classList.toggle("high-contrast");
+    localStorage.setItem("contraste",
+        document.body.classList.contains("high-contrast") ? "on" : "off"
+    );
+});
+
+/* --------------------
+    TAMANHO DA FONTE
+---------------------*/
+document.getElementById("btn-font-aumentar").onclick = () => {
+    fonte += 0.1;
+    if (fonte > 2) fonte = 2; // Limite máximo para evitar quebra de layout
+    document.documentElement.style.fontSize = fonte + "em";
+    localStorage.setItem("fontSize", fonte);
+};
+
+document.getElementById("btn-font-diminuir").onclick = () => {
+    fonte -= 0.1;
+    if (fonte < 0.7) fonte = 0.7; // Limite mínimo
+    document.documentElement.style.fontSize = fonte + "em";
+    localStorage.setItem("fontSize", fonte);
+};
+
+/* --------------------
+    RESETAR
+---------------------*/
+document.getElementById("btn-font-reset").onclick = () => {
+    // Resetar Fonte
+    fonte = 1;
+    document.documentElement.style.fontSize = "1em";
+    localStorage.setItem("fontSize", fonte);
+
+    // Resetar Alto Contraste
+    document.body.classList.remove("high-contrast");
+    localStorage.setItem("contraste", "off");
+};
+</script>
+
+<script>
+    // 1. Seleciona todas as bandeiras (as novas imagens <img>)
+    const languageButtons = document.querySelectorAll('.flag-icon');
+    const languageForm = document.getElementById('language-form');
+    const languageCodeInput = document.getElementById('language-code-input');
+
+    // 2. Adiciona o evento de clique a cada bandeira
+    languageButtons.forEach(flagIcon => {
+        flagIcon.addEventListener('click', function() {
+            // Obtém o código do idioma do atributo data-lang da imagem clicada
+            const selectedLang = this.dataset.lang;
+            
+            // 3. Define o valor do input hidden do formulário
+            languageCodeInput.value = selectedLang;
+            
+            // 4. Envia o formulário do Django para mudar o idioma
+            languageForm.submit();
+        });
+    });
+</script>
+
+<script>
+    const toggle = document.querySelector(".menu-toggle");
+    const navLeft = document.querySelector(".nav-left");
+    const navRight = document.querySelector(".nav-right");
+
+    toggle.addEventListener("click", () => {
+        navLeft.classList.toggle("active");
+        navRight.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

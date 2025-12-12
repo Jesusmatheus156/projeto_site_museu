@@ -1,0 +1,1002 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-11 22:38-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+#: base/models.py:15
+msgid "Rascunho"
+msgstr ""
+
+#: base/models.py:16
+msgid "Publicado"
+msgstr ""
+
+#: base/models.py:19
+msgid "Título da Notícia"
+msgstr ""
+
+#: base/models.py:20 base/models.py:109
+msgid "URL amigável (deixe em branco para gerar automaticamente)"
+msgstr ""
+
+#: base/models.py:25
+msgid "Chamada/Subtítulo (Impacto)"
+msgstr ""
+
+#: base/models.py:28
+msgid ""
+"Texto curto (máx. 300 caracteres) que resume a notícia e atrai o leitor. "
+"Aparece logo abaixo do título principal."
+msgstr ""
+
+#: base/models.py:32
+msgid "Imagem de Capa"
+msgstr ""
+
+#: base/models.py:39
+msgid "Legenda da Imagem de Capa (Alt Text)"
+msgstr ""
+
+#: base/models.py:40
+msgid "Descrição curta da imagem (importante para SEO e acessibilidade)."
+msgstr ""
+
+#: base/models.py:46
+msgid "Fonte/Crédito da Imagem de Capa"
+msgstr ""
+
+#: base/models.py:49
+msgid "Conteúdo Completo (Texto, Imagens, Formatação)"
+msgstr ""
+
+#: base/models.py:59
+msgid "Criado Por"
+msgstr ""
+
+#: base/models.py:61
+msgid "Data de Criação"
+msgstr ""
+
+#: base/models.py:65 base/templates/base/detalhe_noticia.html:26
+msgid "Última Modificação"
+msgstr ""
+
+#: base/models.py:73
+msgid "Modificado Por"
+msgstr ""
+
+#: base/models.py:77 base/templates/base/search_results.html:66
+msgid "Notícia"
+msgstr ""
+
+#: base/models.py:78 base/templates/base/noticias.html:10
+msgid "Notícias"
+msgstr ""
+
+#: base/models.py:102
+msgid "Monografia"
+msgstr ""
+
+#: base/models.py:103
+msgid "Revista"
+msgstr ""
+
+#: base/models.py:104
+msgid "Dissertação"
+msgstr ""
+
+#: base/models.py:105
+msgid "Geral/Outros"
+msgstr ""
+
+#: base/models.py:108
+msgid "Título do Artigo"
+msgstr ""
+
+#: base/models.py:110
+msgid "Autor(es)"
+msgstr ""
+
+#: base/models.py:113
+msgid "Ano de Publicação Original (Ex: 2023)"
+msgstr ""
+
+#: base/models.py:114
+msgid "O ano em que o artigo foi efetivamente publicado."
+msgstr ""
+
+#: base/models.py:121
+msgid "Tipo de Publicação"
+msgstr ""
+
+#: base/models.py:126
+msgid "Link Externo da Pesquisa (URL)"
+msgstr ""
+
+#: base/models.py:127
+msgid "Insira o link completo (ex: https://revista.exemplo.com.br/artigo/xyz)"
+msgstr ""
+
+#: base/models.py:130
+msgid "Resumo e Contexto (com formatação)"
+msgstr ""
+
+#: base/models.py:131
+msgid "Data de Cadastro"
+msgstr ""
+
+#: base/models.py:139 base/templates/base/search_results.html:86
+msgid "Artigo de Pesquisa"
+msgstr ""
+
+#: base/models.py:140
+msgid "Artigos de Pesquisa"
+msgstr ""
+
+#: base/models.py:152
+msgid "Ex: Até 35 pessoas - COM EDUCADOR"
+msgstr ""
+
+#: base/models.py:157
+msgid "Tipo de Visita"
+msgstr ""
+
+#: base/models.py:158
+msgid "Tipos de Visita"
+msgstr ""
+
+#: base/models.py:168
+msgid "Quantos grupos podem agendar neste mesmo horário."
+msgstr ""
+
+#: base/models.py:171
+msgid "Horário Disponível"
+msgstr ""
+
+#: base/models.py:172
+msgid "Horários Disponíveis"
+msgstr ""
+
+#: base/models.py:180
+msgid "Pendente"
+msgstr ""
+
+#: base/models.py:181
+msgid "Notificado"
+msgstr ""
+
+#: base/models.py:182
+msgid "Confirmado"
+msgstr ""
+
+#: base/models.py:183
+msgid "Cancelado"
+msgstr ""
+
+#: base/models.py:195
+msgid "Visitantes (Inteira)"
+msgstr ""
+
+#: base/models.py:196
+msgid "Visitantes (Meia-Entrada)"
+msgstr ""
+
+#: base/models.py:197
+msgid "Visitantes (Gratuidade)"
+msgstr ""
+
+#: base/templates/base/acervo.html:9
+msgid "Acervo"
+msgstr ""
+
+#: base/templates/base/acervo.html:17
+msgid ""
+"Explore os artefatos que materializam a resistência do Povo Tapuia Paiacu. "
+"Cada peça lítica, cada fragmento cerâmico e cada instrumento sagrado foi "
+"encontrado em Apodi e região, sendo preservado com zelo pelas famílias da "
+"comunidade. Estes objetos não são apenas vestígios do passado; são as provas "
+"vivas e pulsantes da nossa ancestralidade milenar."
+msgstr ""
+
+#: base/templates/base/acervo.html:23
+msgid "Cachimbos de madeira"
+msgstr ""
+
+#: base/templates/base/acervo.html:24
+msgid "Artefato etnográfico: conexão social e espiritual do povo Paiacu."
+msgstr ""
+
+#: base/templates/base/acervo.html:25
+msgid ""
+"Artefato Etnográfico (madeira, geralmente cabaça ou barro). Estes cachimbos "
+"são utilizados em rituais e momentos de socialização, representando a "
+"conexão com a espiritualidade e a tradição dos Tapuia Paiacu."
+msgstr ""
+
+#: base/templates/base/acervo.html:37
+msgid "Cumbuca de Argila"
+msgstr ""
+
+#: base/templates/base/acervo.html:38
+msgid "Fragmento cerâmico que atesta a arte da olaria e padrões ancestrais."
+msgstr ""
+
+#: base/templates/base/acervo.html:39
+msgid ""
+"Fragmento Cerâmico Arqueológico. Este caco é uma evidência da avançada arte "
+"da cerâmica praticada pelos ancestrais. Os detalhes decorativos, quando "
+"presentes, oferecem pistas sobre a cultura material, as técnicas de cozedura "
+"e os padrões estéticos utilizados na região."
+msgstr ""
+
+#: base/templates/base/acervo.html:44 base/templates/base/acervo.html:57
+#: base/templates/base/acervo.html:70 base/templates/base/acervo.html:83
+#: base/templates/base/acervo.html:97
+msgid "Ver detalhes +"
+msgstr ""
+
+#: base/templates/base/acervo.html:50
+msgid "Fotografia de Luiza Cantofa"
+msgstr ""
+
+#: base/templates/base/acervo.html:51
+msgid "Retrato em homenagem à líder histórica da revolta de 1825."
+msgstr ""
+
+#: base/templates/base/acervo.html:52
+msgid ""
+"Retrato Histórico. Uma homenagem à grande líder Luiza Cantofa, fundamental "
+"na revolta indígena de 1825. Esta imagem, ou representação, simboliza a "
+"resistência, liderança feminina e a luta incansável pela manutenção do "
+"território e identidade do povo Paiacu."
+msgstr ""
+
+#: base/templates/base/acervo.html:63
+msgid "Machadinha Polida (Pedra)"
+msgstr ""
+
+#: base/templates/base/acervo.html:64
+msgid ""
+"Ferramenta lítica polida, essencial na subsistência e trabalho na terra."
+msgstr ""
+
+#: base/templates/base/acervo.html:65
+msgid ""
+"Artefato Lítico Polido. Uma machadinha confeccionada em pedra, utilizada "
+"para o trabalho na terra, corte de madeira e rituais. Sua técnica de "
+"polimento reflete o conhecimento ancestral e a adaptação dos povos indígenas "
+"ao ambiente, sendo uma peça-chave na compreensão da subsistência na região."
+msgstr ""
+
+#: base/templates/base/acervo.html:76
+msgid "Preguiça feita de coco"
+msgstr ""
+
+#: base/templates/base/acervo.html:77
+msgid "Artesanato figurativo que expressa a conexão com a fauna local."
+msgstr ""
+
+#: base/templates/base/acervo.html:78
+msgid ""
+"Artesanato Etnográfico (fibra/coco). Representação figurativa de uma "
+"preguiça, feita artesanalmente utilizando o coco ou outros materiais da "
+"natureza. Peças como esta destacam a capacidade artística do povo Tapuia "
+"Paiacu e sua profunda conexão com a fauna e o ecossistema local."
+msgstr ""
+
+#: base/templates/base/acervo.html:90
+msgid "Pilão feito de pedra"
+msgstr ""
+
+#: base/templates/base/acervo.html:91
+msgid "Instrumento lítico robusto, símbolo da culinária e vida comunitária."
+msgstr ""
+
+#: base/templates/base/acervo.html:92
+msgid ""
+"Instrumento Lítico de Moagem. Um pilão robusto feito de pedra, essencial "
+"para o processamento de alimentos, como grãos e raízes. Este artefato é um "
+"símbolo da culinária e da vida comunitária, e sua presença no acervo atesta "
+"a tradição milenar de preparo de alimentos no território."
+msgstr ""
+
+#: base/templates/base/acervo.html:105
+msgid "Viva a experiência completa"
+msgstr ""
+
+#: base/templates/base/acervo.html:114
+msgid "Agendar Visita!!"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:142
+msgid "Atenção: Fluxo de Agendamento"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:144
+msgid ""
+"A submissão do formulário representa apenas a intenção de agendamento para o "
+"dia e horário selecionados. A confirmação não é automática."
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:145
+msgid ""
+"Nossa equipe entrará em contato em horário comercial, em até 3 dias úteis, "
+"para a confirmação final e os próximos passos."
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:148
+msgid "Agende sua Visita"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:149
+msgid "Selecione um dia no calendário para ver os horários disponíveis."
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:182
+msgid "SOLICITAR AGENDAMENTO"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:186
+msgid "Horário:"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:190
+msgid "Qual o tipo de visita?"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:193
+msgid "Público Geral/Familiar"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:197
+msgid "Escolar/Institucional"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:201
+msgid "Preencha seus dados de contato:"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:204
+msgid "Nome e sobrenome"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:208
+msgid "Celular/WhatsApp (com DDD)"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:215
+msgid "Nome da Escola/Instituição"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:216
+msgid "Ex: Escola Estadual João da Silva"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:217
+msgid "Este campo é obrigatório para agendamentos institucionais."
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:220
+msgid "Detalhes da visita:"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:224
+msgid "Público Geral (R$ 15,00)"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:229
+msgid "Estudantes (R$ 10,00)"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:234
+msgid ""
+"Este é um formulário de reserva. O agendamento da visita só será confirmada "
+"após nosso contato, em até 3 dias."
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:237
+msgid "Cancelar"
+msgstr ""
+
+#: base/templates/base/agendar_visita.html:238
+msgid "Solicitar Agendamento"
+msgstr ""
+
+#: base/templates/base/base.html:9 base/templates/base/museu.html:112
+#: base/templates/base/museu.html:122
+msgid "Museu Indígena Luiza Cantofa"
+msgstr ""
+
+#: base/templates/base/base.html:49 base/templates/base/base.html:104
+msgid "INÍCIO"
+msgstr ""
+
+#: base/templates/base/base.html:50 base/templates/base/base.html:105
+msgid "MUSEU"
+msgstr ""
+
+#: base/templates/base/base.html:51 base/templates/base/base.html:106
+msgid "ACERVO"
+msgstr ""
+
+#: base/templates/base/base.html:56
+msgid "Logo Museu Luiza Cantofa"
+msgstr ""
+
+#: base/templates/base/base.html:65 base/templates/base/base.html:107
+msgid "NOTÍCIAS"
+msgstr ""
+
+#: base/templates/base/base.html:66 base/templates/base/base.html:108
+msgid "PESQUISA"
+msgstr ""
+
+#: base/templates/base/base.html:67 base/templates/base/base.html:109
+msgid "VISITA"
+msgstr ""
+
+#: base/templates/base/base.html:77
+msgid "Pesquisar"
+msgstr ""
+
+#: base/templates/base/base.html:98
+msgid "Logo Museu"
+msgstr ""
+
+#: base/templates/base/base.html:103
+msgid "NAVEGAÇÃO"
+msgstr ""
+
+#: base/templates/base/base.html:113
+msgid "CONTATO E LOCAL"
+msgstr ""
+
+#: base/templates/base/base.html:118
+msgid "Sítio Missão 1"
+msgstr ""
+
+#: base/templates/base/base.html:119
+msgid "Zona rural - Apodi/RN"
+msgstr ""
+
+#: base/templates/base/base.html:126
+msgid "Fale Conosco"
+msgstr ""
+
+#: base/templates/base/base.html:133
+msgid "SIGA-NOS"
+msgstr ""
+
+#: base/templates/base/base.html:145
+msgid "2025 CHCTPLA. Todos os direitos reservados."
+msgstr ""
+
+#: base/templates/base/base.html:146
+msgid "Desenvolvido em projeto de extensão do IFRN - Campus Apodi."
+msgstr ""
+
+#: base/templates/base/base.html:166
+msgid "Acessibilidade"
+msgstr ""
+
+#: base/templates/base/base.html:169
+msgid "Alto Contraste"
+msgstr ""
+
+#: base/templates/base/base.html:182
+msgid "Resetar"
+msgstr ""
+
+#: base/templates/base/detalhe_noticia.html:17
+#: base/templates/base/noticias.html:48
+msgid "Publicado em"
+msgstr ""
+
+#: base/templates/base/detalhe_noticia.html:20
+msgid "Criado por"
+msgstr ""
+
+#: base/templates/base/detalhe_noticia.html:43
+#: base/templates/base/museu.html:112 base/templates/base/museu.html:122
+msgid "Fonte"
+msgstr ""
+
+#: base/templates/base/detalhe_noticia.html:58
+msgid "Voltar para Notícias"
+msgstr ""
+
+#: base/templates/base/home.html:17
+msgid "Sobre o Museu"
+msgstr ""
+
+#: base/templates/base/home.html:18
+msgid ""
+"O Museu Indígena Luiza Cantofa, reconhecido como o primeiro museu indígena "
+"do Rio Grande do Norte. Fundado em 2013 pela liderança e cacica Lúcia Paiacu "
+"Tabajara, o museu é uma entidade cultural vinculada ao Centro Histórico "
+"Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA)."
+msgstr ""
+
+#: base/templates/base/home.html:19
+msgid ""
+"A instituição dedica-se ao resgate, preservação e reconstrução da cultura e "
+"memória ancestral do povo Tapuia Paiacu de Apodi. O nome homenageia Luiza "
+"Cantofa, uma das corajosas líderes indígenas dos Paiacus na histórica "
+"revolta de 1825. Somos a ponte entre o passado e o futuro, guardando a "
+"história viva de nosso povo."
+msgstr ""
+
+#: base/templates/base/home.html:29
+msgid "Nosso Acervo"
+msgstr ""
+
+#: base/templates/base/home.html:30
+msgid ""
+"Explore a rica memória material dos Tapuias Paiacus. Nosso acervo é composto "
+"por descobertas arqueológicas e etnográficas de Apodi e região. Você "
+"encontrará peças líticas milenares, como machadinhas, cachimbos e pilões de "
+"pedra, além de artefatos de cerâmica que contam a história da vida cotidiana "
+"e das tradições de nossos ancestrais."
+msgstr ""
+
+#: base/templates/base/home.html:31
+msgid ""
+"Cada peça é um portal para a resistência e a sabedoria do povo Paiacu. "
+"Convidamos você a mergulhar nesta jornada de conhecimento e identidade."
+msgstr ""
+
+#: base/templates/base/home.html:34
+msgid "Para ver mais do acervo:"
+msgstr ""
+
+#: base/templates/base/home.html:34
+msgid "Acessar o Acervo"
+msgstr ""
+
+#: base/templates/base/home.html:63
+msgid "Saiba mais sobre a história indígena"
+msgstr ""
+
+#: base/templates/base/home.html:70
+msgid "Apoiadores"
+msgstr ""
+
+#: base/templates/base/museu.html:92
+msgid "História"
+msgstr ""
+
+#: base/templates/base/museu.html:103
+msgid "CHCTPLA - Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi"
+msgstr ""
+
+#: base/templates/base/museu.html:105
+msgid ""
+"O Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA) é "
+"uma entidade cultural e de resistência indígena fundada em 2013, no "
+"município de Apodi (RN). Idealizado pela liderança Lúcia Paiacu Tabajara, o "
+"Centro nasceu com a missão de resgatar, proteger e difundir a memória "
+"ancestral do Povo Tapuia Paiacu, habitantes milenares do Território Pody."
+msgstr ""
+
+#: base/templates/base/museu.html:107
+msgid ""
+"Como mantenedora do Museu Indígena Luiza Cantofa — o primeiro museu indígena "
+"do Rio Grande do Norte —, a instituição atua na preservação de um vasto "
+"acervo arqueológico e na defesa do direito à autoafirmação e identidade "
+"étnica. Por meio de parcerias com universidades e escolas, o CHCTPLA promove "
+"uma educação crítica, recontando a história sob a perspectiva indígena e "
+"garantindo que o legado dos povos originários do sertão nordestino permaneça "
+"vivo e valorizado."
+msgstr ""
+
+#: base/templates/base/museu.html:111
+msgid "Imagem da trajetória do museu"
+msgstr ""
+
+#: base/templates/base/museu.html:112
+msgid "Associação reunida na frente do museu"
+msgstr ""
+
+#: base/templates/base/museu.html:118
+msgid "Luiza Cantofa: A Ancestralidade Presente"
+msgstr ""
+
+#: base/templates/base/museu.html:121
+msgid "Foto de Luiza Cantofa"
+msgstr ""
+
+#: base/templates/base/museu.html:122
+msgid "Luiza Cantofa"
+msgstr ""
+
+#: base/templates/base/museu.html:126
+msgid ""
+"Luiza Cantofa é a matriarca e símbolo maior da resistência do povo Tapuia "
+"Paiacu no sertão do Rio Grande do Norte. Sua trajetória é marcada pela "
+"coragem e liderança durante um dos períodos mais sangrentos da colonização, "
+"destacando-se como protagonista na histórica Revolta de 1825, ocorrida na "
+"região de Portalegre. Em um cenário de opressão e tentativas de extermínio "
+"das populações originárias, Luiza não se calou; ela guiou seu povo na luta "
+"pela defesa do território e pela liberdade, enfrentando as forças imperiais "
+"com bravura inigualável. Perseguida e brutalmente assassinada durante o "
+"massacre que se seguiu ao levante, ela se tornou uma mártir cuja história a "
+"narrativa oficial tentou apagar por quase dois séculos."
+msgstr ""
+
+#: base/templates/base/museu.html:128
+msgid ""
+"No entanto, sua memória sobreviveu através da tradição oral e da força das "
+"famílias que preservaram seu legado, renascendo hoje como a patrona do Museu "
+"Indígena Luiza Cantofa. Seu nome não representa apenas uma lembrança do "
+"passado, mas a vitalidade e a permanência da identidade indígena, inspirando "
+"as novas gerações a continuarem a luta pela autoafirmação e pelo direito de "
+"existir."
+msgstr ""
+
+#: base/templates/base/museu.html:135
+msgid "Nossa linha do tempo"
+msgstr ""
+
+#: base/templates/base/museu.html:140
+msgid "Lucia Paiacu Tabajara: A Idealizadora"
+msgstr ""
+
+#: base/templates/base/museu.html:144
+msgid ""
+"Lúcia Paiacu Tabajara é a principal liderança e idealizadora do renascimento "
+"cultural do Povo Tapuia Paiacu da Lagoa do Apodi. Sua jornada iniciou-se com "
+"uma busca pessoal por identidade que logo se transformou em uma missão "
+"coletiva: resgatar a história de seus antepassados. Após mais de uma década "
+"de pesquisas de campo, recolhimento de memórias orais e preservação de "
+"artefatos nas comunidades, ela fundou o Museu Indígena Luiza Cantofa, "
+"inicialmente abrigado em sua própria residência. Seu esforço incansável "
+"culminou na criação do Centro Histórico Cultural Tapuias Paiacus da Lagoa do "
+"Apodi (CHCTPLA) em 2013, institucionalizando a luta contra o apagamento "
+"histórico na região."
+msgstr ""
+
+#: base/templates/base/museu.html:146
+msgid ""
+"Além da gestão política e da conquista da sede definitiva do museu na "
+"histórica Casa das Máquinas, Lúcia atua como uma guardiã da sabedoria "
+"ancestral. É ela quem recebe estudantes, pesquisadores e visitantes, "
+"transmitindo através da oralidade a \"história não oficial\" do sertão e "
+"combatendo o silenciamento dos povos originários. Sua contribuição para a "
+"memória potiguar expandiu-se também para a literatura com o lançamento do "
+"livro \"Memórias de Uma Infância Feliz\" (2021), consolidando seu papel "
+"vital como educadora, matriarca e defensora dos direitos e da existência "
+"futura do seu povo."
+msgstr ""
+
+#: base/templates/base/museu.html:151
+msgid "Foto de Lúcia Cantufa"
+msgstr ""
+
+#: base/templates/base/museu.html:158
+msgid "Nossos Princípios e Valores"
+msgstr ""
+
+#: base/templates/base/museu.html:163
+msgid "Preservação Cultural"
+msgstr ""
+
+#: base/templates/base/museu.html:165
+msgid ""
+"Nossa missão é preservar, valorizar e difundir a memória e a identidade do "
+"povo Tapuia Paiacu, protegendo o patrimônio material e imaterial do "
+"território."
+msgstr ""
+
+#: base/templates/base/museu.html:171
+msgid "Educação e Pesquisa"
+msgstr ""
+
+#: base/templates/base/museu.html:173
+msgid ""
+"Buscamos ser referência na produção de conhecimento, contando a 'história "
+"não oficial' através de parcerias com escolas e universidades."
+msgstr ""
+
+#: base/templates/base/museu.html:179
+msgid "Respeito à Ancestralidade"
+msgstr ""
+
+#: base/templates/base/museu.html:181
+msgid ""
+"Nossos valores baseiam-se no respeito aos antepassados, na luta pela "
+"autoafirmação e no compromisso com o fortalecimento da comunidade indígena."
+msgstr ""
+
+#: base/templates/base/museu.html:188
+msgid "Aprofunde-se na História Indígena"
+msgstr ""
+
+#: base/templates/base/museu.html:193
+msgid "Artigos e Pesquisas"
+msgstr ""
+
+#: base/templates/base/museu.html:194
+msgid ""
+"Acesse nossa biblioteca de artigos, teses e trabalhos importantes que "
+"detalham a história indígena de Apodi e do Brasil."
+msgstr ""
+
+#: base/templates/base/museu.html:195
+msgid "Ver Artigos"
+msgstr ""
+
+#: base/templates/base/museu.html:200
+msgid "Visite o Museu"
+msgstr ""
+
+#: base/templates/base/museu.html:201
+msgid ""
+"Viva a experiência completa. Agende sua visita presencial para interagir com "
+"o acervo e a comunidade dos Tapuia Paiacu."
+msgstr ""
+
+#: base/templates/base/museu.html:202
+msgid "Agendar Visita"
+msgstr ""
+
+#: base/templates/base/noticias.html:18
+msgid "Últimas Notícias"
+msgstr ""
+
+#: base/templates/base/noticias.html:34
+msgid "Capa padrão para notícia"
+msgstr ""
+
+#: base/templates/base/noticias.html:56
+msgid "Nenhuma notícia publicada encontrada."
+msgstr ""
+
+#: base/templates/base/pesquisa.html:13
+msgid "Pesquisas"
+msgstr ""
+
+#: base/templates/base/pesquisa.html:20
+msgid "Pesquisas Relacionadas ao Museu"
+msgstr ""
+
+#: base/templates/base/pesquisa.html:35 base/templates/base/pesquisa.html:179
+msgid "Autor"
+msgstr ""
+
+#: base/templates/base/pesquisa.html:67
+msgid "Ver mais detalhes"
+msgstr ""
+
+#: base/templates/base/pesquisa.html:73
+msgid "Nenhum artigo de pesquisa encontrado."
+msgstr ""
+
+#: base/templates/base/pesquisa.html:123
+msgid "Acessar Pesquisa Completa"
+msgstr ""
+
+#: base/templates/base/pesquisa.html:126
+msgid "O link direto para a pesquisa não está disponível."
+msgstr ""
+
+#: base/templates/base/search_results.html:11
+msgid "Resultados da Pesquisa para"
+msgstr ""
+
+#: base/templates/base/search_results.html:15
+#, python-format
+msgid ""
+"\n"
+"                    1 resultado encontrado.\n"
+"                "
+msgid_plural ""
+"\n"
+"                    %(total)s resultados encontrados.\n"
+"                "
+msgstr[0] ""
+msgstr[1] ""
+
+#: base/templates/base/search_results.html:22
+msgid "Busca no Site"
+msgstr ""
+
+#: base/templates/base/search_results.html:23
+msgid "Digite um termo de pesquisa no campo acima para buscar em todo o site."
+msgstr ""
+
+#: base/templates/base/search_results.html:35
+#, python-format
+msgid "1 Página do Site Encontrada"
+msgid_plural "%(static_results|length)s Páginas do Site Encontradas"
+msgstr[0] ""
+msgstr[1] ""
+
+#: base/templates/base/search_results.html:46
+msgid "Página do Site"
+msgstr ""
+
+#: base/templates/base/search_results.html:57
+#, python-format
+msgid "1 Notícia Encontrada"
+msgid_plural "%(noticia_results|length)s Notícias Encontradas"
+msgstr[0] ""
+msgstr[1] ""
+
+#: base/templates/base/search_results.html:77
+#, python-format
+msgid "1 Artigo de Pesquisa Encontrado"
+msgid_plural "%(artigo_results|length)s Artigos de Pesquisa Encontrados"
+msgstr[0] ""
+msgstr[1] ""
+
+#: base/templates/base/search_results.html:97
+msgid "Desculpe, não encontramos resultados para"
+msgstr ""
+
+#: base/templates/base/search_results.html:100
+msgid "Tente usar termos mais genéricos."
+msgstr ""
+
+#: base/templates/base/visitar.html:11
+msgid "Visitação"
+msgstr ""
+
+#: base/templates/base/visitar.html:20
+msgid "Planeje sua visita"
+msgstr ""
+
+#: base/templates/base/visitar.html:24
+msgid "Horários de visitação"
+msgstr ""
+
+#: base/templates/base/visitar.html:25
+msgid "De segunda a sexta-feira"
+msgstr ""
+
+#: base/templates/base/visitar.html:25
+msgid "Das 8h às 17h"
+msgstr ""
+
+#: base/templates/base/visitar.html:25
+msgid "Última entrada às 16:00"
+msgstr ""
+
+#: base/templates/base/visitar.html:28
+msgid "Fechamento"
+msgstr ""
+
+#: base/templates/base/visitar.html:29
+msgid ""
+"O museu fecha aos sábados e domingos, bem como em feriados municipais e "
+"nacionais."
+msgstr ""
+
+#: base/templates/base/visitar.html:36
+msgid "Ingressos"
+msgstr ""
+
+#: base/templates/base/visitar.html:37
+msgid ""
+"Os ingressos são vendidos mediante agendamento prévio, com dia e horário "
+"escolhidos no calendário de agendamento. O pagamento deve ser realizado no "
+"dia da visita, podendo ser feito em dinheiro ou via Pix."
+msgstr ""
+
+#: base/templates/base/visitar.html:38
+msgid ""
+"O número máximo de pessoas por visita é de 35 e os valores dos ingressos são:"
+msgstr ""
+
+#: base/templates/base/visitar.html:40
+msgid "R$ 10,00 para estudantes (de instituições públicas ou privadas);"
+msgstr ""
+
+#: base/templates/base/visitar.html:41
+msgid "R$ 15,00 para público geral (pesquisadores, turistas, família, etc.)."
+msgstr ""
+
+#: base/templates/base/visitar.html:43
+msgid ""
+"Todas as visitas são guiadas, garantindo uma experiência completa e "
+"educativa."
+msgstr ""
+
+#: base/templates/base/visitar.html:47
+msgid "Orientações"
+msgstr ""
+
+#: base/templates/base/visitar.html:51
+msgid "Não tocar nos objetos expostos."
+msgstr ""
+
+#: base/templates/base/visitar.html:52
+msgid "Respeitar o meio ambiente e as áreas demarcadas para visitação."
+msgstr ""
+
+#: base/templates/base/visitar.html:53
+msgid ""
+"Não é permitido o consumo de alimentos ou bebidas nas áreas de exposição."
+msgstr ""
+
+#: base/templates/base/visitar.html:54
+msgid ""
+"Não é permitido correr, sentar no chão, ou encostar nas paredes das salas de "
+"exposição."
+msgstr ""
+
+#: base/templates/base/visitar.html:55
+msgid ""
+"Crianças devem estar sempre acompanhadas e sob a supervisão de um "
+"responsável."
+msgstr ""
+
+#: base/templates/base/visitar.html:60
+msgid "Localização"
+msgstr ""
+
+#: base/templates/base/visitar.html:62
+msgid ""
+"O Museu do Índio Luiza Cantofa está localizado no Sítio Missão 1, nº 1001, "
+"na zona rural de Apodi (RN), às margens da Lagoa do Apodi, próximo ao "
+"balneário da lagoa. Envolvido por um cenário de tranquilidade e natureza "
+"exuberante, o museu oferece uma experiência imersiva na história e cultura "
+"dos povos indígenas Tapuias Paiacus."
+msgstr ""
+
+#: base/templates/base/visitar.html:63
+msgid ""
+"A cidade de Apodi é reconhecida por suas tradições e paisagens naturais, "
+"tornando o museu um destino imperdível para quem deseja comprovar e "
+"valorizar a herança indígena do Rio Grande do Norte. O local está a cerca de "
+"80 km de Mossoró e 340 km da capital, Natal, com acesso facilitado pela "
+"BR-405."
+msgstr ""
+
+#: base/views.py:251
+msgid "O Museu - História e Missão"
+msgstr ""
+
+#: base/views.py:253
+msgid ""
+"Nossa história, missão e visão. Conheça a fundadora Luiza Cantofa, a "
+"trajetória do povo indígenda, e a importância da preservação cultural. Onde "
+"estamos, como chegamos aqui."
+msgstr ""
+
+#: base/views.py:257
+msgid "Acervo - Coleções e Artefatos"
+msgstr ""
+
+#: base/views.py:259
+msgid ""
+"Explore nossa coleção de artefatos, cerâmicas, indumentárias, e documentos "
+"históricos. Informações sobre catalogação, doações, pesquisa e exposições no "
+"acervo."
+msgstr ""
+
+#: base/views.py:263
+msgid "Visite-nos e Agendamento"
+msgstr ""
+
+#: base/views.py:265
+msgid ""
+"Informações sobre como agendar sua visita, horários disponíveis, preços "
+"(inteira, meia, gratuidade), regras de visitação e contato para "
+"agendamentos. Ver calendário."
+msgstr ""

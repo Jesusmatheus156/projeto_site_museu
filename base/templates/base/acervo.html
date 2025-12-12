@@ -1,0 +1,222 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+    <section class="hero" style="background-image: url('{% static "base/img/foto_carrossel3.jpg" %}');">
+        <div class="hero-overlay">
+            <h1>{% trans "Acervo" %}</h1>
+        </div>
+    </section>
+
+    <div class="grafismo-divider-full"></div>
+
+<div class="acervo-container">
+    <h1 class="pesquisa-header" style="text-align: center;">Nosso Acervo</h1>
+    <p>{% trans "Explore os artefatos que materializam a resistência do Povo Tapuia Paiacu. Cada peça lítica, cada fragmento cerâmico e cada instrumento sagrado foi encontrado em Apodi e região, sendo preservado com zelo pelas famílias da comunidade. Estes objetos não são apenas vestígios do passado; são as provas vivas e pulsantes da nossa ancestralidade milenar." %}</p>
+
+    <div class="acervo-grid">
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/cachimbos.jpg' %}" alt="Cachimbos de madeira">
+            <h3>{% trans "Cachimbos de madeira" %}</h3>
+            <p>{% trans "Artefato etnográfico: conexão social e espiritual do povo Paiacu." %}</p>
+            <p class="detail-text">{% trans "Artefato Etnográfico (madeira, geralmente cabaça ou barro). Estes cachimbos são utilizados em rituais e momentos de socialização, representando a conexão com a espiritualidade e a tradição dos Tapuia Paiacu." %}</p>
+            <a href="#" class="btn-details"
+                data-img="{% static 'base/img/cachimbos.jpg' %}"
+                data-title="Cachimbos de madeira"
+                data-text="Artefato Etnográfico (madeira, geralmente cabaça ou barro). Estes cachimbos são utilizados em rituais e momentos de socialização, representando a conexão com a espiritualidade e a tradição dos Tapuia Paiacu.">
+                Ver detalhes +
+            </a>
+
+        </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/pote.jpg' %}" alt="Pote de Argila (Fragmento)">
+            <h3>{% trans "Cumbuca de Argila" %}</h3>
+            <p>{% trans "Fragmento cerâmico que atesta a arte da olaria e padrões ancestrais." %}</p>
+            <p class="detail-text">{% trans "Fragmento Cerâmico Arqueológico. Este caco é uma evidência da avançada arte da cerâmica praticada pelos ancestrais. Os detalhes decorativos, quando presentes, oferecem pistas sobre a cultura material, as técnicas de cozedura e os padrões estéticos utilizados na região." %}</p>
+            <a href="#" class="btn-details"
+                data-img="{% static 'base/img/pote.jpg' %}"
+                data-title="Cumbuca de Argila"
+                data-text="Fragmento Cerâmico Arqueológico. Este caco é uma evidência da avançada arte da cerâmica praticada pelos ancestrais. Os detalhes decorativos, quando presentes, oferecem pistas sobre a cultura material, as técnicas de cozedura e os padrões estéticos utilizados na região.">
+                {% trans "Ver detalhes +" %}
+            </a>
+        </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/luizacantofa.jpg' %}" alt="Fotografia de Luiza Cantofa">
+            <h3>{% trans "Fotografia de Luiza Cantofa" %}</h3>
+            <p>{% trans "Retrato em homenagem à líder histórica da revolta de 1825." %}</p>
+            <p class="detail-text">{% trans "Retrato Histórico. Uma homenagem à grande líder Luiza Cantofa, fundamental na revolta indígena de 1825. Esta imagem, ou representação, simboliza a resistência, liderança feminina e a luta incansável pela manutenção do território e identidade do povo Paiacu." %}</p>
+            <a href="#" class="btn-details"
+                data-img="{% static 'base/img/luizacantofa.jpg' %}"
+                data-title="Fotografia de Luiza Cantofa"
+                data-text="Retrato Histórico. Uma homenagem à grande líder Luiza Cantofa, fundamental na revolta indígena de 1825. Esta imagem, ou representação, simboliza a resistência, liderança feminina e a luta incansável pela manutenção do território e identidade do povo Paiacu.">
+                {% trans "Ver detalhes +" %}
+            </a>
+        </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/machadinha.jpg' %}" alt="Machadinha Polida (Pedra)">
+            <h3>{% trans "Machadinha Polida (Pedra)" %}</h3>
+            <p>{% trans "Ferramenta lítica polida, essencial na subsistência e trabalho na terra." %}</p>
+            <p class="detail-text">{% trans "Artefato Lítico Polido. Uma machadinha confeccionada em pedra, utilizada para o trabalho na terra, corte de madeira e rituais. Sua técnica de polimento reflete o conhecimento ancestral e a adaptação dos povos indígenas ao ambiente, sendo uma peça-chave na compreensão da subsistência na região." %}</p>
+            <a href="#" class="btn-details"
+                data-img="{% static 'base/img/machadinha.jpg' %}"
+                data-title="Machadinha Polida (Pedra)"
+                data-text="Artefato Lítico Polido. Uma machadinha confeccionada em pedra, utilizada para o trabalho na terra, corte de madeira e rituais. Sua técnica de polimento reflete o conhecimento ancestral e a adaptação dos povos indígenas ao ambiente, sendo uma peça-chave na compreensão da subsistência na região.">
+                {% trans "Ver detalhes +" %}
+            </a>
+        </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/preguica.jpg' %}" alt="Preguiça feita de coco">
+            <h3>{% trans "Preguiça feita de coco" %}</h3>
+            <p>{% trans "Artesanato figurativo que expressa a conexão com a fauna local." %}</p>
+            <p class="detail-text">{% trans "Artesanato Etnográfico (fibra/coco). Representação figurativa de uma preguiça, feita artesanalmente utilizando o coco ou outros materiais da natureza. Peças como esta destacam a capacidade artística do povo Tapuia Paiacu e sua profunda conexão com a fauna e o ecossistema local." %}</p>
+            <a href="#" class="btn-details"
+                data-img="{% static 'base/img/preguica.jpg' %}"
+                data-title="Preguiça feita de coco"
+                data-text="Artesanato Etnográfico (fibra/coco). Representação figurativa de uma preguiça, feita artesanalmente utilizando o coco ou outros materiais da natureza. Peças como esta destacam a capacidade artística do povo Tapuia Paiacu e sua profunda conexão com a fauna e o ecossistema local.">
+                {% trans "Ver detalhes +" %}
+            </a>
+
+        </div>
+        
+        <div class="acervo-card">
+            <img src="{% static 'base/img/pilao.jpg' %}" alt="Pilão feito de pedra">
+            <h3>{% trans "Pilão feito de pedra" %}</h3>
+            <p>{% trans "Instrumento lítico robusto, símbolo da culinária e vida comunitária." %}</p>
+            <p class="detail-text">{% trans "Instrumento Lítico de Moagem. Um pilão robusto feito de pedra, essencial para o processamento de alimentos, como grãos e raízes. Este artefato é um símbolo da culinária e da vida comunitária, e sua presença no acervo atesta a tradição milenar de preparo de alimentos no território." %}</p>
+            <a href="#" class="btn-details"
+                data-img="{% static 'base/img/pilao.jpg' %}"
+                data-title="Pilão feito de pedra"
+                data-text="Instrumento Lítico de Moagem. Um pilão robusto feito de pedra, essencial para o processamento de alimentos, como grãos e raízes. Este artefato é um símbolo da culinária e da vida comunitária, e sua presença no acervo atesta a tradição milenar de preparo de alimentos no território.">
+                {% trans "Ver detalhes +" %}
+            </a>
+        </div>
+        
+    </div> 
+
+    <div class="acervo-final-msg" style="margin-top:60px;text-align:center;max-width:800px;margin-left:auto;margin-right:auto;">
+        <h2 style="font-family: 'Work Sans', serif; color: #7c0810; margin-bottom: 20px; font-weight: 600; font-size: 2.3em;">
+            {% trans "Viva a experiência completa" %}
+        </h2>
+
+        <p style="font-family: 'Work Sans', sans-serif; font-size:1.25em;line-height:1.7;margin-bottom:30px;">
+       {% trans "O que você vê aqui é apenas um vislumbre da nossa história. O Museu Indígena Luiza Cantofa guarda muitas outras relíquias que só podem 
+        ser compreendidas através do olhar e da escuta presencial. Venha ver mais de perto, visite-nos presencialmente." %}
+        </p>
+        
+        <a href="{% url 'agendar_visita' %}" class="btn-agendar">
+            <i class="fa-solid fa-calendar-days"></i> {% trans "Agendar Visita!!" %}
+        </a>
+    </div>
+</div> 
+
+<div id="modal-acervo" class="modal-overlay">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+
+        <div class="modal-image-container">
+            <img id="modal-img" src="" alt="">
+        </div>
+
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<script>
+const modal = document.getElementById("modal-acervo");
+const modalImg = document.getElementById("modal-img");
+const modalTitle = document.getElementById("modal-title");
+const modalText = document.getElementById("modal-text");
+const closeBtn = document.querySelector(".modal-close");
+const imageContainer = document.querySelector(".modal-image-container");
+
+let scale = 1;
+let posX = 0;
+let posY = 0;
+let isDragging = false;
+let startX, startY;
+
+document.querySelectorAll(".btn-details").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        modalImg.src = this.dataset.img;
+        modalTitle.innerText = this.dataset.title;
+        modalText.innerText = this.dataset.text;
+
+        // Reset zoom
+        scale = 1;
+        posX = 0;
+        posY = 0;
+        updateTransform();
+
+        modal.classList.add("active");
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", e => {
+    if (e.target.id === "modal-acervo") {
+        modal.classList.remove("active");
+    }
+});
+
+/* ✅ ZOOM COM SCROLL DO MOUSE */
+imageContainer.addEventListener("wheel", e => {
+    e.preventDefault();
+
+    scale += e.deltaY * -0.001;
+    scale = Math.min(Math.max(1, scale), 4);
+
+    updateTransform();
+});
+
+/* ✅ MOVE A IMAGEM LIVREMENTE */
+imageContainer.addEventListener("mousedown", e => {
+    isDragging = true;
+    startX = e.clientX - posX;
+    startY = e.clientY - posY;
+    imageContainer.style.cursor = "grabbing";
+});
+
+window.addEventListener("mouseup", () => {
+    isDragging = false;
+    imageContainer.style.cursor = "grab";
+});
+
+window.addEventListener("mousemove", e => {
+    if (!isDragging) return;
+
+    posX = e.clientX - startX;
+    posY = e.clientY - startY;
+    updateTransform();
+});
+
+function updateTransform() {
+    const containerRect = imageContainer.getBoundingClientRect();
+
+    const imgWidth = modalImg.offsetWidth * scale;
+    const imgHeight = modalImg.offsetHeight * scale;
+
+    const maxX = Math.max(0, (imgWidth - containerRect.width) / 2);
+    const maxY = Math.max(0, (imgHeight - containerRect.height) / 2);
+
+    posX = Math.min(maxX, Math.max(-maxX, posX));
+    posY = Math.min(maxY, Math.max(-maxY, posY));
+
+    modalImg.style.transform =
+        `translate(calc(-50% + ${posX}px), calc(-50% + ${posY}px)) scale(${scale})`;
+}
+</script>
+
+{% endblock %} 

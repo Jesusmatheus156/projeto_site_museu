@@ -1,0 +1,107 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="container search-results-container" style="padding-top: 50px; padding-bottom: 50px;">
+    
+    <header class="page-header">
+        {% if query %}
+            <h1 class="titulo-secao">
+                {% trans "Resultados da Pesquisa para" %} 
+                "<span class="highlight">{{ query }}</span>" 
+            </h1>
+            <p class="summary">
+                {% blocktrans with total=total_results count total=total_results %}
+                    1 resultado encontrado.
+                {% plural %}
+                    {{ total }} resultados encontrados.
+                {% endblocktrans %}
+            </p>
+        {% else %}
+            <h1 class="titulo-secao">{% trans "Busca no Site" %}</h1>
+            <p class="summary">{% trans "Digite um termo de pesquisa no campo acima para buscar em todo o site." %}</p>
+        {% endif %}
+    </header>
+
+    <section class="results-section">
+
+        {% if total_results > 0 %}
+            
+            {% if static_results %}
+            <div class="result-group">
+                <h2 class="group-title">
+                    <i class="fa-solid fa-file"></i> 
+                    {% blocktrans count static_results=static_results|length %}1 Página do Site Encontrada{% plural %}{{ static_results|length }} Páginas do Site Encontradas{% endblocktrans %}
+                </h2>
+                <ul class="result-list">
+                    {% for item in static_results %}
+                    <li class="result-item static-result">
+                        <a href="{% url item.url_name %}" class="result-link">
+                            <h3>{% trans item.title %}</h3>
+                            <p class="snippet">
+                                {{ item.snippet|truncatechars:150 }} 
+                            </p>
+                        </a>
+                        <span class="source-tag">{% trans "Página do Site" %}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if noticia_results %}
+            <div class="result-group">
+                <h2 class="group-title">
+                    <i class="fa-solid fa-newspaper"></i> 
+                    {% blocktrans count noticia_results=noticia_results|length %}1 Notícia Encontrada{% plural %}{{ noticia_results|length }} Notícias Encontradas{% endblocktrans %}
+                </h2>
+                <ul class="result-list">
+                    {% for item in noticia_results %}
+                    <li class="result-item news-result">
+                        <a href="{% url 'detalhe_noticia' slug=item.slug %}" class="result-link">
+                            <h3>{{ item.titulo }}</h3>
+                            <p class="snippet">{{ item.chamada|default:item.get_resumo|striptags|truncatechars:150 }}</p>
+                        </a>
+                        <span class="source-tag">{% trans "Notícia" %}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if artigo_results %}
+            <div class="result-group">
+                <h2 class="group-title">
+                    <i class="fa-solid fa-flask"></i> 
+                    {% blocktrans count artigo_results=artigo_results|length %}1 Artigo de Pesquisa Encontrado{% plural %}{{ artigo_results|length }} Artigos de Pesquisa Encontrados{% endblocktrans %}
+                </h2>
+                <ul class="result-list">
+                    {% for item in artigo_results %}
+                    <li class="result-item artigo-result">
+                        <a href="{{ item.link_externo_pesquisa }}" target="_blank" class="result-link">
+                            <h3>{{ item.titulo }} - {{ item.autor }}</h3>
+                            <p class="snippet">{{ item.resumo_detalhado|striptags|truncatechars:150 }}</p>
+                        </a>
+                        <span class="source-tag">{% trans "Artigo de Pesquisa" %} ({{ item.tipo_pesquisa }})</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+        {% elif query %}
+            <div class="no-results-message">
+                <p>
+                    <i class="fa-solid fa-exclamation-circle"></i> 
+                    {% trans "Desculpe, não encontramos resultados para" %} 
+                    "<span class="highlight">{{ query }}</span>"
+                </p>
+                <p>{% trans "Tente usar termos mais genéricos." %}</p>
+            </div>
+        {% endif %}
+
+    </section>
+
+</div>
+{% endblock %}

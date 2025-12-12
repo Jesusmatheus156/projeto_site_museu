@@ -1,0 +1,62 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="container detalhe-container" style="padding-top: 100px; padding-bottom: 50px;">
+
+    <article class="detalhe-noticia-content">
+        <h1>{{ noticia.titulo }}</h1>
+        
+        {% if noticia.chamada %}
+            <h2 class="detalhe-chamada">{{ noticia.chamada }}</h2>
+        {% endif %}
+        
+        <p class="meta-info">
+            {# Informação de Criação #}
+            {% trans "Publicado em" %}: {{ noticia.data_publicacao|date:"d \d\e F \d\e Y \à\s H:i" }}  
+            {% if noticia.created_by %}
+                <br>
+                {% trans "Criado por" %}: <strong>{{ noticia.created_by.get_full_name|default:noticia.created_by.username }}</strong>
+            {% endif %}
+            
+            {# Informação de Modificação #}
+            {% if noticia.modified_by and noticia.data_modificacao %}
+                <br>
+                {% trans "Última Modificação" %}: {{ noticia.data_modificacao|date:"d/m/Y \à\s H:i" }} por <strong>{{ noticia.modified_by.get_full_name|default:noticia.modified_by.username }}</strong>
+            {% endif %}
+        </p>
+
+        {% if noticia.capa %}
+            <figure class="capa-noticia-detalhe">
+                <img 
+                    src="{{ noticia.capa.url }}" 
+                    alt="{% if noticia.legenda_capa %}{{ noticia.legenda_capa }}{% else %}{{ noticia.titulo }}{% endif %}"
+                >
+            
+                {% if noticia.legenda_capa or noticia.fonte_capa %}
+                <figcaption class="caption-capa">
+                    {% if noticia.legenda_capa %}
+                        <span class="legenda">{{ noticia.legenda_capa }}</span>
+                    {% endif %}
+                    {% if noticia.fonte_capa %}
+                        <span class="fonte"> | {% trans "Fonte" %}: {{ noticia.fonte_capa }}</span>
+                    {% endif %}
+                </figcaption>
+                {% endif %}
+            </figure>
+        {% endif %}
+        
+        <div class="conteudo-noticia-full">
+            {# Conteúdo Rich Text do CKEditor #}
+            {{ noticia.conteudo|safe }} 
+        </div>
+
+    </article>
+    
+    <a href="{% url 'noticias' %}" class="btn-voltar bottom-link">
+        &leftarrow; {% trans "Voltar para Notícias" %}
+    </a>
+
+</div>
+{% endblock %}

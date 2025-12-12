@@ -1,0 +1,210 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    /* Estilos básicos para a Timeline (Mova para style.css se for complexo) */
+    .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: #7c0810; /* Cor da sua marca */
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+    }
+    .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #7c0810;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .left {
+        left: 0;
+    }
+    .right {
+        left: 50%;
+    }
+    .right::after {
+        left: -8px;
+    }
+    .timeline-item-content {
+        padding: 20px 30px;
+        background-color: #f4f4f4;
+        position: relative;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .timeline-item-content h3 {
+        color: #7c0810;
+        margin-bottom: 5px;
+    }
+
+    /* Mobile adjustments for timeline */
+    @media screen and (max-width: 600px) {
+        .timeline::after {
+            left: 31px;
+        }
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        .timeline-item::before {
+            left: 60px;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #f4f4f4 transparent transparent;
+        }
+        .left::after, .right::after {
+            left: 15px;
+        }
+        .right {
+            left: 0%;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section class="history-banner" style="background-image: url('{% static 'base/img/Banner_Museu.jpg' %}');">
+    <div class="history-banner-overlay">
+        <h1>{% trans "História" %}</h1>
+    </div>
+</section>
+
+<div class="grafismo-divider-full"></div>
+
+<div class="page-container">
+
+    <section class="history-section">
+        <div class="history-content-grid">
+            <div class="history-text">
+                <h2 class="titulo-secao">{% trans "CHCTPLA - Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi" %}</h2>
+                <p>
+                    {% trans "O Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA) é uma entidade cultural e de resistência indígena fundada em 2013, no município de Apodi (RN). Idealizado pela liderança Lúcia Paiacu Tabajara, o Centro nasceu com a missão de resgatar, proteger e difundir a memória ancestral do Povo Tapuia Paiacu, habitantes milenares do Território Pody." %}
+                    <br><br>
+                    {% trans "Como mantenedora do Museu Indígena Luiza Cantofa — o primeiro museu indígena do Rio Grande do Norte —, a instituição atua na preservação de um vasto acervo arqueológico e na defesa do direito à autoafirmação e identidade étnica. Por meio de parcerias com universidades e escolas, o CHCTPLA promove uma educação crítica, recontando a história sob a perspectiva indígena e garantindo que o legado dos povos originários do sertão nordestino permaneça vivo e valorizado." %}
+                </p>
+            </div>
+            <div class="history-image">
+                <img src="{% static 'base/img/chctpla.jpg' %}" alt="{% trans 'Imagem da trajetória do museu' %}">
+                <p style="text-align: center;">{% trans "Associação reunida na frente do museu" %} | {% trans "Fonte" %}: {% trans "Museu Indígena Luiza Cantofa" %}.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="biography-section">
+        <h2 class="titulo-secao">{% trans "Luiza Cantofa: A Ancestralidade Presente" %}</h2>
+        <div class="content-reverse-grid">
+            <div class="biography-image">
+                <img src="{% static 'base/img/luizacantofa_nova.jpg' %}" alt="{% trans 'Foto de Luiza Cantofa' %}">
+                <p style="text-align: center;">{% trans "Luiza Cantofa" %} | {% trans "Fonte" %}: {% trans "Museu Indígena Luiza Cantofa" %}.</p>
+            </div>
+            <div class="biography-text" style="text-align: justify;">
+                <p>
+                    {% trans "Luiza Cantofa é a matriarca e símbolo maior da resistência do povo Tapuia Paiacu no sertão do Rio Grande do Norte. Sua trajetória é marcada pela coragem e liderança durante um dos períodos mais sangrentos da colonização, destacando-se como protagonista na histórica Revolta de 1825, ocorrida na região de Portalegre. Em um cenário de opressão e tentativas de extermínio das populações originárias, Luiza não se calou; ela guiou seu povo na luta pela defesa do território e pela liberdade, enfrentando as forças imperiais com bravura inigualável. Perseguida e brutalmente assassinada durante o massacre que se seguiu ao levante, ela se tornou uma mártir cuja história a narrativa oficial tentou apagar por quase dois séculos." %}
+                    <br><br>
+                    {% trans "No entanto, sua memória sobreviveu através da tradição oral e da força das famílias que preservaram seu legado, renascendo hoje como a patrona do Museu Indígena Luiza Cantofa. Seu nome não representa apenas uma lembrança do passado, mas a vitalidade e a permanência da identidade indígena, inspirando as novas gerações a continuarem a luta pela autoafirmação e pelo direito de existir." %}
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <h2 class="titulo-secao">{% trans "Nossa linha do tempo" %}</h2>
+        <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vRAS5MS4qOlMzluZpui3qJ3fPsqGfwOx9YKUx6mBLs6e32_6sNaREyZPziTWiv4hS-RGGeBp4Tw9Kdm&font=Default&lang=pt-br&initial_zoom=2&width=100%25&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+    </section>
+
+    <section class="idealizadora-section">
+        <h2 class="titulo-secao">{% trans "Lucia Paiacu Tabajara: A Idealizadora" %}</h2>
+        <div class="history-content-grid">
+            <div class="history-text">
+                <p>
+                    {% trans "Lúcia Paiacu Tabajara é a principal liderança e idealizadora do renascimento cultural do Povo Tapuia Paiacu da Lagoa do Apodi. Sua jornada iniciou-se com uma busca pessoal por identidade que logo se transformou em uma missão coletiva: resgatar a história de seus antepassados. Após mais de uma década de pesquisas de campo, recolhimento de memórias orais e preservação de artefatos nas comunidades, ela fundou o Museu Indígena Luiza Cantofa, inicialmente abrigado em sua própria residência. Seu esforço incansável culminou na criação do Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA) em 2013, institucionalizando a luta contra o apagamento histórico na região." %}
+                    <br><br>
+                    {% trans 'Além da gestão política e da conquista da sede definitiva do museu na histórica Casa das Máquinas, Lúcia atua como uma guardiã da sabedoria ancestral. É ela quem recebe estudantes, pesquisadores e visitantes, transmitindo através da oralidade a "história não oficial" do sertão e combatendo o silenciamento dos povos originários. Sua contribuição para a memória potiguar expandiu-se também para a literatura com o lançamento do livro "Memórias de Uma Infância Feliz" (2021), consolidando seu papel vital como educadora, matriarca e defensora dos direitos e da existência futura do seu povo.' %}
+                    <br><br>
+                </p>
+            </div>
+            <div class="history-image">
+                <img src="{% static 'base/img/foto_lucia.jpg' %}" alt="{% trans 'Foto de Lúcia Cantufa' %}">
+                <p style="text-align: center;">Lúcia Paiacu Tabajara | Fonte: Museu Indígena Luiza Cantofa.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="principles-section">
+            <h2 class="titulo-secao" style="text-align: center;">{% trans "Nossos Princípios e Valores" %}</h2>
+
+            <div class="cards-container">
+                <div class="card-mvv">
+                    <i class="fa-solid fa-tree"></i>
+                    <h3>{% trans "Preservação Cultural" %}</h3>
+                    <p>
+                        {% trans "Nossa missão é preservar, valorizar e difundir a memória e a identidade do povo Tapuia Paiacu, protegendo o patrimônio material e imaterial do território." %}
+                    </p>
+                </div>
+
+                <div class="card-mvv">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h3>{% trans "Educação e Pesquisa" %}</h3>
+                    <p>
+                        {% trans "Buscamos ser referência na produção de conhecimento, contando a 'história não oficial' através de parcerias com escolas e universidades." %}
+                    </p>
+                </div>
+
+                <div class="card-mvv">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <h3>{% trans "Respeito à Ancestralidade" %}</h3>
+                    <p>
+                        {% trans "Nossos valores baseiam-se no respeito aos antepassados, na luta pela autoafirmação e no compromisso com o fortalecimento da comunidade indígena." %}
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    <section class="cta-section">
+        <h2 class="titulo-secao">{% trans "Aprofunde-se na História Indígena" %}</h2>
+        <div class="cta-cards-container">
+            
+            <div class="cta-card">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h3>{% trans "Artigos e Pesquisas" %}</h3>
+                <p>{% trans "Acesse nossa biblioteca de artigos, teses e trabalhos importantes que detalham a história indígena de Apodi e do Brasil." %}</p>
+                <a href="{% url 'pesquisa' %}" class="btn-cta">{% trans "Ver Artigos" %}</a>
+            </div>
+
+            <div class="cta-card">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h3>{% trans "Visite o Museu" %}</h3>
+                <p>{% trans "Viva a experiência completa. Agende sua visita presencial para interagir com o acervo e a comunidade dos Tapuia Paiacu." %}</p>
+                <a href="{% url 'visitar' %}" class="btn-cta">{% trans "Agendar Visita" %}</a>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,200 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <section class="hero" style="background-image: url('{% static "base/img/quadropadre.jpg" %}');">
+        <div class="hero-overlay">
+            <h1>{% trans "Pesquisas" %}</h1>
+        </div>
+    </section>
+
+    <div class="grafismo-divider-full"></div>
+
+<section class="pesquisa-header">
+    <h1>{% trans "Pesquisas Relacionadas ao Museu" %}</h1>
+</section>
+
+<main class="pesq-container" id="pesqContainer">
+
+    {# Loop sobre os artigos da página atual (page_obj) #}
+    {% for artigo in page_obj %}
+        <div 
+            class="pesq-card" 
+            data-category="{{ artigo.tipo_pesquisa|default:'geral' }}"
+        >
+            
+            <h2 class="titulo">{{ artigo.titulo }}</h2>
+            
+            <p class="autor">
+                {% trans "Autor" %}: <strong>{{ artigo.autor }}</strong>
+                
+                {# Lógica de Fallback para o Ano: Prioriza ano_publicacao_artigo. #}
+                {% if artigo.ano_publicacao_artigo or artigo.data_publicacao %}
+                    {% with ano_publicacao_final=artigo.ano_publicacao_artigo|default:artigo.data_publicacao|date:"Y" %}
+                        {% if ano_publicacao_final %}
+                            <span class="ano-autor-separador">|</span>
+                            <span class="ano-autor-inline">{{ ano_publicacao_final }}</span>
+                        {% endif %}
+                    {% endwith %}
+                {% endif %}
+            </p>
+            
+            <p class="resumo-curto">
+                {# CORREÇÃO: Aplica |safe para decodificar entidades HTML após remover tags. #}
+                {% with resumo_sem_tags=artigo.resumo_detalhado|striptags %}
+                    {{ resumo_sem_tags|safe|truncatechars:150 }}
+                {% endwith %}
+            </p>
+            
+            <button 
+                class="btn-details mt-3"
+                data-bs-toggle="modal" 
+                data-bs-target="#resumoModal"
+                data-titulo="{{ artigo.titulo|escapejs }}"
+                data-autor="{{ artigo.autor|escapejs }}"
+                data-ano="{% if artigo.ano_publicacao_artigo %}{{ artigo.ano_publicacao_artigo }}{% else %}{{ artigo.data_publicacao|date:'Y' }}{% endif %}"
+                {# CRÍTICO: Usa |safe para garantir que as tags (incluindo justificação) sejam passadas #}
+                data-resumo="{{ artigo.resumo_detalhado|safe }}" 
+                data-link="{% if artigo.link_externo_pesquisa %}{{ artigo.link_externo_pesquisa }}{% else %}#{% endif %}"
+                data-link-disponivel="{% if artigo.link_externo_pesquisa %}true{% else %}false{% endif %}"
+            >
+                {% trans "Ver mais detalhes" %}
+            </button>
+            
+        </div>
+    {% empty %}
+        <div class="col-12 text-center" style="grid-column: 1 / -1;">
+            <div class="alert alert-info">{% trans "Nenhum artigo de pesquisa encontrado." %}</div>
+        </div>
+    {% endfor %}
+
+</main>
+
+{# SISTEMA DE PAGINAÇÃO #}
+{% if page_obj.has_other_pages %}
+<nav class="pagination-container" aria-label="Navegação de Pesquisas">
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Anterior">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% for i in page_obj.paginator.page_range %}
+            {% if page_obj.number == i %}
+            <li class="page-item active" aria-current="page"><span class="page-link">{{ i }}</span></li>
+            {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Próxima">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
+
+<div class="modal fade" id="resumoModal" tabindex="-1" aria-labelledby="resumoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resumoModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-meta-info" id="modal-meta-info"></p>
+                <div id="modal-resumo-completo" class="resumo-completo"></div>
+                <div class="link-area mt-4 pt-3 border-top">
+                    <a id="modal-link-externo" href="#" target="_blank" class="btn btn-success w-100">
+                        <i class="fa-solid fa-external-link-alt"></i> {% trans "Acessar Pesquisa Completa" %}
+                    </a>
+                    <p id="modal-link-indisponivel" class="text-danger mt-2 text-center small" style="display:none;">
+                        {% trans "O link direto para a pesquisa não está disponível." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Função utilitária para decodificar entidades HTML. 
+    // Isso resolve o problema de caracteres ilegíveis no resumo.
+    function decodeHtml(html) {
+        var txt = document.createElement("textarea");
+        txt.innerHTML = html;
+        return txt.value;
+    }
+
+    // ----------------------------------------------------
+    // LÓGICA DO MODAL 
+    // ----------------------------------------------------
+    const resumoModal = document.getElementById('resumoModal');
+    resumoModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget;
+        
+        const titulo = button.getAttribute('data-titulo');
+        const autor = button.getAttribute('data-autor');
+        const ano = button.getAttribute('data-ano');
+        // CRÍTICO: Pega o conteúdo Rich Text escapado
+        const resumoComTagsEscapado = button.getAttribute('data-resumo'); 
+        const link = button.getAttribute('data-link');
+        const linkDisponivel = button.getAttribute('data-link-disponivel') === 'true';
+
+        // DECODIFICAÇÃO CRÍTICA: Decodifica a string antes de inseri-la como HTML
+        const resumoDecodificado = decodeHtml(resumoComTagsEscapado);
+        
+        // Atualiza o conteúdo do modal
+        const modalTitle = resumoModal.querySelector('.modal-title');
+        const modalMetaInfo = resumoModal.querySelector('#modal-meta-info');
+        const modalResumo = resumoModal.querySelector('#modal-resumo-completo');
+        const modalLink = resumoModal.querySelector('#modal-link-externo');
+        const modalLinkIndisponivel = resumoModal.querySelector('#modal-link-indisponivel');
+
+        modalTitle.textContent = titulo;
+        
+        // Exibição do Autor e Ano no Modal 
+        // Usamos uma string de template para facilitar a tradução
+        const metaTemplate = `{0}: <strong>{1}</strong> | {2}`;
+        const metaInfo = metaTemplate
+            .replace('{0}', '{% trans "Autor" %}')
+            .replace('{1}', autor)
+            .replace('{2}', ano);
+            
+        modalMetaInfo.innerHTML = metaInfo;
+        
+        // INSERÇÃO CORRIGIDA: Insere o conteúdo decodificado como HTML
+        modalResumo.innerHTML = resumoDecodificado; 
+
+        // Lógica do Link
+        if (linkDisponivel) {
+            modalLink.href = link;
+            modalLink.style.display = 'block';
+            modalLinkIndisponivel.style.display = 'none';
+        } else {
+            modalLink.style.display = 'none';
+            modalLinkIndisponivel.style.display = 'block';
+        }
+    });
+
+</script>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{# Este bloco insere o conteúdo principal dentro da tag <main> do base.html #}
+{% block content %}
+    <section class="hero" style="background-image: url('{% static "base/img/NovaImgTelaHome.jpg" %}');">
+        <div class="hero-overlay"></div>
+    </section>
+    <div class="grafismo-divider-full"></div>
+    <section class="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="{% static 'base/img/placa.jpg' %}" alt="Placa do Museu Luiza Cantofa">                
+            </div>
+            <div class="about-text">
+                <h2>{% trans "Sobre o Museu" %}</h2>
+                    <p>{% trans "O Museu Indígena Luiza Cantofa, reconhecido como o primeiro museu indígena do Rio Grande do Norte. Fundado em 2013 pela liderança e cacica Lúcia Paiacu Tabajara, o museu é uma entidade cultural vinculada ao Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA)." %}
+                    <br>{% trans "A instituição dedica-se ao resgate, preservação e reconstrução da cultura e memória ancestral do povo Tapuia Paiacu de Apodi. O nome homenageia Luiza Cantofa, uma das corajosas líderes indígenas dos Paiacus na histórica revolta de 1825. Somos a ponte entre o passado e o futuro, guardando a história viva de nosso povo." %}
+                    </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="exhibitions">
+        <div class="exhibitions-content">
+            <div class="about-text">
+                <h2>{% trans "Nosso Acervo" %}</h2>
+                    <p>{% trans "Explore a rica memória material dos Tapuias Paiacus. Nosso acervo é composto por descobertas arqueológicas e etnográficas de Apodi e região. Você encontrará peças líticas milenares, como machadinhas, cachimbos e pilões de pedra, além de artefatos de cerâmica que contam a história da vida cotidiana e das tradições de nossos ancestrais." %}
+                    <br>{% trans "Cada peça é um portal para a resistência e a sabedoria do povo Paiacu. Convidamos você a mergulhar nesta jornada de conhecimento e identidade." %}
+                    </p>
+                    <p class="exhibitions-more">
+                        {% trans "Para ver mais do acervo:" %} <a href="{% url 'acervo' %}" class="acervo-link">{% trans "Acessar o Acervo" %}</a>
+                    </p>
+            </div>
+            <div class="exhibition-image">
+                <img src="{% static 'base/img/IMG_20250915_134749.jpg' %}" alt="A morte do Padre Filipe Bourel">
+            </div>
+        </div>
+    </section>
+
+        <!-- SEÇÃO COM IMAGEM DE FUNDO + VÍDEO SOBREPOSTO -->
+    <section class="video-section">
+        <div class="video-overlay"></div>
+
+        <div class="video-container">
+            <iframe
+                class="video-embed"
+                id="hero-video"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/AkXISOwzh9c?autoplay=0&mute=0&playsinline=1&loop=1&controls=1&rel=0&enablejsapi=1&playlist=AkXISOwzh9c"
+                title="YouTube video player"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <h6>
+            <a class="video-title" href="{% url 'museu' %}">{% trans "Saiba mais sobre a história indígena" %}</a>
+        </h6>
+    </section>
+
+
+    <section>
+
+        <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:2.5em;text-align:center;margin-top:10px;">{% trans "Apoiadores" %}</h2>
+
+        <div class="partners-logos" style="max-width:1000px; margin: auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:30px;align-items:center;justify-items:center;">
+
+            <div class="partner-logo" style="width:100%;max-width:200px;display:flex;align-items:center;justify-content:center;">
+                <img src="{% static 'base/img/Apodi - Logo_Color Hor.png' %}" alt="IFRN Logo" style="width:100%;height:auto;object-fit:contain;">
+            </div>
+
+            <div class="partner-logo" style="width:100%;max-width:200px;display:flex;align-items:center;justify-content:center;">
+                <img src="{% static 'base/img/logo_CHCTPLA.png' %}" alt="CHCTPLA Logo" style="width:700px;height:auto;object-fit:contain;">
+            </div>
+
+            <div class="partner-logo" style="width:100%;max-width:200px;display:flex;align-items:center;justify-content:center;">
+                <img src="{% static 'base/img/LOGOMARCA_UERN_PNG/LOGOMARCA_UERN_Azul Azure.png' %}" alt="UERN Logo" style="width:100%;height:auto;object-fit:contain;">
+            </div>
+
+            <div class="partner-logo" style="width:100%;max-width:200px;display:flex;align-items:center;justify-content:center;">
+                <img src="{% static 'base/img/Logo_ufersa.jpg' %}" alt="UFERSA Logo" style="width:100%;height:auto;object-fit:contain;">
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

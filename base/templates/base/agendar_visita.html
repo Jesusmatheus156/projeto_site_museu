@@ -1,0 +1,426 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block extra_css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    /* 1. CORREÇÃO FORÇADA E ULTRA-AGRESSIVA DO OVERLAY (MANTIDA) */
+    /* Sobrescreve o zoom de 0.90 do style.css que quebra o fixed positioning */
+    html, body { 
+        height: 100% !important; 
+        width: 100% !important; 
+        margin: 0 !important; 
+        padding: 0 !important; 
+        min-height: 100vh !important;
+        overflow-x: hidden !important; 
+        overflow-y: auto !important; 
+        zoom: 1.0 !important; 
+        transform: none !important;
+    }
+    
+    .modal-backdrop {
+        position: fixed !important; 
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important; 
+        height: 100vh !important; 
+        z-index: 1050 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+    
+    /* --------------------------------- */
+    /* 2. ESTILOS DO CALENDÁRIO (PERSONALIZADO) */
+    /* --------------------------------- */
+    
+    #calendar { 
+        max-width: 900px; 
+        margin: 40px auto; 
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Cabeçalho (Mês/Botões) */
+    .fc-header-toolbar {
+        margin-bottom: 1.5em !important;
+        border-bottom: 2px solid #7c0810; /* Linha de destaque */
+        padding-bottom: 10px;
+    }
+    
+    /* Título do Mês */
+    .fc-toolbar-title {
+        font-family: 'Saira Condensed', sans-serif;
+        font-weight: 700;
+        color: #7c0810;
+        font-size: 1.8em;
+    }
+
+    /* Botões de Navegação (Mês/Hoje) */
+    .fc-button-primary {
+        background-color: #7c0810 !important;
+        border-color: #7c0810 !important;
+        color: #ffffff !important;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        transition: background-color 0.2s;
+    }
+
+    .fc-button-primary:hover:not(:disabled) {
+        background-color: #a0101b !important;
+        border-color: #a0101b !important;
+    }
+
+    /* Dias da Semana (Tabela) */
+    .fc-col-header-cell {
+        background-color: #f8f8f8;
+        color: #555;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9em;
+    }
+
+    /* Células de Data */
+    .fc-daygrid-day-frame {
+        background-color: #ffffff; 
+        border: 1px solid #eee;
+        cursor: pointer;
+    }
+    
+    /* Efeito de hover nos dias clicáveis */
+    .fc-daygrid-day-frame:hover {
+        background-color: #fff9f9;
+        box-shadow: 0 0 5px rgba(124, 8, 16, 0.3);
+    }
+
+    /* Dias fora do mês atual */
+    .fc-day-other {
+        background-color: #fafafa;
+        opacity: 0.8;
+    }
+    
+    /* Dias no passado (Não clicáveis) */
+    .fc-day-past { 
+        background-color: #e5e5e5 !important; 
+        opacity: 0.7;
+        cursor: default !important;
+    }
+    
+    /* Estilo do Timeslot (Melhorado) */
+    .timeslot { 
+        border: 1px solid #7c0810; 
+        padding: 15px; 
+        margin-bottom: 10px; 
+        border-radius: 8px; 
+        background-color: #fff9f9; /* Fundo leve */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+    }
+    
+    .timeslot:hover {
+        transform: translateY(-2px);
+    }
+    
+    .book-btn {
+        background-color: #7c0810 !important;
+        border-color: #7c0810 !important;
+    }
+    .book-btn:hover {
+        background-color: #a0101b !important;
+        border-color: #a0101b !important;
+    }
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container" style="padding-top: 80px;">
+<div class="alert alert-danger border-start border-5 border-danger p-3 mb-5" role="alert" style="background-color: #fff9f9; max-width: 800px; mix-width: 500px; margin: auto;">
+        <h4 class="alert-heading text-danger">⚠️ {% trans "Atenção: Fluxo de Agendamento" %}</h4>
+        <ul class="list-unstyled mb-0">
+            <li><i class="bi bi-info-circle-fill me-2 text-primary" style="text-align: justify;"></i> {% trans "A submissão do formulário representa apenas a intenção de agendamento para o dia e horário selecionados. A confirmação não é automática." %}</li>
+            <li><i class="bi bi-clock-fill me-2 text-primary" style="text-align: justify;"></i> {% trans "Nossa equipe entrará em contato em horário comercial, em até 3 dias úteis, para a confirmação final e os próximos passos." %}</li>
+
+        </ul>
+    </div>   <h1 class="my-4 text-center">{% trans "Agende sua Visita" %}</h1>
+    <p class="text-center text-muted">{% trans "Selecione um dia no calendário para ver os horários disponíveis." %} </p>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div id="calendar"></div>
+    <div id="timeslot-container" class="mt-4 mb-5"></div>
+
+    <form id="booking-form" method="POST" action="{% url 'processar_agendamento' %}" class="d-none">
+        {% csrf_token %}
+        <input type="hidden" name="horario_id" id="form-horario-id">
+        <input type="hidden" name="tipo_visita" id="form-tipo-visita"> 
+        <input type="hidden" name="quantidade_geral" id="form-quantidade-geral"> 
+        <input type="hidden" name="quantidade_estudantes" id="form-quantidade-estudantes"> 
+        <input type="hidden" name="nome_instituicao" id="form-instituicao">
+        <input type="hidden" name="nome_completo" id="form-nome">
+        <input type="hidden" name="telefone" id="form-telefone">
+    </form>
+</div>
+{% endblock %}
+
+
+{% block extra_js %}
+<div class="modal fade" id="agendamentoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"> 
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="agendamentoModalLabel">{% trans "SOLICITAR AGENDAMENTO" %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>{% trans "Horário:" %}</strong> <span id="modal-horario-texto" class="fw-bold"></span></p>
+                <hr>
+                
+                <div class="mb-4">
+                    <h6>{% trans "Qual o tipo de visita?" %} <span class="text-danger">*</span></h6>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoVisita" id="visitaGeral" value="geral" checked>
+                        <label class="form-check-label" for="visitaGeral">{% trans "Público Geral/Familiar" %}</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoVisita" id="visitaInstitucional" value="institucional">
+                        <label class="form-check-label" for="visitaInstitucional">{% trans "Escolar/Institucional" %}</label>
+                    </div>
+                </div>
+                
+                <h6>{% trans "Preencha seus dados de contato:" %}</h6>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="modal-nome" class="form-label">{% trans "Nome e sobrenome" %} <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="modal-nome" required>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="modal-telefone" class="form-label">{% trans "Celular/WhatsApp (com DDD)" %}<span class="text-danger">*</span></label>
+                        <input type="tel" class="form-control" id="modal-telefone" required placeholder="(84) 12345-6789">
+                    </div>
+                </div>
+                <hr>
+
+                <div id="instituicaoContainer" class="mb-3 mt-3 d-none"> 
+                    <label for="modal-instituicao" class="form-label">{% trans "Nome da Escola/Instituição" %} <span class="text-danger">*</span>:</label>
+                    <input type="text" class="form-control" id="modal-instituicao" placeholder="{% trans "Ex: Escola Estadual João da Silva" %}">
+                    <div class="form-text">{% trans "Este campo é obrigatório para agendamentos institucionais." %}</div>
+                </div>
+
+                <h6>{% trans "Detalhes da visita:" %} <small class="text-muted fw-bold">(Total: <span id="total-visitantes-modal">1</span> pessoa)</small></h6>
+                
+                <div class="row">
+                    <div id="campoGeralContainer" class="col-sm-12 mb-3">
+                        <label for="modal-qtd-geral" class="form-label">{% trans "Público Geral (R$ 15,00)" %}</label>
+                        <input type="number" class="form-control visitor-input" id="modal-qtd-geral" value="1" min="0"> 
+                    </div>
+                    
+                    <div id="campoEstudantesContainer" class="col-sm-12 mb-3 d-none">
+                        <label for="modal-qtd-estudantes" class="form-label">{% trans "Estudantes (R$ 10,00)" %}</label>
+                        <input type="number" class="form-control visitor-input" id="modal-qtd-estudantes" value="0" min="0">
+                    </div>
+                    
+                </div>
+                <div class="form-text text-danger fw-bold">{% trans "Este é um formulário de reserva. O agendamento da visita só será confirmada após nosso contato, em até 3 dias." %}</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Cancelar" %}</button>
+                <button type="button" class="btn btn-primary" id="confirmar-agendamento-btn">{% trans "Solicitar Agendamento" %}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/locales-all.global.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const calendarEl = document.getElementById('calendar');
+    const timeslotContainer = document.getElementById('timeslot-container');
+    const bookingForm = document.getElementById('booking-form');
+    const agendamentoModal = new bootstrap.Modal(document.getElementById('agendamentoModal'));
+    const confirmarBtn = document.getElementById('confirmar-agendamento-btn');
+    let currentHorarioId = null;
+    const CAPACIDADE_MAXIMA = 35; 
+
+    // Elementos do Modal
+    const radioGeral = document.getElementById('visitaGeral');
+    const radioInstitucional = document.getElementById('visitaInstitucional');
+    const instituicaoContainer = document.getElementById('instituicaoContainer');
+    const inputInstituicao = document.getElementById('modal-instituicao');
+    
+    const campoGeralContainer = document.getElementById('campoGeralContainer');
+    const inputQtdGeral = document.getElementById('modal-qtd-geral');
+    
+    const campoEstudantesContainer = document.getElementById('campoEstudantesContainer');
+    const inputQtdEstudantes = document.getElementById('modal-qtd-estudantes');
+    const totalVisitantesModal = document.getElementById('total-visitantes-modal');
+    
+    // --- Lógica de Visibilidade Condicional ---
+    
+    // Gerencia a visibilidade de Instituição e dos campos de quantidade
+    function toggleVisitorFields() {
+        const isInstitucional = radioInstitucional.checked;
+        
+        // 1.1 Instituição: Aparece se for institucional
+        if (isInstitucional) {
+            instituicaoContainer.classList.remove('d-none');
+            inputInstituicao.required = true;
+        } else {
+            instituicaoContainer.classList.add('d-none');
+            inputInstituicao.required = false;
+        }
+
+        // 1.2 Campos de Quantidade: Apenas um dos dois é visível
+        if (isInstitucional) {
+            // Se for Institucional, mostra Estudantes e esconde Geral
+            campoEstudantesContainer.classList.remove('d-none');
+            campoGeralContainer.classList.add('d-none');
+            inputQtdGeral.value = 0; // Zera o campo escondido
+            inputQtdEstudantes.value = Math.max(1, parseInt(inputQtdEstudantes.value) || 1); // Garante 1 no campo visível
+        } else {
+            // Se for Geral, mostra Geral e esconde Estudantes
+            campoGeralContainer.classList.remove('d-none');
+            campoEstudantesContainer.classList.add('d-none');
+            inputQtdEstudantes.value = 0; // Zera o campo escondido
+            inputQtdGeral.value = Math.max(1, parseInt(inputQtdGeral.value) || 1); // Garante 1 no campo visível
+        }
+        
+        updateTotal(); // Atualiza o total exibido
+    }
+
+    radioGeral.addEventListener('change', toggleVisitorFields);
+    radioInstitucional.addEventListener('change', toggleVisitorFields);
+    
+    // 2. Atualiza o total de visitantes no modal
+    function updateTotal() {
+        const qtdGeral = parseInt(inputQtdGeral.value) || 0;
+        const qtdEstudantes = parseInt(inputQtdEstudantes.value) || 0;
+        const total = qtdGeral + qtdEstudantes;
+        totalVisitantesModal.innerText = total;
+    }
+    
+    inputQtdGeral.addEventListener('input', updateTotal);
+    inputQtdEstudantes.addEventListener('input', updateTotal);
+    
+    // Inicializa o estado ao abrir o modal
+    document.getElementById('agendamentoModal').addEventListener('show.bs.modal', function() {
+        // Reseta para o padrão (Geral) e chama a função de visibilidade
+        radioGeral.checked = true;
+        inputQtdGeral.max = CAPACIDADE_MAXIMA;
+        inputQtdEstudantes.max = CAPACIDADE_MAXIMA;
+        toggleVisitorFields(); 
+    });
+
+
+    // --- Inicialização do Calendário (Pt-Br) ---
+    const hoje = new Date();
+    const dataMinima = new Date(new Date().setDate(hoje.getDate() + 3));
+
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'pt-br', // Configuração para Português
+        headerToolbar: { left: 'prev', center: 'title', right: 'next' },
+        validRange: {
+            start: dataMinima.toISOString().split('T')[0]
+        },
+        dateClick: function(info) {
+            if (info.dayEl.classList.contains('fc-day-past')) return false;
+            let dataClicada = info.dateStr;
+            timeslotContainer.innerHTML = '<div class="text-center"><div class="spinner-border text-danger" role="status"></div></div>';
+            let apiUrl = `{% url 'api_horarios_do_dia' 'YYYY-MM-DD' %}`.replace('YYYY-MM-DD', dataClicada);
+            fetch(apiUrl).then(response => response.json()).then(data => {
+                timeslotContainer.innerHTML = '';
+                if(data && data.length > 0) {
+                    let dataFormatada = new Date(dataClicada + 'T00:00:00').toLocaleDateString('pt-BR');
+                    timeslotContainer.innerHTML = `<h3 class="mb-3">Horários disponíveis para ${dataFormatada}</h3>`;
+                    data.forEach(horario => {
+                        const horarioDiv = document.createElement('div');
+                        horarioDiv.className = 'timeslot d-flex justify-content-between align-items-center';
+                        // Usando CAPACIDADE_MAXIMA fixa
+                        horarioDiv.innerHTML = `<div><strong>${horario.titulo}</strong><br><small class="text-muted">${horario.hora_inicio} – ${horario.hora_fim} | ${horario.vagas} vaga(s) | Até ${CAPACIDADE_MAXIMA} pessoas</small></div><button class="btn btn-danger book-btn" data-horario-id="${horario.id}" data-horario-texto="${horario.hora_inicio} de ${dataFormatada}">Agendar</button>`;
+                        timeslotContainer.appendChild(horarioDiv);
+                    });
+                } else {
+                    timeslotContainer.innerHTML = '<div class="alert alert-info">Não há horários disponíveis para esta data.</div>';
+                }
+            });
+        }
+    });
+    calendar.render();
+    
+    timeslotContainer.addEventListener('click', function(event) {
+        if (event.target.classList.contains('book-btn')) {
+            currentHorarioId = event.target.dataset.horarioId;
+            document.getElementById('modal-horario-texto').innerText = event.target.dataset.horarioTexto;
+            agendamentoModal.show();
+        }
+    });
+
+    // --- LÓGICA DO BOTÃO DE CONFIRMAÇÃO ---
+    confirmarBtn.addEventListener('click', function() {
+        const nome = document.getElementById('modal-nome').value;
+        const telefone = document.getElementById('modal-telefone').value;
+        
+        const tipoVisita = document.querySelector('input[name="tipoVisita"]:checked').value;
+        const instituicao = document.getElementById('modal-instituicao').value;
+        
+        let qtdGeral = 0;
+        let qtdEstudantes = 0;
+
+        // Pega o valor do campo visível (o outro é zero)
+        if (tipoVisita === 'geral') {
+            qtdGeral = parseInt(inputQtdGeral.value) || 0;
+        } else { // institucional
+            qtdEstudantes = parseInt(inputQtdEstudantes.value) || 0;
+        }
+        
+        const totalVisitantes = qtdGeral + qtdEstudantes;
+
+        // Validação de campos obrigatórios
+        if (!nome || !telefone || totalVisitantes <= 0) {
+            alert('Por favor, preencha o Nome do Responsável, Telefone e informe ao menos 1 visitante.');
+            return;
+        }
+        
+        // Validação da capacidade máxima (35 pessoas)
+        if (totalVisitantes > CAPACIDADE_MAXIMA) {
+             alert(`A capacidade máxima por agendamento é de ${CAPACIDADE_MAXIMA} pessoas. Por favor, ajuste a quantidade.`);
+             return;
+        }
+
+        // Validação condicional da Instituição
+        if (tipoVisita === 'institucional' && !instituicao.trim()) {
+            alert('Para visitas escolares/institucionais, o Nome da Escola/Instituição é obrigatório.');
+            return;
+        }
+
+        // Passa os dados para o formulário hidden
+        document.getElementById('form-horario-id').value = currentHorarioId;
+        document.getElementById('form-nome').value = nome;
+        document.getElementById('form-telefone').value = telefone;
+        
+        // APENAS UM DESTES TERÁ VALOR > 0
+        document.getElementById('form-quantidade-geral').value = qtdGeral; 
+        document.getElementById('form-quantidade-estudantes').value = qtdEstudantes; 
+        
+        document.getElementById('form-instituicao').value = instituicao;
+        document.getElementById('form-tipo-visita').value = tipoVisita; 
+
+        bookingForm.submit();
+    });
+});
+</script>
+{% endblock %}
