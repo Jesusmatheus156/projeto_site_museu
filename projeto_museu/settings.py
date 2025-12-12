@@ -87,20 +87,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-USE_I18N = True
-
-USE_L10N = True
-
 LANGUAGE_CODE = 'pt-BR'
 TIME_ZONE = 'America/Sao_Paulo'
-
+USE_I18N = True
+USE_L10N = True
 USE_TZ = True
 
 # Definir os idiomas suportados
 LANGUAGES = [
-    ('pt-br', 'Português'),
-    ('en', 'English'),
-    ('es', 'Español'),
+    ('pt-br', _('Portuguese')),
+    ('en', _('English')),
+    ('es', _('Spanish')),
 ]
 
 LOCALE_PATHS = [
