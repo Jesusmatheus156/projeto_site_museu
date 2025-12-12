@@ -1,209 +1,209 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Translation of Project Museu to Spanish
+# Copyright (C) 2025
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Matheus <matheus@example.com>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-11 22:38-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-12-12 00:00-0300\n"
+"Last-Translator: Matheus <matheus@example.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
-"1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: base/models.py:15
 msgid "Rascunho"
-msgstr ""
+msgstr "Borrador"
 
 #: base/models.py:16
 msgid "Publicado"
-msgstr ""
+msgstr "Publicado"
 
 #: base/models.py:19
 msgid "Título da Notícia"
-msgstr ""
+msgstr "Título de la Noticia"
 
 #: base/models.py:20 base/models.py:109
 msgid "URL amigável (deixe em branco para gerar automaticamente)"
-msgstr ""
+msgstr "URL amigable (deje en blanco para generar automáticamente)"
 
 #: base/models.py:25
 msgid "Chamada/Subtítulo (Impacto)"
-msgstr ""
+msgstr "Titular/Subtítulo (Impacto)"
 
 #: base/models.py:28
 msgid ""
 "Texto curto (máx. 300 caracteres) que resume a notícia e atrai o leitor. "
 "Aparece logo abaixo do título principal."
 msgstr ""
+"Texto corto (máx. 300 caracteres) que resume la noticia y atrae al lector. "
+"Aparece justo debajo del título principal."
 
 #: base/models.py:32
 msgid "Imagem de Capa"
-msgstr ""
+msgstr "Imagen de Portada"
 
 #: base/models.py:39
 msgid "Legenda da Imagem de Capa (Alt Text)"
-msgstr ""
+msgstr "Leyenda de la Imagen de Portada (Texto Alt)"
 
 #: base/models.py:40
 msgid "Descrição curta da imagem (importante para SEO e acessibilidade)."
-msgstr ""
+msgstr "Descripción corta de la imagen (importante para SEO y accesibilidad)."
 
 #: base/models.py:46
 msgid "Fonte/Crédito da Imagem de Capa"
-msgstr ""
+msgstr "Fuente/Crédito de la Imagen"
 
 #: base/models.py:49
 msgid "Conteúdo Completo (Texto, Imagens, Formatação)"
-msgstr ""
+msgstr "Contenido Completo (Texto, Imágenes, Formato)"
 
 #: base/models.py:59
 msgid "Criado Por"
-msgstr ""
+msgstr "Creado Por"
 
 #: base/models.py:61
 msgid "Data de Criação"
-msgstr ""
+msgstr "Fecha de Creación"
 
 #: base/models.py:65 base/templates/base/detalhe_noticia.html:26
 msgid "Última Modificação"
-msgstr ""
+msgstr "Última Modificación"
 
 #: base/models.py:73
 msgid "Modificado Por"
-msgstr ""
+msgstr "Modificado Por"
 
 #: base/models.py:77 base/templates/base/search_results.html:66
 msgid "Notícia"
-msgstr ""
+msgstr "Noticia"
 
 #: base/models.py:78 base/templates/base/noticias.html:10
 msgid "Notícias"
-msgstr ""
+msgstr "Noticias"
 
 #: base/models.py:102
 msgid "Monografia"
-msgstr ""
+msgstr "Monografía"
 
 #: base/models.py:103
 msgid "Revista"
-msgstr ""
+msgstr "Revista"
 
 #: base/models.py:104
 msgid "Dissertação"
-msgstr ""
+msgstr "Disertación"
 
 #: base/models.py:105
 msgid "Geral/Outros"
-msgstr ""
+msgstr "General/Otros"
 
 #: base/models.py:108
 msgid "Título do Artigo"
-msgstr ""
+msgstr "Título del Artículo"
 
 #: base/models.py:110
 msgid "Autor(es)"
-msgstr ""
+msgstr "Autor(es)"
 
 #: base/models.py:113
 msgid "Ano de Publicação Original (Ex: 2023)"
-msgstr ""
+msgstr "Año de Publicación Original (Ej: 2023)"
 
 #: base/models.py:114
 msgid "O ano em que o artigo foi efetivamente publicado."
-msgstr ""
+msgstr "El año en que el artículo fue efectivamente publicado."
 
 #: base/models.py:121
 msgid "Tipo de Publicação"
-msgstr ""
+msgstr "Tipo de Publicación"
 
 #: base/models.py:126
 msgid "Link Externo da Pesquisa (URL)"
-msgstr ""
+msgstr "Enlace Externo de la Investigación (URL)"
 
 #: base/models.py:127
 msgid "Insira o link completo (ex: https://revista.exemplo.com.br/artigo/xyz)"
-msgstr ""
+msgstr "Inserte el enlace completo (ej: https://revista.ejemplo.com.br/articulo/xyz)"
 
 #: base/models.py:130
 msgid "Resumo e Contexto (com formatação)"
-msgstr ""
+msgstr "Resumen y Contexto (con formato)"
 
 #: base/models.py:131
 msgid "Data de Cadastro"
-msgstr ""
+msgstr "Fecha de Registro"
 
 #: base/models.py:139 base/templates/base/search_results.html:86
 msgid "Artigo de Pesquisa"
-msgstr ""
+msgstr "Artículo de Investigación"
 
 #: base/models.py:140
 msgid "Artigos de Pesquisa"
-msgstr ""
+msgstr "Artículos de Investigación"
 
 #: base/models.py:152
 msgid "Ex: Até 35 pessoas - COM EDUCADOR"
-msgstr ""
+msgstr "Ej: Hasta 35 personas - CON EDUCADOR"
 
 #: base/models.py:157
 msgid "Tipo de Visita"
-msgstr ""
+msgstr "Tipo de Visita"
 
 #: base/models.py:158
 msgid "Tipos de Visita"
-msgstr ""
+msgstr "Tipos de Visita"
 
 #: base/models.py:168
 msgid "Quantos grupos podem agendar neste mesmo horário."
-msgstr ""
+msgstr "Cuántos grupos pueden agendar en este mismo horario."
 
 #: base/models.py:171
 msgid "Horário Disponível"
-msgstr ""
+msgstr "Horario Disponible"
 
 #: base/models.py:172
 msgid "Horários Disponíveis"
-msgstr ""
+msgstr "Horarios Disponibles"
 
 #: base/models.py:180
 msgid "Pendente"
-msgstr ""
+msgstr "Pendiente"
 
 #: base/models.py:181
 msgid "Notificado"
-msgstr ""
+msgstr "Notificado"
 
 #: base/models.py:182
 msgid "Confirmado"
-msgstr ""
+msgstr "Confirmado"
 
 #: base/models.py:183
 msgid "Cancelado"
-msgstr ""
+msgstr "Cancelado"
 
 #: base/models.py:195
 msgid "Visitantes (Inteira)"
-msgstr ""
+msgstr "Visitantes (Entrada Completa)"
 
 #: base/models.py:196
 msgid "Visitantes (Meia-Entrada)"
-msgstr ""
+msgstr "Visitantes (Media Entrada)"
 
 #: base/models.py:197
 msgid "Visitantes (Gratuidade)"
-msgstr ""
+msgstr "Visitantes (Entrada Gratuita)"
 
 #: base/templates/base/acervo.html:9
 msgid "Acervo"
-msgstr ""
+msgstr "Colección"
 
 #: base/templates/base/acervo.html:17
 msgid ""
@@ -213,14 +213,19 @@ msgid ""
 "comunidade. Estes objetos não são apenas vestígios do passado; são as provas "
 "vivas e pulsantes da nossa ancestralidade milenar."
 msgstr ""
+"Explore los artefactos que materializan la resistencia del Pueblo Tapuia "
+"Paiacu. Cada pieza lítica, cada fragmento cerámico y cada instrumento "
+"sagrado fue encontrado en Apodi y la región, siendo preservado con celo por "
+"las familias de la comunidad. Estos objetos no son solo vestigios del "
+"pasado; son las pruebas vivas y pulsantes de nuestra ancestralidad milenaria."
 
 #: base/templates/base/acervo.html:23
 msgid "Cachimbos de madeira"
-msgstr ""
+msgstr "Pipas de madera"
 
 #: base/templates/base/acervo.html:24
 msgid "Artefato etnográfico: conexão social e espiritual do povo Paiacu."
-msgstr ""
+msgstr "Artefacto etnográfico: conexión social y espiritual del pueblo Paiacu."
 
 #: base/templates/base/acervo.html:25
 msgid ""
@@ -228,14 +233,17 @@ msgid ""
 "são utilizados em rituais e momentos de socialização, representando a "
 "conexão com a espiritualidade e a tradição dos Tapuia Paiacu."
 msgstr ""
+"Artefacto Etnográfico (madera, generalmente calabaza o barro). Estas pipas "
+"son utilizadas en rituales y momentos de socialización, representando la "
+"conexión con la espiritualidad y la tradición de los Tapuia Paiacu."
 
 #: base/templates/base/acervo.html:37
 msgid "Cumbuca de Argila"
-msgstr ""
+msgstr "Cuenco de Arcilla"
 
 #: base/templates/base/acervo.html:38
 msgid "Fragmento cerâmico que atesta a arte da olaria e padrões ancestrais."
-msgstr ""
+msgstr "Fragmento cerámico que atestigua el arte de la alfarería y patrones ancestrales."
 
 #: base/templates/base/acervo.html:39
 msgid ""
@@ -244,20 +252,25 @@ msgid ""
 "presentes, oferecem pistas sobre a cultura material, as técnicas de cozedura "
 "e os padrões estéticos utilizados na região."
 msgstr ""
+"Fragmento Cerámico Arqueológico. Este fragmento es una evidencia del "
+"avanzado arte de la cerámica practicado por los ancestros. Los detalles "
+"decorativos, cuando están presentes, ofrecen pistas sobre la cultura "
+"material, las técnicas de cocción y los patrones estéticos utilizados en la "
+"región."
 
 #: base/templates/base/acervo.html:44 base/templates/base/acervo.html:57
 #: base/templates/base/acervo.html:70 base/templates/base/acervo.html:83
 #: base/templates/base/acervo.html:97
 msgid "Ver detalhes +"
-msgstr ""
+msgstr "Ver detalles +"
 
 #: base/templates/base/acervo.html:50
 msgid "Fotografia de Luiza Cantofa"
-msgstr ""
+msgstr "Fotografía de Luiza Cantofa"
 
 #: base/templates/base/acervo.html:51
 msgid "Retrato em homenagem à líder histórica da revolta de 1825."
-msgstr ""
+msgstr "Retrato en homenaje a la líder histórica de la revuelta de 1825."
 
 #: base/templates/base/acervo.html:52
 msgid ""
@@ -266,15 +279,19 @@ msgid ""
 "resistência, liderança feminina e a luta incansável pela manutenção do "
 "território e identidade do povo Paiacu."
 msgstr ""
+"Retrato Histórico. Un homenaje a la gran líder Luiza Cantofa, fundamental en "
+"la revuelta indígena de 1825. Esta imagen, o representación, simboliza la "
+"resistencia, el liderazgo femenino y la lucha incansable por el "
+"mantenimiento del territorio y la identidad del pueblo Paiacu."
 
 #: base/templates/base/acervo.html:63
 msgid "Machadinha Polida (Pedra)"
-msgstr ""
+msgstr "Hachuela Pulida (Piedra)"
 
 #: base/templates/base/acervo.html:64
 msgid ""
 "Ferramenta lítica polida, essencial na subsistência e trabalho na terra."
-msgstr ""
+msgstr "Herramienta lítica pulida, esencial en la subsistencia y el trabajo en la tierra."
 
 #: base/templates/base/acervo.html:65
 msgid ""
@@ -283,14 +300,19 @@ msgid ""
 "polimento reflete o conhecimento ancestral e a adaptação dos povos indígenas "
 "ao ambiente, sendo uma peça-chave na compreensão da subsistência na região."
 msgstr ""
+"Artefacto Lítico Pulido. Una hachuela confeccionada en piedra, utilizada "
+"para el trabajo en la tierra, corte de madera y rituales. Su técnica de "
+"pulido refleja el conocimiento ancestral y la adaptación de los pueblos "
+"indígenas al ambiente, siendo una pieza clave en la comprensión de la "
+"subsistencia en la región."
 
 #: base/templates/base/acervo.html:76
 msgid "Preguiça feita de coco"
-msgstr ""
+msgstr "Perezoso hecho de coco"
 
 #: base/templates/base/acervo.html:77
 msgid "Artesanato figurativo que expressa a conexão com a fauna local."
-msgstr ""
+msgstr "Artesanía figurativa que expresa la conexión con la fauna local."
 
 #: base/templates/base/acervo.html:78
 msgid ""
@@ -299,14 +321,18 @@ msgid ""
 "natureza. Peças como esta destacam a capacidade artística do povo Tapuia "
 "Paiacu e sua profunda conexão com a fauna e o ecossistema local."
 msgstr ""
+"Artesanía Etnográfica (fibra/coco). Representación figurativa de un "
+"perezoso, hecha artesanalmente utilizando coco u otros materiales de la "
+"naturaleza. Piezas como esta destacan la capacidad artística del pueblo "
+"Tapuia Paiacu y su profunda conexión con la fauna y el ecosistema local."
 
 #: base/templates/base/acervo.html:90
 msgid "Pilão feito de pedra"
-msgstr ""
+msgstr "Mortero de piedra"
 
 #: base/templates/base/acervo.html:91
 msgid "Instrumento lítico robusto, símbolo da culinária e vida comunitária."
-msgstr ""
+msgstr "Instrumento lítico robusto, símbolo de la culinaria y vida comunitaria."
 
 #: base/templates/base/acervo.html:92
 msgid ""
@@ -315,215 +341,226 @@ msgid ""
 "símbolo da culinária e da vida comunitária, e sua presença no acervo atesta "
 "a tradição milenar de preparo de alimentos no território."
 msgstr ""
+"Instrumento Lítico de Molienda. Un mortero robusto hecho de piedra, esencial "
+"para el procesamiento de alimentos, como granos y raíces. Este artefacto es "
+"un símbolo de la culinaria y de la vida comunitaria, y su presencia en la "
+"colección atestigua la tradición milenaria de preparación de alimentos en el "
+"territorio."
 
 #: base/templates/base/acervo.html:105
 msgid "Viva a experiência completa"
-msgstr ""
+msgstr "Viva la experiencia completa"
 
 #: base/templates/base/acervo.html:114
 msgid "Agendar Visita!!"
-msgstr ""
+msgstr "¡Programar Visita!"
 
 #: base/templates/base/agendar_visita.html:142
 msgid "Atenção: Fluxo de Agendamento"
-msgstr ""
+msgstr "Atención: Flujo de Programación"
 
 #: base/templates/base/agendar_visita.html:144
 msgid ""
 "A submissão do formulário representa apenas a intenção de agendamento para o "
 "dia e horário selecionados. A confirmação não é automática."
 msgstr ""
+"El envío del formulario representa solo la intención de programar para el "
+"día y horario seleccionados. La confirmación no es automática."
 
 #: base/templates/base/agendar_visita.html:145
 msgid ""
 "Nossa equipe entrará em contato em horário comercial, em até 3 dias úteis, "
 "para a confirmação final e os próximos passos."
 msgstr ""
+"Nuestro equipo entrará en contacto en horario comercial, en hasta 3 días "
+"hábiles, para la confirmación final y los próximos pasos."
 
 #: base/templates/base/agendar_visita.html:148
 msgid "Agende sua Visita"
-msgstr ""
+msgstr "Programe su Visita"
 
 #: base/templates/base/agendar_visita.html:149
 msgid "Selecione um dia no calendário para ver os horários disponíveis."
-msgstr ""
+msgstr "Seleccione un día en el calendario para ver los horarios disponibles."
 
 #: base/templates/base/agendar_visita.html:182
 msgid "SOLICITAR AGENDAMENTO"
-msgstr ""
+msgstr "SOLICITAR PROGRAMACIÓN"
 
 #: base/templates/base/agendar_visita.html:186
 msgid "Horário:"
-msgstr ""
+msgstr "Horario:"
 
 #: base/templates/base/agendar_visita.html:190
 msgid "Qual o tipo de visita?"
-msgstr ""
+msgstr "¿Cuál es el tipo de visita?"
 
 #: base/templates/base/agendar_visita.html:193
 msgid "Público Geral/Familiar"
-msgstr ""
+msgstr "Público General/Familiar"
 
 #: base/templates/base/agendar_visita.html:197
 msgid "Escolar/Institucional"
-msgstr ""
+msgstr "Escolar/Institucional"
 
 #: base/templates/base/agendar_visita.html:201
 msgid "Preencha seus dados de contato:"
-msgstr ""
+msgstr "Complete sus datos de contacto:"
 
 #: base/templates/base/agendar_visita.html:204
 msgid "Nome e sobrenome"
-msgstr ""
+msgstr "Nombre y apellido"
 
 #: base/templates/base/agendar_visita.html:208
 msgid "Celular/WhatsApp (com DDD)"
-msgstr ""
+msgstr "Celular/WhatsApp (con código de área)"
 
 #: base/templates/base/agendar_visita.html:215
 msgid "Nome da Escola/Instituição"
-msgstr ""
+msgstr "Nombre de la Escuela/Institución"
 
 #: base/templates/base/agendar_visita.html:216
 msgid "Ex: Escola Estadual João da Silva"
-msgstr ""
+msgstr "Ej: Escuela Estatal João da Silva"
 
 #: base/templates/base/agendar_visita.html:217
 msgid "Este campo é obrigatório para agendamentos institucionais."
-msgstr ""
+msgstr "Este campo es obligatorio para programaciones institucionales."
 
 #: base/templates/base/agendar_visita.html:220
 msgid "Detalhes da visita:"
-msgstr ""
+msgstr "Detalles de la visita:"
 
 #: base/templates/base/agendar_visita.html:224
 msgid "Público Geral (R$ 15,00)"
-msgstr ""
+msgstr "Público General (R$ 15,00)"
 
 #: base/templates/base/agendar_visita.html:229
 msgid "Estudantes (R$ 10,00)"
-msgstr ""
+msgstr "Estudiantes (R$ 10,00)"
 
 #: base/templates/base/agendar_visita.html:234
 msgid ""
 "Este é um formulário de reserva. O agendamento da visita só será confirmada "
 "após nosso contato, em até 3 dias."
 msgstr ""
+"Este es un formulario de reserva. La programación de la visita solo será "
+"confirmada tras nuestro contacto, en hasta 3 días."
 
 #: base/templates/base/agendar_visita.html:237
 msgid "Cancelar"
-msgstr ""
+msgstr "Cancelar"
 
 #: base/templates/base/agendar_visita.html:238
 msgid "Solicitar Agendamento"
-msgstr ""
+msgstr "Solicitar Programación"
 
 #: base/templates/base/base.html:9 base/templates/base/museu.html:112
 #: base/templates/base/museu.html:122
 msgid "Museu Indígena Luiza Cantofa"
-msgstr ""
+msgstr "Museo Indígena Luiza Cantofa"
 
 #: base/templates/base/base.html:49 base/templates/base/base.html:104
 msgid "INÍCIO"
-msgstr ""
+msgstr "INICIO"
 
 #: base/templates/base/base.html:50 base/templates/base/base.html:105
 msgid "MUSEU"
-msgstr ""
+msgstr "MUSEO"
 
 #: base/templates/base/base.html:51 base/templates/base/base.html:106
 msgid "ACERVO"
-msgstr ""
+msgstr "COLECCIÓN"
 
 #: base/templates/base/base.html:56
 msgid "Logo Museu Luiza Cantofa"
-msgstr ""
+msgstr "Logo Museo Luiza Cantofa"
 
 #: base/templates/base/base.html:65 base/templates/base/base.html:107
 msgid "NOTÍCIAS"
-msgstr ""
+msgstr "NOTICIAS"
 
 #: base/templates/base/base.html:66 base/templates/base/base.html:108
 msgid "PESQUISA"
-msgstr ""
+msgstr "INVESTIGACIÓN"
 
 #: base/templates/base/base.html:67 base/templates/base/base.html:109
 msgid "VISITA"
-msgstr ""
+msgstr "VISITA"
 
 #: base/templates/base/base.html:77
 msgid "Pesquisar"
-msgstr ""
+msgstr "Buscar"
 
 #: base/templates/base/base.html:98
 msgid "Logo Museu"
-msgstr ""
+msgstr "Logo Museo"
 
 #: base/templates/base/base.html:103
 msgid "NAVEGAÇÃO"
-msgstr ""
+msgstr "NAVEGACIÓN"
 
 #: base/templates/base/base.html:113
 msgid "CONTATO E LOCAL"
-msgstr ""
+msgstr "CONTACTO Y UBICACIÓN"
 
 #: base/templates/base/base.html:118
 msgid "Sítio Missão 1"
-msgstr ""
+msgstr "Sítio Missão 1"
 
 #: base/templates/base/base.html:119
 msgid "Zona rural - Apodi/RN"
-msgstr ""
+msgstr "Zona rural - Apodi/RN"
 
 #: base/templates/base/base.html:126
 msgid "Fale Conosco"
-msgstr ""
+msgstr "Hable con Nosotros"
 
 #: base/templates/base/base.html:133
 msgid "SIGA-NOS"
-msgstr ""
+msgstr "SÍGANOS"
 
 #: base/templates/base/base.html:145
 msgid "2025 CHCTPLA. Todos os direitos reservados."
-msgstr ""
+msgstr "2025 CHCTPLA. Todos los derechos reservados."
 
 #: base/templates/base/base.html:146
 msgid "Desenvolvido em projeto de extensão do IFRN - Campus Apodi."
-msgstr ""
+msgstr "Desarrollado en proyecto de extensión del IFRN - Campus Apodi."
 
 #: base/templates/base/base.html:166
 msgid "Acessibilidade"
-msgstr ""
+msgstr "Accesibilidad"
 
 #: base/templates/base/base.html:169
 msgid "Alto Contraste"
-msgstr ""
+msgstr "Alto Contraste"
 
 #: base/templates/base/base.html:182
 msgid "Resetar"
-msgstr ""
+msgstr "Restablecer"
 
 #: base/templates/base/detalhe_noticia.html:17
 #: base/templates/base/noticias.html:48
 msgid "Publicado em"
-msgstr ""
+msgstr "Publicado en"
 
 #: base/templates/base/detalhe_noticia.html:20
 msgid "Criado por"
-msgstr ""
+msgstr "Creado por"
 
 #: base/templates/base/detalhe_noticia.html:43
 #: base/templates/base/museu.html:112 base/templates/base/museu.html:122
 msgid "Fonte"
-msgstr ""
+msgstr "Fuente"
 
 #: base/templates/base/detalhe_noticia.html:58
 msgid "Voltar para Notícias"
-msgstr ""
+msgstr "Volver a Noticias"
 
 #: base/templates/base/home.html:17
 msgid "Sobre o Museu"
-msgstr ""
+msgstr "Sobre el Museo"
 
 #: base/templates/base/home.html:18
 msgid ""
@@ -532,6 +569,10 @@ msgid ""
 "Tabajara, o museu é uma entidade cultural vinculada ao Centro Histórico "
 "Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA)."
 msgstr ""
+"El Museo Indígena Luiza Cantofa, reconocido como el primer museo indígena de "
+"Rio Grande do Norte. Fundado en 2013 por la líder y cacica Lúcia Paiacu "
+"Tabajara, el museo es una entidad cultural vinculada al Centro Histórico "
+"Cultural Tapuias Paiacus de Lagoa do Apodi (CHCTPLA)."
 
 #: base/templates/base/home.html:19
 msgid ""
@@ -541,10 +582,15 @@ msgid ""
 "revolta de 1825. Somos a ponte entre o passado e o futuro, guardando a "
 "história viva de nosso povo."
 msgstr ""
+"La institución se dedica al rescate, preservación y reconstrucción de la "
+"cultura y memoria ancestral del pueblo Tapuia Paiacu de Apodi. El nombre "
+"homenajea a Luiza Cantofa, una de las valientes líderes indígenas de los "
+"Paiacus en la histórica revuelta de 1825. Somos el puente entre el pasado y "
+"el futuro, guardando la historia viva de nuestro pueblo."
 
 #: base/templates/base/home.html:29
 msgid "Nosso Acervo"
-msgstr ""
+msgstr "Nuestra Colección"
 
 #: base/templates/base/home.html:30
 msgid ""
@@ -554,36 +600,43 @@ msgid ""
 "pedra, além de artefatos de cerâmica que contam a história da vida cotidiana "
 "e das tradições de nossos ancestrais."
 msgstr ""
+"Explore la rica memoria material de los Tapuias Paiacus. Nuestra colección "
+"está compuesta por descubrimientos arqueológicos y etnográficos de Apodi y "
+"la región. Encontrará piezas líticas milenarias, como hachuelas, pipas y "
+"morteros de piedra, además de artefactos de cerámica que cuentan la historia "
+"de la vida cotidiana y de las tradiciones de nuestros ancestros."
 
 #: base/templates/base/home.html:31
 msgid ""
 "Cada peça é um portal para a resistência e a sabedoria do povo Paiacu. "
 "Convidamos você a mergulhar nesta jornada de conhecimento e identidade."
 msgstr ""
+"Cada pieza es un portal a la resistencia y la sabiduría del pueblo Paiacu. "
+"Lo invitamos a sumergirse en esta jornada de conocimiento e identidad."
 
 #: base/templates/base/home.html:34
 msgid "Para ver mais do acervo:"
-msgstr ""
+msgstr "Para ver más de la colección:"
 
 #: base/templates/base/home.html:34
 msgid "Acessar o Acervo"
-msgstr ""
+msgstr "Acceder a la Colección"
 
 #: base/templates/base/home.html:63
 msgid "Saiba mais sobre a história indígena"
-msgstr ""
+msgstr "Sepa más sobre la historia indígena"
 
 #: base/templates/base/home.html:70
 msgid "Apoiadores"
-msgstr ""
+msgstr "Apoyadores"
 
 #: base/templates/base/museu.html:92
 msgid "História"
-msgstr ""
+msgstr "Historia"
 
 #: base/templates/base/museu.html:103
 msgid "CHCTPLA - Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi"
-msgstr ""
+msgstr "CHCTPLA - Centro Histórico Cultural Tapuias Paiacus de Lagoa do Apodi"
 
 #: base/templates/base/museu.html:105
 msgid ""
@@ -593,6 +646,12 @@ msgid ""
 "Centro nasceu com a missão de resgatar, proteger e difundir a memória "
 "ancestral do Povo Tapuia Paiacu, habitantes milenares do Território Pody."
 msgstr ""
+"El Centro Histórico Cultural Tapuias Paiacus de Lagoa do Apodi (CHCTPLA) es "
+"una entidad cultural y de resistencia indígena fundada en 2013, en el "
+"municipio de Apodi (RN). Ideado por la líder Lúcia Paiacu Tabajara, el "
+"Centro nació con la misión de rescatar, proteger y difundir la memoria "
+"ancestral del Pueblo Tapuia Paiacu, habitantes milenarios del Territorio "
+"Pody."
 
 #: base/templates/base/museu.html:107
 msgid ""
@@ -604,26 +663,33 @@ msgid ""
 "garantindo que o legado dos povos originários do sertão nordestino permaneça "
 "vivo e valorizado."
 msgstr ""
+"Como mantenedora del Museo Indígena Luiza Cantofa — el primer museo indígena "
+"de Rio Grande do Norte —, la institución actúa en la preservación de una "
+"vasta colección arqueológica y en la defensa del derecho a la autoafirmación "
+"e identidad étnica. A través de alianzas con universidades y escuelas, el "
+"CHCTPLA promueve una educación crítica, recontando la historia bajo la "
+"perspectiva indígena y garantizando que el legado de los pueblos originarios "
+"del sertão nordestino permanezca vivo y valorado."
 
 #: base/templates/base/museu.html:111
 msgid "Imagem da trajetória do museu"
-msgstr ""
+msgstr "Imagen de la trayectoria del museo"
 
 #: base/templates/base/museu.html:112
 msgid "Associação reunida na frente do museu"
-msgstr ""
+msgstr "Asociación reunida frente al museo"
 
 #: base/templates/base/museu.html:118
 msgid "Luiza Cantofa: A Ancestralidade Presente"
-msgstr ""
+msgstr "Luiza Cantofa: La Ancestralidad Presente"
 
 #: base/templates/base/museu.html:121
 msgid "Foto de Luiza Cantofa"
-msgstr ""
+msgstr "Foto de Luiza Cantofa"
 
 #: base/templates/base/museu.html:122
 msgid "Luiza Cantofa"
-msgstr ""
+msgstr "Luiza Cantofa"
 
 #: base/templates/base/museu.html:126
 msgid ""
@@ -638,6 +704,17 @@ msgid ""
 "massacre que se seguiu ao levante, ela se tornou uma mártir cuja história a "
 "narrativa oficial tentou apagar por quase dois séculos."
 msgstr ""
+"Luiza Cantofa es la matriarca y símbolo mayor de la resistencia del pueblo "
+"Tapuia Paiacu en el sertão de Rio Grande do Norte. Su trayectoria está "
+"marcada por el coraje y el liderazgo durante uno de los períodos más "
+"sangrientos de la colonización, destacándose como protagonista en la "
+"histórica Revuelta de 1825, ocurrida en la región de Portalegre. En un "
+"escenario de opresión e intentos de exterminio de las poblaciones "
+"originarias, Luiza no calló; guio a su pueblo en la lucha por la defensa del "
+"territorio y por la libertad, enfrentando a las fuerzas imperiales con "
+"bravura inigualable. Perseguida y brutalmente asesinada durante la masacre "
+"que siguió al levantamiento, se convirtió en una mártir cuya historia la "
+"narrativa oficial intentó borrar por casi dos siglos."
 
 #: base/templates/base/museu.html:128
 msgid ""
@@ -648,14 +725,20 @@ msgid ""
 "as novas gerações a continuarem a luta pela autoafirmação e pelo direito de "
 "existir."
 msgstr ""
+"Sin embargo, su memoria sobrevivió a través de la tradición oral y de la "
+"fuerza de las familias que preservaron su legado, renaciendo hoy como la "
+"patrona del Museo Indígena Luiza Cantofa. Su nombre no representa solo un "
+"recuerdo del pasado, sino la vitalidad y la permanencia de la identidad "
+"indígena, inspirando a las nuevas generaciones a continuar la lucha por la "
+"autoafirmación y por el derecho a existir."
 
 #: base/templates/base/museu.html:135
 msgid "Nossa linha do tempo"
-msgstr ""
+msgstr "Nuestra línea del tiempo"
 
 #: base/templates/base/museu.html:140
 msgid "Lucia Paiacu Tabajara: A Idealizadora"
-msgstr ""
+msgstr "Lucia Paiacu Tabajara: La Idealizadora"
 
 #: base/templates/base/museu.html:144
 msgid ""
@@ -670,6 +753,16 @@ msgid ""
 "Apodi (CHCTPLA) em 2013, institucionalizando a luta contra o apagamento "
 "histórico na região."
 msgstr ""
+"Lúcia Paiacu Tabajara es la principal líder e idealizadora del renacimiento "
+"cultural del Pueblo Tapuia Paiacu de Lagoa do Apodi. Su jornada se inició "
+"con una búsqueda personal por la identidad que pronto se transformó en una "
+"misión colectiva: rescatar la historia de sus antepasados. Tras más de una "
+"década de investigaciones de campo, recolección de memorias orales y "
+"preservación de artefactos en las comunidades, fundó el Museo Indígena Luiza "
+"Cantofa, inicialmente albergado en su propia residencia. Su esfuerzo "
+"incansable culminó en la creación del Centro Histórico Cultural Tapuias "
+"Paiacus de Lagoa do Apodi (CHCTPLA) en 2013, institucionalizando la lucha "
+"contra el borrado histórico en la región."
 
 #: base/templates/base/museu.html:146
 msgid ""
@@ -683,18 +776,27 @@ msgid ""
 "vital como educadora, matriarca e defensora dos direitos e da existência "
 "futura do seu povo."
 msgstr ""
+"Además de la gestión política y de la conquista de la sede definitiva del "
+"museo en la histórica Casa de las Máquinas, Lúcia actúa como una guardiana "
+"de la sabiduría ancestral. Es ella quien recibe a estudiantes, "
+"investigadores y visitantes, transmitiendo a través de la oralidad la "
+"\"historia no oficial\" del sertão y combatiendo el silenciamiento de los "
+"pueblos originarios. Su contribución a la memoria potiguar se expandió "
+"también a la literatura con el lanzamiento del libro \"Memorias de Una "
+"Infancia Feliz\" (2021), consolidando su papel vital como educadora, "
+"matriarca y defensora de los derechos y de la existencia futura de su pueblo."
 
 #: base/templates/base/museu.html:151
 msgid "Foto de Lúcia Cantufa"
-msgstr ""
+msgstr "Foto de Lúcia Cantufa"
 
 #: base/templates/base/museu.html:158
 msgid "Nossos Princípios e Valores"
-msgstr ""
+msgstr "Nuestros Principios y Valores"
 
 #: base/templates/base/museu.html:163
 msgid "Preservação Cultural"
-msgstr ""
+msgstr "Preservación Cultural"
 
 #: base/templates/base/museu.html:165
 msgid ""
@@ -702,194 +804,214 @@ msgid ""
 "povo Tapuia Paiacu, protegendo o patrimônio material e imaterial do "
 "território."
 msgstr ""
+"Nuestra misión es preservar, valorar y difundir la memoria y la identidad "
+"del pueblo Tapuia Paiacu, protegiendo el patrimonio material e inmaterial "
+"del territorio."
 
 #: base/templates/base/museu.html:171
 msgid "Educação e Pesquisa"
-msgstr ""
+msgstr "Educación e Investigación"
 
 #: base/templates/base/museu.html:173
 msgid ""
 "Buscamos ser referência na produção de conhecimento, contando a 'história "
 "não oficial' através de parcerias com escolas e universidades."
 msgstr ""
+"Buscamos ser referencia en la producción de conocimiento, contando la "
+"'historia no oficial' a través de alianzas con escuelas y universidades."
 
 #: base/templates/base/museu.html:179
 msgid "Respeito à Ancestralidade"
-msgstr ""
+msgstr "Respeto a la Ancestralidad"
 
 #: base/templates/base/museu.html:181
 msgid ""
 "Nossos valores baseiam-se no respeito aos antepassados, na luta pela "
 "autoafirmação e no compromisso com o fortalecimento da comunidade indígena."
 msgstr ""
+"Nuestros valores se basan en el respeto a los antepasados, en la lucha por "
+"la autoafirmación y en el compromiso con el fortalecimiento de la comunidad "
+"indígena."
 
 #: base/templates/base/museu.html:188
 msgid "Aprofunde-se na História Indígena"
-msgstr ""
+msgstr "Profundice en la Historia Indígena"
 
 #: base/templates/base/museu.html:193
 msgid "Artigos e Pesquisas"
-msgstr ""
+msgstr "Artículos e Investigaciones"
 
 #: base/templates/base/museu.html:194
 msgid ""
 "Acesse nossa biblioteca de artigos, teses e trabalhos importantes que "
 "detalham a história indígena de Apodi e do Brasil."
 msgstr ""
+"Acceda a nuestra biblioteca de artículos, tesis y trabajos importantes que "
+"detallan la historia indígena de Apodi y de Brasil."
 
 #: base/templates/base/museu.html:195
 msgid "Ver Artigos"
-msgstr ""
+msgstr "Ver Artículos"
 
 #: base/templates/base/museu.html:200
 msgid "Visite o Museu"
-msgstr ""
+msgstr "Visite el Museo"
 
 #: base/templates/base/museu.html:201
 msgid ""
 "Viva a experiência completa. Agende sua visita presencial para interagir com "
 "o acervo e a comunidade dos Tapuia Paiacu."
 msgstr ""
+"Viva la experiencia completa. Programe su visita presencial para interactuar "
+"con la colección y la comunidad de los Tapuia Paiacu."
 
 #: base/templates/base/museu.html:202
 msgid "Agendar Visita"
-msgstr ""
+msgstr "Programar Visita"
 
 #: base/templates/base/noticias.html:18
 msgid "Últimas Notícias"
-msgstr ""
+msgstr "Últimas Noticias"
 
 #: base/templates/base/noticias.html:34
 msgid "Capa padrão para notícia"
-msgstr ""
+msgstr "Portada predeterminada para noticia"
 
 #: base/templates/base/noticias.html:56
 msgid "Nenhuma notícia publicada encontrada."
-msgstr ""
+msgstr "Ninguna noticia publicada encontrada."
 
 #: base/templates/base/pesquisa.html:13
 msgid "Pesquisas"
-msgstr ""
+msgstr "Investigaciones"
 
 #: base/templates/base/pesquisa.html:20
 msgid "Pesquisas Relacionadas ao Museu"
-msgstr ""
+msgstr "Investigaciones Relacionadas al Museo"
 
 #: base/templates/base/pesquisa.html:35 base/templates/base/pesquisa.html:179
 msgid "Autor"
-msgstr ""
+msgstr "Autor"
 
 #: base/templates/base/pesquisa.html:67
 msgid "Ver mais detalhes"
-msgstr ""
+msgstr "Ver más detalles"
 
 #: base/templates/base/pesquisa.html:73
 msgid "Nenhum artigo de pesquisa encontrado."
-msgstr ""
+msgstr "Ningún artículo de investigación encontrado."
 
 #: base/templates/base/pesquisa.html:123
 msgid "Acessar Pesquisa Completa"
-msgstr ""
+msgstr "Acceder a la Investigación Completa"
 
 #: base/templates/base/pesquisa.html:126
 msgid "O link direto para a pesquisa não está disponível."
-msgstr ""
+msgstr "El enlace directo a la investigación no está disponible."
 
 #: base/templates/base/search_results.html:11
 msgid "Resultados da Pesquisa para"
-msgstr ""
+msgstr "Resultados de la Búsqueda para"
 
 #: base/templates/base/search_results.html:15
 #, python-format
 msgid ""
 "\n"
+"                    1 resultado encontrado.\n"
+"                "
+msgid_plural ""
+"\n"
+"                    %(total)s resultados encontrados.\n"
+"                "
+msgstr[0] ""
+"\n"
 "                    1 resultado encontrado.\n"
 "                "
-msgid_plural ""
+msgstr[1] ""
 "\n"
 "                    %(total)s resultados encontrados.\n"
 "                "
-msgstr[0] ""
-msgstr[1] ""
 
 #: base/templates/base/search_results.html:22
 msgid "Busca no Site"
-msgstr ""
+msgstr "Búsqueda en el Sitio"
 
 #: base/templates/base/search_results.html:23
 msgid "Digite um termo de pesquisa no campo acima para buscar em todo o site."
-msgstr ""
+msgstr "Escriba un término de búsqueda en el campo de arriba para buscar en todo el sitio."
 
 #: base/templates/base/search_results.html:35
 #, python-format
 msgid "1 Página do Site Encontrada"
 msgid_plural "%(static_results|length)s Páginas do Site Encontradas"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 Página del Sitio Encontrada"
+msgstr[1] "%(static_results|length)s Páginas del Sitio Encontradas"
 
 #: base/templates/base/search_results.html:46
 msgid "Página do Site"
-msgstr ""
+msgstr "Página del Sitio"
 
 #: base/templates/base/search_results.html:57
 #, python-format
 msgid "1 Notícia Encontrada"
 msgid_plural "%(noticia_results|length)s Notícias Encontradas"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 Noticia Encontrada"
+msgstr[1] "%(noticia_results|length)s Noticias Encontradas"
 
 #: base/templates/base/search_results.html:77
 #, python-format
 msgid "1 Artigo de Pesquisa Encontrado"
 msgid_plural "%(artigo_results|length)s Artigos de Pesquisa Encontrados"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 Artículo de Investigación Encontrado"
+msgstr[1] "%(artigo_results|length)s Artículos de Investigación Encontrados"
 
 #: base/templates/base/search_results.html:97
 msgid "Desculpe, não encontramos resultados para"
-msgstr ""
+msgstr "Lo sentimos, no encontramos resultados para"
 
 #: base/templates/base/search_results.html:100
 msgid "Tente usar termos mais genéricos."
-msgstr ""
+msgstr "Intente usar términos más genéricos."
 
 #: base/templates/base/visitar.html:11
 msgid "Visitação"
-msgstr ""
+msgstr "Visita"
 
 #: base/templates/base/visitar.html:20
 msgid "Planeje sua visita"
-msgstr ""
+msgstr "Planifique su visita"
 
 #: base/templates/base/visitar.html:24
 msgid "Horários de visitação"
-msgstr ""
+msgstr "Horarios de visita"
 
 #: base/templates/base/visitar.html:25
 msgid "De segunda a sexta-feira"
-msgstr ""
+msgstr "De lunes a viernes"
 
 #: base/templates/base/visitar.html:25
 msgid "Das 8h às 17h"
-msgstr ""
+msgstr "De 8h a 17h"
 
 #: base/templates/base/visitar.html:25
 msgid "Última entrada às 16:00"
-msgstr ""
+msgstr "Última entrada a las 16:00"
 
 #: base/templates/base/visitar.html:28
 msgid "Fechamento"
-msgstr ""
+msgstr "Cierre"
 
 #: base/templates/base/visitar.html:29
 msgid ""
 "O museu fecha aos sábados e domingos, bem como em feriados municipais e "
 "nacionais."
 msgstr ""
+"El museo cierra los sábados y domingos, así como en feriados municipales y "
+"nacionales."
 
 #: base/templates/base/visitar.html:36
 msgid "Ingressos"
-msgstr ""
+msgstr "Entradas"
 
 #: base/templates/base/visitar.html:37
 msgid ""
@@ -897,58 +1019,69 @@ msgid ""
 "escolhidos no calendário de agendamento. O pagamento deve ser realizado no "
 "dia da visita, podendo ser feito em dinheiro ou via Pix."
 msgstr ""
+"Las entradas se venden mediante programación previa, con día y horario "
+"elegidos en el calendario. El pago debe realizarse el día de la visita, "
+"pudiendo hacerse en efectivo o vía Pix."
 
 #: base/templates/base/visitar.html:38
 msgid ""
 "O número máximo de pessoas por visita é de 35 e os valores dos ingressos são:"
 msgstr ""
+"El número máximo de personas por visita es de 35 y los valores de las entradas son:"
 
 #: base/templates/base/visitar.html:40
 msgid "R$ 10,00 para estudantes (de instituições públicas ou privadas);"
-msgstr ""
+msgstr "R$ 10,00 para estudiantes (de instituciones públicas o privadas);"
 
 #: base/templates/base/visitar.html:41
 msgid "R$ 15,00 para público geral (pesquisadores, turistas, família, etc.)."
-msgstr ""
+msgstr "R$ 15,00 para público general (investigadores, turistas, familia, etc.)."
 
 #: base/templates/base/visitar.html:43
 msgid ""
 "Todas as visitas são guiadas, garantindo uma experiência completa e "
 "educativa."
 msgstr ""
+"Todas las visitas son guiadas, garantizando una experiencia completa y "
+"educativa."
 
 #: base/templates/base/visitar.html:47
 msgid "Orientações"
-msgstr ""
+msgstr "Orientaciones"
 
 #: base/templates/base/visitar.html:51
 msgid "Não tocar nos objetos expostos."
-msgstr ""
+msgstr "No tocar los objetos expuestos."
 
 #: base/templates/base/visitar.html:52
 msgid "Respeitar o meio ambiente e as áreas demarcadas para visitação."
-msgstr ""
+msgstr "Respetar el medio ambiente y las áreas demarcadas para visita."
 
 #: base/templates/base/visitar.html:53
 msgid ""
 "Não é permitido o consumo de alimentos ou bebidas nas áreas de exposição."
 msgstr ""
+"No está permitido el consumo de alimentos o bebidas en las áreas de exposición."
 
 #: base/templates/base/visitar.html:54
 msgid ""
 "Não é permitido correr, sentar no chão, ou encostar nas paredes das salas de "
 "exposição."
 msgstr ""
+"No está permitido correr, sentarse en el suelo o apoyarse en las paredes de "
+"las salas de exposición."
 
 #: base/templates/base/visitar.html:55
 msgid ""
 "Crianças devem estar sempre acompanhadas e sob a supervisão de um "
 "responsável."
 msgstr ""
+"Los niños deben estar siempre acompañados y bajo la supervisión de un "
+"responsable."
 
 #: base/templates/base/visitar.html:60
 msgid "Localização"
-msgstr ""
+msgstr "Ubicación"
 
 #: base/templates/base/visitar.html:62
 msgid ""
@@ -958,6 +1091,11 @@ msgid ""
 "exuberante, o museu oferece uma experiência imersiva na história e cultura "
 "dos povos indígenas Tapuias Paiacus."
 msgstr ""
+"El Museo del Indio Luiza Cantofa está ubicado en el Sítio Missão 1, nº 1001, "
+"en la zona rural de Apodi (RN), a orillas de la Laguna de Apodi, cerca del "
+"balneario de la laguna. Envuelto en un escenario de tranquilidad y "
+"naturaleza exuberante, el museo ofrece una experiencia inmersiva en la "
+"historia y cultura de los pueblos indígenas Tapuias Paiacus."
 
 #: base/templates/base/visitar.html:63
 msgid ""
@@ -967,10 +1105,15 @@ msgid ""
 "80 km de Mossoró e 340 km da capital, Natal, com acesso facilitado pela "
 "BR-405."
 msgstr ""
+"La ciudad de Apodi es reconocida por sus tradiciones y paisajes naturales, "
+"haciendo del museo un destino imperdible para quien desea comprobar y "
+"valorar la herencia indígena de Rio Grande do Norte. El lugar está a cerca "
+"de 80 km de Mossoró y 340 km de la capital, Natal, con acceso facilitado por "
+"la BR-405."
 
 #: base/views.py:251
 msgid "O Museu - História e Missão"
-msgstr ""
+msgstr "El Museo - Historia y Misión"
 
 #: base/views.py:253
 msgid ""
@@ -978,10 +1121,13 @@ msgid ""
 "trajetória do povo indígenda, e a importância da preservação cultural. Onde "
 "estamos, como chegamos aqui."
 msgstr ""
+"Nuestra historia, misión y visión. Conozca a la fundadora Luiza Cantofa, la "
+"trayectoria del pueblo indígena y la importancia de la preservación "
+"cultural. Dónde estamos, cómo llegamos aquí."
 
 #: base/views.py:257
 msgid "Acervo - Coleções e Artefatos"
-msgstr ""
+msgstr "Colección - Colecciones y Artefactos"
 
 #: base/views.py:259
 msgid ""
@@ -989,10 +1135,13 @@ msgid ""
 "históricos. Informações sobre catalogação, doações, pesquisa e exposições no "
 "acervo."
 msgstr ""
+"Explore nuestra colección de artefactos, cerámicas, indumentarias y "
+"documentos históricos. Informaciones sobre catalogación, donaciones, "
+"investigación y exposiciones en la colección."
 
 #: base/views.py:263
 msgid "Visite-nos e Agendamento"
-msgstr ""
+msgstr "Visítenos y Programación"
 
 #: base/views.py:265
 msgid ""
@@ -1000,3 +1149,6 @@ msgid ""
 "(inteira, meia, gratuidade), regras de visitação e contato para "
 "agendamentos. Ver calendário."
 msgstr ""
+"Informaciones sobre cómo programar su visita, horarios disponibles, precios "
+"(completa, media, gratuidad), reglas de visita y contacto para "
+"programaciones. Ver calendario."
