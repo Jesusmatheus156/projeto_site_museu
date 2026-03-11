@@ -25,22 +25,24 @@
         <nav class="navigation">
             <div class="header-left">
                 <div class="language-selector">
-                    <form action="{% url 'set_language' %}" method="post" id="language-form">
+                    <form action="{% url 'set_language' %}" method="post" id="language-form" style="display:flex; gap:10px;">
                         {% csrf_token %}
                         <input name="next" type="hidden" value="{{ request.path }}">
-                        <input name="language" type="hidden" id="language-code-input">
- 
-                        <img src="{% static 'base/img/flag_brazil.png' %}" alt="Português" class="flag-icon"
-                            data-lang="pt-br"
-                            aria-pressed="{% if LANGUAGE_CODE == 'pt-br' %}true{% else %}false{% endif %}">
 
-                        <img src="{% static 'base/img/flag_eua.png' %}" alt="English" class="flag-icon"
-                            data-lang="en-us"
-                            aria-pressed="{% if LANGUAGE_CODE == 'en-us' %}true{% else %}false{% endif %}">
+                        <button type="submit" name="language" value="pt-br" style="background:none; border:none; padding:0; cursor:pointer;">
+                            <img src="{% static 'base/img/flag_brazil.png' %}" alt="Português" class="flag-icon"
+                                aria-pressed="{% if LANGUAGE_CODE == 'pt-br' %}true{% else %}false{% endif %}">
+                        </button>
 
-                        <img src="{% static 'base/img/flag_spain.png' %}" alt="Español" class="flag-icon"
-                            data-lang="es"
-                            aria-pressed="{% if LANGUAGE_CODE == 'es' %}true{% else %}false{% endif %}">
+                        <button type="submit" name="language" value="en-us" style="background:none; border:none; padding:0; cursor:pointer;">
+                            <img src="{% static 'base/img/flag_eua.png' %}" alt="English" class="flag-icon"
+                                aria-pressed="{% if LANGUAGE_CODE == 'en-us' %}true{% else %}false{% endif %}">
+                        </button>
+
+                        <button type="submit" name="language" value="es" style="background:none; border:none; padding:0; cursor:pointer;">
+                            <img src="{% static 'base/img/flag_spain.png' %}" alt="Español" class="flag-icon"
+                                aria-pressed="{% if LANGUAGE_CODE == 'es' %}true{% else %}false{% endif %}">
+                        </button>
                     </form>
                 </div>
             </div>
