@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-##4_j_p91fei^%6hy5g@m47e-406-f^&mo)-ru(fw&@39et7mr')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'museuindigenaluizacantofa.org.br', 
@@ -87,22 +87,23 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'pt-BR'
+LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Sao_Paulo'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
 
 # Definir os idiomas suportados
 LANGUAGES = [
-    ('pt-br', _('Portuguese')),
-    ('en-us', _('English')),
-    ('es', _('Spanish')),
+    ('pt-br', _('Português')),
+    ('en', _('English')),
+    ('es', _('Español')),
 ]
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
+
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
 
 MEDIA_URL = '/media/'
 
