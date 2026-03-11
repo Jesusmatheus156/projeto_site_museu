@@ -3,211 +3,211 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-11 17:07-0300\n"
-"PO-Revision-Date: 2026-03-11 17:30-0300\n"
+"POT-Creation-Date: 2026-03-11 20:12-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Spanish <es@li.org>\n"
-"Language: es\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
 
 #: base/models.py:15
 msgid "Rascunho"
-msgstr "Borrador"
+msgstr ""
 
 #: base/models.py:16
 msgid "Publicado"
-msgstr "Publicado"
+msgstr ""
 
 #: base/models.py:19
 msgid "Título da Notícia"
-msgstr "Título de la Noticia"
+msgstr ""
 
 #: base/models.py:20 base/models.py:109
 msgid "URL amigável (deixe em branco para gerar automaticamente)"
-msgstr "URL amigable (dejar en blanco para generar automáticamente)"
+msgstr ""
 
 #: base/models.py:25
 msgid "Chamada/Subtítulo (Impacto)"
-msgstr "Llamada/Subtítulo (Impacto)"
+msgstr ""
 
 #: base/models.py:28
 msgid ""
 "Texto curto (máx. 300 caracteres) que resume a notícia e atrai o leitor. "
 "Aparece logo abaixo do título principal."
 msgstr ""
-"Texto corto (máx. 300 caracteres) que resume la noticia y atrae al lector. "
-"Aparece justo debajo del título principal."
 
 #: base/models.py:32
 msgid "Imagem de Capa"
-msgstr "Imagen de Portada"
+msgstr ""
 
 #: base/models.py:39
 msgid "Legenda da Imagem de Capa (Alt Text)"
-msgstr "Leyenda de la Imagen de Portada (Alt Text)"
+msgstr ""
 
 #: base/models.py:40
 msgid "Descrição curta da imagem (importante para SEO e acessibilidade)."
-msgstr "Descripción corta de la imagen (importante para SEO y accesibilidad)."
+msgstr ""
 
 #: base/models.py:46
 msgid "Fonte/Crédito da Imagem de Capa"
-msgstr "Fuente/Crédito de la Imagen de Portada"
+msgstr ""
 
 #: base/models.py:49
 msgid "Conteúdo Completo (Texto, Imagens, Formatação)"
-msgstr "Contenido Completo (Texto, Imágenes, Formato)"
+msgstr ""
 
 #: base/models.py:59
 msgid "Criado Por"
-msgstr "Creado Por"
+msgstr ""
 
 #: base/models.py:61
 msgid "Data de Criação"
-msgstr "Fecha de Creación"
+msgstr ""
 
 #: base/models.py:65 base/templates/base/detalhe_noticia.html:26
 msgid "Última Modificação"
-msgstr "Última Modificación"
+msgstr ""
 
 #: base/models.py:73
 msgid "Modificado Por"
-msgstr "Modificado Por"
+msgstr ""
 
 #: base/models.py:77 base/templates/base/search_results.html:66
 msgid "Notícia"
-msgstr "Noticia"
+msgstr ""
 
 #: base/models.py:78 base/templates/base/noticias.html:10
 msgid "Notícias"
-msgstr "Noticias"
+msgstr ""
 
 #: base/models.py:102
 msgid "Monografia"
-msgstr "Monografía"
+msgstr ""
 
 #: base/models.py:103
 msgid "Revista"
-msgstr "Revista"
+msgstr ""
 
 #: base/models.py:104
 msgid "Dissertação"
-msgstr "Disertación"
+msgstr ""
 
 #: base/models.py:105
 msgid "Geral/Outros"
-msgstr "General/Otros"
+msgstr ""
 
 #: base/models.py:108
 msgid "Título do Artigo"
-msgstr "Título del Artículo"
+msgstr ""
 
 #: base/models.py:110
 msgid "Autor(es)"
-msgstr "Autor(es)"
+msgstr ""
 
 #: base/models.py:113
 msgid "Ano de Publicação Original (Ex: 2023)"
-msgstr "Año de Publicación Original (Ej: 2023)"
+msgstr ""
 
 #: base/models.py:114
 msgid "O ano em que o artigo foi efetivamente publicado."
-msgstr "El año en que el artículo fue efectivamente publicado."
+msgstr ""
 
 #: base/models.py:121
 msgid "Tipo de Publicação"
-msgstr "Tipo de Publicación"
+msgstr ""
 
 #: base/models.py:126
 msgid "Link Externo da Pesquisa (URL)"
-msgstr "Enlace Externo de la Investigación (URL)"
+msgstr ""
 
 #: base/models.py:127
 msgid "Insira o link completo (ex: https://revista.exemplo.com.br/artigo/xyz)"
-msgstr "Ingrese el enlace completo (ej: https://revista.ejemplo.com.br/articulo/xyz)"
+msgstr ""
 
 #: base/models.py:130
 msgid "Resumo e Contexto (com formatação)"
-msgstr "Resumen y Contexto (con formato)"
+msgstr ""
 
 #: base/models.py:131
 msgid "Data de Cadastro"
-msgstr "Fecha de Registro"
+msgstr ""
 
 #: base/models.py:139 base/templates/base/search_results.html:86
 msgid "Artigo de Pesquisa"
-msgstr "Artículo de Investigación"
+msgstr ""
 
 #: base/models.py:140
 msgid "Artigos de Pesquisa"
-msgstr "Artículos de Investigación"
+msgstr ""
 
 #: base/models.py:152
 msgid "Ex: Até 35 pessoas - COM EDUCADOR"
-msgstr "Ej: Hasta 35 personas - CON EDUCADOR"
+msgstr ""
 
 #: base/models.py:157
 msgid "Tipo de Visita"
-msgstr "Tipo de Visita"
+msgstr ""
 
 #: base/models.py:158
 msgid "Tipos de Visita"
-msgstr "Tipos de Visita"
+msgstr ""
 
 #: base/models.py:168
 msgid "Quantos grupos podem agendar neste mesmo horário."
-msgstr "Cuántos grupos pueden agendar en este mismo horario."
+msgstr ""
 
 #: base/models.py:171
 msgid "Horário Disponível"
-msgstr "Horario Disponible"
+msgstr ""
 
 #: base/models.py:172
 msgid "Horários Disponíveis"
-msgstr "Horarios Disponibles"
+msgstr ""
 
 #: base/models.py:180
 msgid "Pendente"
-msgstr "Pendiente"
+msgstr ""
 
 #: base/models.py:181
 msgid "Notificado"
-msgstr "Notificado"
+msgstr ""
 
 #: base/models.py:182
 msgid "Confirmado"
-msgstr "Confirmado"
+msgstr ""
 
 #: base/models.py:183
 msgid "Cancelado"
-msgstr "Cancelado"
+msgstr ""
 
 #: base/models.py:195
 msgid "Visitantes (Inteira)"
-msgstr "Visitantes (Entrada General)"
+msgstr ""
 
 #: base/models.py:196
 msgid "Visitantes (Meia-Entrada)"
-msgstr "Visitantes (Media Entrada)"
+msgstr ""
 
 #: base/models.py:197
 msgid "Visitantes (Gratuidade)"
-msgstr "Visitantes (Gratuidad)"
+msgstr ""
 
 #: base/templates/base/acervo.html:9
 msgid "Acervo"
-msgstr "Acervo"
+msgstr ""
 
 #: base/templates/base/acervo.html:16 base/templates/base/home.html:29
 msgid "Nosso Acervo"
-msgstr "Nuestro Acervo"
+msgstr ""
 
 #: base/templates/base/acervo.html:17
 msgid ""
@@ -217,19 +217,14 @@ msgid ""
 "comunidade. Estes objetos não são apenas vestígios do passado; são as provas "
 "vivas e pulsantes da nossa ancestralidade milenar."
 msgstr ""
-"Explore los artefactos que materializan la resistencia del Pueblo Tapuia Paiacu. "
-"Cada pieza lítica, cada fragmento cerámico y cada instrumento sagrado fue "
-"encontrado en Apodi y la región, siendo preservado con celo por las familias de la "
-"comunidad. Estos objetos no son solo vestigios del pasado; son las pruebas "
-"vivas y palpitantes de nuestra ancestralidad milenaria."
 
 #: base/templates/base/acervo.html:23
 msgid "Cachimbos de madeira"
-msgstr "Pipas de madera"
+msgstr ""
 
 #: base/templates/base/acervo.html:24
 msgid "Artefato etnográfico: conexão social e espiritual do povo Paiacu."
-msgstr "Artefacto etnográfico: conexión social y espiritual del pueblo Paiacu."
+msgstr ""
 
 #: base/templates/base/acervo.html:25
 msgid ""
@@ -237,23 +232,20 @@ msgid ""
 "são utilizados em rituais e momentos de socialização, representando a "
 "conexão com a espiritualidade e a tradição dos Tapuia Paiacu."
 msgstr ""
-"Artefacto Etnográfico (madera, generalmente calabaza o barro). Estas pipas "
-"son utilizadas en rituales y momentos de socialización, representando la "
-"conexión con la espiritualidad y la tradición de los Tapuia Paiacu."
 
 #: base/templates/base/acervo.html:30 base/templates/base/acervo.html:44
 #: base/templates/base/acervo.html:57 base/templates/base/acervo.html:70
 #: base/templates/base/acervo.html:83 base/templates/base/acervo.html:97
 msgid "Ver detalhes +"
-msgstr "Ver detalles +"
+msgstr ""
 
 #: base/templates/base/acervo.html:37
 msgid "Cumbuca de Argila"
-msgstr "Cuenco de Arcilla"
+msgstr ""
 
 #: base/templates/base/acervo.html:38
 msgid "Fragmento cerâmico que atesta a arte da olaria e padrões ancestrais."
-msgstr "Fragmento cerámico que atestigua el arte de la alfarería y patrones ancestrales."
+msgstr ""
 
 #: base/templates/base/acervo.html:39
 msgid ""
@@ -262,18 +254,14 @@ msgid ""
 "presentes, oferecem pistas sobre a cultura material, as técnicas de cozedura "
 "e os padrões estéticos utilizados na região."
 msgstr ""
-"Fragmento Cerámico Arqueológico. Este fragmento es una evidencia del avanzado arte "
-"de la cerámica practicado por los ancestros. Los detalles decorativos, cuando "
-"están presentes, ofrecen pistas sobre la cultura material, las técnicas de cocción "
-"y los patrones estéticos utilizados en la región."
 
 #: base/templates/base/acervo.html:50
 msgid "Fotografia de Luiza Cantofa"
-msgstr "Fotografía de Luiza Cantofa"
+msgstr ""
 
 #: base/templates/base/acervo.html:51
 msgid "Retrato em homenagem à líder histórica da revolta de 1825."
-msgstr "Retrato en homenaje a la líder histórica de la revuelta de 1825."
+msgstr ""
 
 #: base/templates/base/acervo.html:52
 msgid ""
@@ -282,20 +270,15 @@ msgid ""
 "resistência, liderança feminina e a luta incansável pela manutenção do "
 "território e identidade do povo Paiacu."
 msgstr ""
-"Retrato Histórico. Un homenaje a la gran líder Luiza Cantofa, fundamental "
-"en la revuelta indígena de 1825. Esta imagen, o representación, simboliza la "
-"resistencia, el liderazgo femenino y la lucha incansable por el mantenimiento del "
-"territorio e identidad del pueblo Paiacu."
 
 #: base/templates/base/acervo.html:63
 msgid "Machadinha Polida (Pedra)"
-msgstr "Hachuela Pulida (Piedra)"
+msgstr ""
 
 #: base/templates/base/acervo.html:64
 msgid ""
 "Ferramenta lítica polida, essencial na subsistência e trabalho na terra."
 msgstr ""
-"Herramienta lítica pulida, esencial en la subsistencia y trabajo en la tierra."
 
 #: base/templates/base/acervo.html:65
 msgid ""
@@ -304,18 +287,14 @@ msgid ""
 "polimento reflete o conhecimento ancestral e a adaptação dos povos indígenas "
 "ao ambiente, sendo uma peça-chave na compreensão da subsistência na região."
 msgstr ""
-"Artefacto Lítico Pulido. Una hachuela confeccionada en piedra, utilizada "
-"para el trabajo en la tierra, corte de madera y rituales. Su técnica de "
-"pulido refleja el conocimiento ancestral y la adaptación de los pueblos indígenas "
-"al medio ambiente, siendo una pieza clave en la comprensión de la subsistencia en la región."
 
 #: base/templates/base/acervo.html:76
 msgid "Preguiça feita de coco"
-msgstr "Perezoso hecho de coco"
+msgstr ""
 
 #: base/templates/base/acervo.html:77
 msgid "Artesanato figurativo que expressa a conexão com a fauna local."
-msgstr "Artesanía figurativa que expresa la conexión con la fauna local."
+msgstr ""
 
 #: base/templates/base/acervo.html:78
 msgid ""
@@ -324,18 +303,14 @@ msgid ""
 "natureza. Peças como esta destacam a capacidade artística do povo Tapuia "
 "Paiacu e sua profunda conexão com a fauna e o ecossistema local."
 msgstr ""
-"Artesanía Etnográfica (fibra/coco). Representación figurativa de un "
-"perezoso, hecha artesanalmente utilizando el coco u otros materiales de la "
-"naturaleza. Piezas como esta destacan la capacidad artística del pueblo Tapuia "
-"Paiacu y su profunda conexión con la fauna y el ecosistema local."
 
 #: base/templates/base/acervo.html:90
 msgid "Pilão feito de pedra"
-msgstr "Mortero hecho de piedra"
+msgstr ""
 
 #: base/templates/base/acervo.html:91
 msgid "Instrumento lítico robusto, símbolo da culinária e vida comunitária."
-msgstr "Instrumento lítico robusto, símbolo de la culinaria y la vida comunitaria."
+msgstr ""
 
 #: base/templates/base/acervo.html:92
 msgid ""
@@ -344,14 +319,10 @@ msgid ""
 "símbolo da culinária e da vida comunitária, e sua presença no acervo atesta "
 "a tradição milenar de preparo de alimentos no território."
 msgstr ""
-"Instrumento Lítico de Molienda. Un mortero robusto hecho de piedra, esencial "
-"para el procesamiento de alimentos, como granos y raíces. Este artefacto es un "
-"símbolo de la culinaria y de la vida comunitaria, y su presencia en el acervo atestigua "
-"la tradición milenaria de preparación de alimentos en el territorio."
 
 #: base/templates/base/acervo.html:105
 msgid "Viva a experiência completa"
-msgstr "Viva la experiencia completa"
+msgstr ""
 
 #: base/templates/base/acervo.html:109
 msgid ""
@@ -360,221 +331,211 @@ msgid ""
 "através do olhar e da escuta presencial. Venha ver mais de perto, visite-nos "
 "presencialmente."
 msgstr ""
-"Lo que ve aquí es solo un destello de nuestra historia. El Museo Indígena "
-"Luiza Cantofa guarda muchas otras reliquias que solo pueden ser comprendidas "
-"a través de la mirada y la escucha presencial. Venga a ver más de cerca, visítenos "
-"presencialmente."
 
 #: base/templates/base/acervo.html:113
 msgid "Agendar Visita!!"
-msgstr "¡Agendar Visita!"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:142
 msgid "Atenção: Fluxo de Agendamento"
-msgstr "Atención: Flujo de Agendamiento"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:144
 msgid ""
 "A submissão do formulário representa apenas a intenção de agendamento para o "
 "dia e horário selecionados. A confirmação não é automática."
 msgstr ""
-"El envío del formulario representa solo la intención de agendamiento para el "
-"día y horario seleccionados. La confirmación no es automática."
 
 #: base/templates/base/agendar_visita.html:145
 msgid ""
 "Nossa equipe entrará em contato em horário comercial, em até 3 dias úteis, "
 "para a confirmação final e os próximos passos."
 msgstr ""
-"Nuestro equipo se pondrá en contacto en horario comercial, en hasta 3 días hábiles, "
-"para la confirmación final y los próximos pasos."
 
 #: base/templates/base/agendar_visita.html:148
 msgid "Agende sua Visita"
-msgstr "Agende su Visita"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:149
 msgid "Selecione um dia no calendário para ver os horários disponíveis."
-msgstr "Seleccione un día en el calendario para ver los horarios disponibles."
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:182
 msgid "SOLICITAR AGENDAMENTO"
-msgstr "SOLICITAR AGENDAMIENTO"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:186
 msgid "Horário:"
-msgstr "Horario:"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:190
 msgid "Qual o tipo de visita?"
-msgstr "¿Cuál es el tipo de visita?"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:193
 msgid "Público Geral/Familiar"
-msgstr "Público General/Familiar"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:197
 msgid "Escolar/Institucional"
-msgstr "Escolar/Institucional"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:201
 msgid "Preencha seus dados de contato:"
-msgstr "Complete sus datos de contacto:"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:204
 msgid "Nome e sobrenome"
-msgstr "Nombre y apellido"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:208
 msgid "Celular/WhatsApp (com DDD)"
-msgstr "Celular/WhatsApp (con código de área)"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:215
 msgid "Nome da Escola/Instituição"
-msgstr "Nombre de la Escuela/Institución"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:216
 msgid "Ex: Escola Estadual João da Silva"
-msgstr "Ej: Escuela Estatal João da Silva"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:217
 msgid "Este campo é obrigatório para agendamentos institucionais."
-msgstr "Este campo es obligatorio para agendamientos institucionales."
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:220
 msgid "Detalhes da visita:"
-msgstr "Detalles de la visita:"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:224
 msgid "Público Geral (R$ 15,00)"
-msgstr "Público General (R$ 15,00)"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:229
 msgid "Estudantes (R$ 10,00)"
-msgstr "Estudiantes (R$ 10,00)"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:234
 msgid ""
 "Este é um formulário de reserva. O agendamento da visita só será confirmada "
 "após nosso contato, em até 3 dias."
 msgstr ""
-"Este es un formulario de reserva. El agendamiento de la visita solo será confirmado "
-"después de nuestro contacto, en hasta 3 días."
 
 #: base/templates/base/agendar_visita.html:237
 msgid "Cancelar"
-msgstr "Cancelar"
+msgstr ""
 
 #: base/templates/base/agendar_visita.html:238
 msgid "Solicitar Agendamento"
-msgstr "Solicitar Agendamiento"
+msgstr ""
 
 #: base/templates/base/base.html:9 base/templates/base/museu.html:112
 #: base/templates/base/museu.html:122
 msgid "Museu Indígena Luiza Cantofa"
-msgstr "Museo Indígena Luiza Cantofa"
-
-#: base/templates/base/base.html:49 base/templates/base/base.html:104
-msgid "INÍCIO"
-msgstr "INICIO"
-
-#: base/templates/base/base.html:50 base/templates/base/base.html:105
-msgid "MUSEU"
-msgstr "MUSEO"
+msgstr ""
 
 #: base/templates/base/base.html:51 base/templates/base/base.html:106
+msgid "INÍCIO"
+msgstr ""
+
+#: base/templates/base/base.html:52 base/templates/base/base.html:107
+msgid "MUSEU"
+msgstr ""
+
+#: base/templates/base/base.html:53 base/templates/base/base.html:108
 msgid "ACERVO"
-msgstr "ACERVO"
+msgstr ""
 
-#: base/templates/base/base.html:56
+#: base/templates/base/base.html:58
 msgid "Logo Museu Luiza Cantofa"
-msgstr "Logo Museo Luiza Cantofa"
-
-#: base/templates/base/base.html:65 base/templates/base/base.html:107
-msgid "NOTÍCIAS"
-msgstr "NOTICIAS"
-
-#: base/templates/base/base.html:66 base/templates/base/base.html:108
-msgid "PESQUISA"
-msgstr "INVESTIGACIÓN"
+msgstr ""
 
 #: base/templates/base/base.html:67 base/templates/base/base.html:109
+msgid "NOTÍCIAS"
+msgstr ""
+
+#: base/templates/base/base.html:68 base/templates/base/base.html:110
+msgid "PESQUISA"
+msgstr ""
+
+#: base/templates/base/base.html:69 base/templates/base/base.html:111
 msgid "VISITA"
-msgstr "VISITA"
+msgstr ""
 
-#: base/templates/base/base.html:77
+#: base/templates/base/base.html:79
 msgid "Pesquisar"
-msgstr "Buscar"
+msgstr ""
 
-#: base/templates/base/base.html:98
+#: base/templates/base/base.html:100
 msgid "Logo Museu"
-msgstr "Logo Museo"
+msgstr ""
 
-#: base/templates/base/base.html:103
+#: base/templates/base/base.html:105
 msgid "NAVEGAÇÃO"
-msgstr "NAVEGACIÓN"
+msgstr ""
 
-#: base/templates/base/base.html:113
+#: base/templates/base/base.html:115
 msgid "CONTATO E LOCAL"
-msgstr "CONTACTO Y UBICACIÓN"
+msgstr ""
 
-#: base/templates/base/base.html:118
+#: base/templates/base/base.html:120
 msgid "Sítio Missão 1"
-msgstr "Sítio Missão 1"
+msgstr ""
 
-#: base/templates/base/base.html:119
+#: base/templates/base/base.html:121
 msgid "Zona rural - Apodi/RN"
-msgstr "Zona rural - Apodi/RN"
+msgstr ""
 
-#: base/templates/base/base.html:126
+#: base/templates/base/base.html:128
 msgid "Fale Conosco"
-msgstr "Contáctenos"
+msgstr ""
 
-#: base/templates/base/base.html:133
+#: base/templates/base/base.html:135
 msgid "SIGA-NOS"
-msgstr "SÍGANOS"
+msgstr ""
 
-#: base/templates/base/base.html:145
+#: base/templates/base/base.html:147
 msgid "CHCTPLA. Todos os direitos reservados."
-msgstr "CHCTPLA. Todos los derechos reservados."
+msgstr ""
 
-#: base/templates/base/base.html:146
+#: base/templates/base/base.html:148
 msgid "Desenvolvido em projeto de extensão do IFRN - Campus Apodi."
-msgstr "Desarrollado en un proyecto de extensión del IFRN - Campus Apodi."
+msgstr ""
 
-#: base/templates/base/base.html:166
+#: base/templates/base/base.html:168
 msgid "Acessibilidade"
-msgstr "Accesibilidad"
+msgstr ""
 
-#: base/templates/base/base.html:169
+#: base/templates/base/base.html:171
 msgid "Alto Contraste"
-msgstr "Alto Contraste"
+msgstr ""
 
-#: base/templates/base/base.html:182
+#: base/templates/base/base.html:184
 msgid "Resetar"
-msgstr "Restablecer"
+msgstr ""
 
 #: base/templates/base/detalhe_noticia.html:17
 #: base/templates/base/noticias.html:48
 msgid "Publicado em"
-msgstr "Publicado en"
+msgstr ""
 
 #: base/templates/base/detalhe_noticia.html:20
 msgid "Criado por"
-msgstr "Creado por"
+msgstr ""
 
 #: base/templates/base/detalhe_noticia.html:43
 #: base/templates/base/museu.html:112 base/templates/base/museu.html:122
 msgid "Fonte"
-msgstr "Fuente"
+msgstr ""
 
 #: base/templates/base/detalhe_noticia.html:58
 msgid "Voltar para Notícias"
-msgstr "Volver a Noticias"
+msgstr ""
 
 #: base/templates/base/home.html:17
 msgid "Sobre o Museu"
-msgstr "Sobre el Museo"
+msgstr ""
 
 #: base/templates/base/home.html:18
 msgid ""
@@ -583,10 +544,6 @@ msgid ""
 "Tabajara, o museu é uma entidade cultural vinculada ao Centro Histórico "
 "Cultural Tapuias Paiacus da Lagoa do Apodi (CHCTPLA)."
 msgstr ""
-"El Museo Indígena Luiza Cantofa, reconocido como el primer museo indígena "
-"de Río Grande del Norte. Fundado en 2013 por la lideresa y cacica Lúcia Paiacu "
-"Tabajara, el museo es una entidad cultural vinculada al Centro Histórico "
-"Cultural Tapuias Paiacus de la Laguna de Apodi (CHCTPLA)."
 
 #: base/templates/base/home.html:19
 msgid ""
@@ -596,11 +553,6 @@ msgid ""
 "revolta de 1825. Somos a ponte entre o passado e o futuro, guardando a "
 "história viva de nosso povo."
 msgstr ""
-"La institución se dedica al rescate, preservación y reconstrucción de la cultura y "
-"memoria ancestral del pueblo Tapuia Paiacu de Apodi. El nombre homenajea a Luiza "
-"Cantofa, una de las valientes líderes indígenas de los Paiacus en la histórica "
-"revuelta de 1825. Somos el puente entre el pasado y el futuro, guardando la "
-"historia viva de nuestro pueblo."
 
 #: base/templates/base/home.html:30
 msgid ""
@@ -610,43 +562,36 @@ msgid ""
 "pedra, além de artefatos de cerâmica que contam a história da vida cotidiana "
 "e das tradições de nossos ancestrais."
 msgstr ""
-"Explore la rica memoria material de los Tapuias Paiacus. Nuestro acervo está compuesto "
-"por descubrimientos arqueológicos y etnográficos de Apodi y la región. Usted "
-"encontrará piezas líticas milenarias, como hachuelas, pipas y morteros de "
-"piedra, además de artefactos de cerámica que cuentan la historia de la vida cotidiana "
-"y de las tradiciones de nuestros ancestros."
 
 #: base/templates/base/home.html:31
 msgid ""
 "Cada peça é um portal para a resistência e a sabedoria do povo Paiacu. "
 "Convidamos você a mergulhar nesta jornada de conhecimento e identidade."
 msgstr ""
-"Cada pieza es un portal hacia la resistencia y la sabiduría del pueblo Paiacu. "
-"Lo invitamos a sumergirse en este viaje de conocimiento e identidad."
 
 #: base/templates/base/home.html:34
 msgid "Para ver mais do acervo:"
-msgstr "Para ver más del acervo:"
+msgstr ""
 
 #: base/templates/base/home.html:34
 msgid "Acessar o Acervo"
-msgstr "Acceder al Acervo"
+msgstr ""
 
 #: base/templates/base/home.html:63
 msgid "Saiba mais sobre a história indígena"
-msgstr "Conozca más sobre la historia indígena"
+msgstr ""
 
 #: base/templates/base/home.html:70
 msgid "Apoiadores"
-msgstr "Patrocinadores"
+msgstr ""
 
 #: base/templates/base/museu.html:92
 msgid "História"
-msgstr "Historia"
+msgstr ""
 
 #: base/templates/base/museu.html:103
 msgid "CHCTPLA - Centro Histórico Cultural Tapuias Paiacus da Lagoa do Apodi"
-msgstr "CHCTPLA - Centro Histórico Cultural Tapuias Paiacus de la Laguna de Apodi"
+msgstr ""
 
 #: base/templates/base/museu.html:105
 msgid ""
@@ -656,11 +601,6 @@ msgid ""
 "Centro nasceu com a missão de resgatar, proteger e difundir a memória "
 "ancestral do Povo Tapuia Paiacu, habitantes milenares do Território Pody."
 msgstr ""
-"El Centro Histórico Cultural Tapuias Paiacus de la Laguna de Apodi (CHCTPLA) es "
-"una entidad cultural y de resistencia indígena fundada en 2013, en el "
-"municipio de Apodi (RN). Ideado por la lideresa Lúcia Paiacu Tabajara, el "
-"Centro nació con la misión de rescatar, proteger y difundir la memoria "
-"ancestral del Pueblo Tapuia Paiacu, habitantes milenarios del Territorio Pody."
 
 #: base/templates/base/museu.html:107
 msgid ""
@@ -672,33 +612,26 @@ msgid ""
 "garantindo que o legado dos povos originários do sertão nordestino permaneça "
 "vivo e valorizado."
 msgstr ""
-"Como mantenedora del Museo Indígena Luiza Cantofa — el primer museo indígena "
-"de Río Grande del Norte —, la institución actúa en la preservación de un vasto "
-"acervo arqueológico y en la defensa del derecho a la autoafirmación e identidad "
-"étnica. A través de asociaciones con universidades y escuelas, el CHCTPLA promueve "
-"una educación crítica, recontando la historia bajo la perspectiva indígena y "
-"garantizando que el legado de los pueblos originarios del sertón nordestino permanezca "
-"vivo y valorado."
 
 #: base/templates/base/museu.html:111
 msgid "Imagem da trajetória do museu"
-msgstr "Imagen de la trayectoria del museo"
+msgstr ""
 
 #: base/templates/base/museu.html:112
 msgid "Associação reunida na frente do museu"
-msgstr "Asociación reunida frente al museo"
+msgstr ""
 
 #: base/templates/base/museu.html:118
 msgid "Luiza Cantofa: A Ancestralidade Presente"
-msgstr "Luiza Cantofa: La Ancestralidad Presente"
+msgstr ""
 
 #: base/templates/base/museu.html:121
 msgid "Foto de Luiza Cantofa"
-msgstr "Foto de Luiza Cantofa"
+msgstr ""
 
 #: base/templates/base/museu.html:122
 msgid "Luiza Cantofa"
-msgstr "Luiza Cantofa"
+msgstr ""
 
 #: base/templates/base/museu.html:126
 msgid ""
@@ -713,16 +646,6 @@ msgid ""
 "massacre que se seguiu ao levante, ela se tornou uma mártir cuja história a "
 "narrativa oficial tentou apagar por quase dois séculos."
 msgstr ""
-"Luiza Cantofa es la matriarca y símbolo mayor de la resistencia del pueblo Tapuia "
-"Paiacu en el sertón de Río Grande del Norte. Su trayectoria está marcada por el "
-"coraje y el liderazgo durante uno de los períodos más sangrientos de la colonización, "
-"destacándose como protagonista en la histórica Revuelta de 1825, ocurrida en la "
-"región de Portalegre. En un escenario de opresión e intentos de exterminio "
-"de las poblaciones originarias, Luiza no se calló; guio a su pueblo en la lucha "
-"por la defensa del territorio y por la libertad, enfrentando a las fuerzas imperiales "
-"con una valentía inigualable. Perseguida y brutalmente asesinada durante la "
-"masacre que siguió al levantamiento, se convirtió en una mártir cuya historia la "
-"narrativa oficial intentó borrar durante casi dos siglos."
 
 #: base/templates/base/museu.html:128
 msgid ""
@@ -733,20 +656,14 @@ msgid ""
 "as novas gerações a continuarem a luta pela autoafirmação e pelo direito de "
 "existir."
 msgstr ""
-"Sin embargo, su memoria sobrevivió a través de la tradición oral y de la fuerza de las "
-"familias que preservaron su legado, renaciendo hoy como la patrona del Museo "
-"Indígena Luiza Cantofa. Su nombre no representa solo un recuerdo del "
-"pasado, sino la vitalidad y la permanencia de la identidad indígena, inspirando "
-"a las nuevas generaciones a continuar la lucha por la autoafirmación y por el derecho a "
-"existir."
 
 #: base/templates/base/museu.html:135
 msgid "Nossa linha do tempo"
-msgstr "Nuestra línea de tiempo"
+msgstr ""
 
 #: base/templates/base/museu.html:140
 msgid "Lucia Paiacu Tabajara: A Idealizadora"
-msgstr "Lucia Paiacu Tabajara: La Creadora"
+msgstr ""
 
 #: base/templates/base/museu.html:144
 msgid ""
@@ -761,16 +678,6 @@ msgid ""
 "Apodi (CHCTPLA) em 2013, institucionalizando a luta contra o apagamento "
 "histórico na região."
 msgstr ""
-"Lúcia Paiacu Tabajara es la principal lideresa y creadora del renacimiento "
-"cultural del Pueblo Tapuia Paiacu de la Laguna de Apodi. Su viaje comenzó con "
-"una búsqueda personal de identidad que pronto se transformó en una misión "
-"colectiva: rescatar la historia de sus antepasados. Después de más de una década "
-"de investigaciones de campo, recolección de memorias orales y preservación de "
-"artefactos en las comunidades, fundó el Museo Indígena Luiza Cantofa, "
-"inicialmente albergado en su propia residencia. Su esfuerzo incansable "
-"culminó en la creación del Centro Histórico Cultural Tapuias Paiacus de la Laguna de "
-"Apodi (CHCTPLA) en 2013, institucionalizando la lucha contra el borrado "
-"histórico en la región."
 
 #: base/templates/base/museu.html:146
 msgid ""
@@ -784,27 +691,18 @@ msgid ""
 "vital como educadora, matriarca e defensora dos direitos e da existência "
 "futura do seu povo."
 msgstr ""
-"Además de la gestión política y la conquista de la sede definitiva del museo en la "
-"histórica Casa de Máquinas, Lúcia actúa como una guardiana de la sabiduría "
-"ancestral. Es ella quien recibe a estudiantes, investigadores y visitantes, "
-"transmitiendo a través de la oralidad la \"historia no oficial\" del sertón y "
-"combatiendo el silenciamiento de los pueblos originarios. Su contribución a la "
-"memoria potiguar se expandió también a la literatura con el lanzamiento del "
-"libro \"Memorias de una Infancia Feliz\" (2021), consolidando su papel "
-"vital como educadora, matriarca y defensora de los derechos y de la existencia "
-"futura de su pueblo."
 
 #: base/templates/base/museu.html:151
 msgid "Foto de Lúcia Cantufa"
-msgstr "Foto de Lúcia Cantufa"
+msgstr ""
 
 #: base/templates/base/museu.html:158
 msgid "Nossos Princípios e Valores"
-msgstr "Nuestros Principios y Valores"
+msgstr ""
 
 #: base/templates/base/museu.html:163
 msgid "Preservação Cultural"
-msgstr "Preservación Cultural"
+msgstr ""
 
 #: base/templates/base/museu.html:165
 msgid ""
@@ -812,213 +710,194 @@ msgid ""
 "povo Tapuia Paiacu, protegendo o patrimônio material e imaterial do "
 "território."
 msgstr ""
-"Nuestra misión es preservar, valorar y difundir la memoria y la identidad del "
-"pueblo Tapuia Paiacu, protegiendo el patrimonio material e inmaterial del "
-"territorio."
 
 #: base/templates/base/museu.html:171
 msgid "Educação e Pesquisa"
-msgstr "Educación e Investigación"
+msgstr ""
 
 #: base/templates/base/museu.html:173
 msgid ""
 "Buscamos ser referência na produção de conhecimento, contando a 'história "
 "não oficial' através de parcerias com escolas e universidades."
 msgstr ""
-"Buscamos ser referencia en la producción de conocimiento, contando la 'historia "
-"no oficial' a través de asociaciones con escuelas y universidades."
 
 #: base/templates/base/museu.html:179
 msgid "Respeito à Ancestralidade"
-msgstr "Respeto a la Ancestralidad"
+msgstr ""
 
 #: base/templates/base/museu.html:181
 msgid ""
 "Nossos valores baseiam-se no respeito aos antepassados, na luta pela "
 "autoafirmação e no compromisso com o fortalecimento da comunidade indígena."
 msgstr ""
-"Nuestros valores se basan en el respeto a los antepasados, en la lucha por la "
-"autoafirmación y en el compromiso con el fortalecimiento de la comunidad indígena."
 
 #: base/templates/base/museu.html:188
 msgid "Aprofunde-se na História Indígena"
-msgstr "Profundice en la Historia Indígena"
+msgstr ""
 
 #: base/templates/base/museu.html:193
 msgid "Artigos e Pesquisas"
-msgstr "Artículos e Investigaciones"
+msgstr ""
 
 #: base/templates/base/museu.html:194
 msgid ""
 "Acesse nossa biblioteca de artigos, teses e trabalhos importantes que "
 "detalham a história indígena de Apodi e do Brasil."
 msgstr ""
-"Acceda a nuestra biblioteca de artículos, tesis y trabajos importantes que "
-"detallan la historia indígena de Apodi y de Brasil."
 
 #: base/templates/base/museu.html:195
 msgid "Ver Artigos"
-msgstr "Ver Artículos"
+msgstr ""
 
 #: base/templates/base/museu.html:200
 msgid "Visite o Museu"
-msgstr "Visite el Museo"
+msgstr ""
 
 #: base/templates/base/museu.html:201
 msgid ""
 "Viva a experiência completa. Agende sua visita presencial para interagir com "
 "o acervo e a comunidade dos Tapuia Paiacu."
 msgstr ""
-"Viva la experiencia completa. Agende su visita presencial para interactuar con "
-"el acervo y la comunidad de los Tapuia Paiacu."
 
 #: base/templates/base/museu.html:202
 msgid "Agendar Visita"
-msgstr "Agendar Visita"
+msgstr ""
 
 #: base/templates/base/noticias.html:18
 msgid "Últimas Notícias"
-msgstr "Últimas Noticias"
+msgstr ""
 
 #: base/templates/base/noticias.html:34
 msgid "Capa padrão para notícia"
-msgstr "Portada predeterminada para noticia"
+msgstr ""
 
 #: base/templates/base/noticias.html:56
 msgid "Nenhuma notícia publicada encontrada."
-msgstr "No se encontraron noticias publicadas."
+msgstr ""
 
 #: base/templates/base/pesquisa.html:13
 msgid "Pesquisas"
-msgstr "Investigaciones"
+msgstr ""
 
 #: base/templates/base/pesquisa.html:20
 msgid "Pesquisas Relacionadas ao Museu"
-msgstr "Investigaciones Relacionadas con el Museo"
+msgstr ""
 
 #: base/templates/base/pesquisa.html:35 base/templates/base/pesquisa.html:179
 msgid "Autor"
-msgstr "Autor"
+msgstr ""
 
 #: base/templates/base/pesquisa.html:67
 msgid "Ver mais detalhes"
-msgstr "Ver más detalles"
+msgstr ""
 
 #: base/templates/base/pesquisa.html:73
 msgid "Nenhum artigo de pesquisa encontrado."
-msgstr "No se encontró ningún artículo de investigación."
+msgstr ""
 
 #: base/templates/base/pesquisa.html:123
 msgid "Acessar Pesquisa Completa"
-msgstr "Acceder a la Investigación Completa"
+msgstr ""
 
 #: base/templates/base/pesquisa.html:126
 msgid "O link direto para a pesquisa não está disponível."
-msgstr "El enlace directo a la investigación no está disponible."
+msgstr ""
 
 #: base/templates/base/search_results.html:11
 msgid "Resultados da Pesquisa para"
-msgstr "Resultados de la Búsqueda de"
+msgstr ""
 
 #: base/templates/base/search_results.html:15
 #, python-format
 msgid ""
 "\n"
-"                    1 resultado encontrado.\n"
-"                "
+"                    1 resultado encontrado.\n"
+"                "
 msgid_plural ""
 "\n"
-"                    %(total)s resultados encontrados.\n"
-"                "
+"                    %(total)s resultados encontrados.\n"
+"                "
 msgstr[0] ""
-"\n"
-"                    1 resultado encontrado.\n"
-"                "
 msgstr[1] ""
-"\n"
-"                    %(total)s resultados encontrados.\n"
-"                "
 
 #: base/templates/base/search_results.html:22
 msgid "Busca no Site"
-msgstr "Búsqueda en el Sitio"
+msgstr ""
 
 #: base/templates/base/search_results.html:23
 msgid "Digite um termo de pesquisa no campo acima para buscar em todo o site."
-msgstr "Ingrese un término de búsqueda en el campo de arriba para buscar en todo el sitio."
+msgstr ""
 
 #: base/templates/base/search_results.html:35
 #, python-format
 msgid "1 Página do Site Encontrada"
 msgid_plural "%(static_results|length)s Páginas do Site Encontradas"
-msgstr[0] "1 Página del Sitio Encontrada"
-msgstr[1] "%(static_results|length)s Páginas del Sitio Encontradas"
+msgstr[0] ""
+msgstr[1] ""
 
 #: base/templates/base/search_results.html:46
 msgid "Página do Site"
-msgstr "Página del Sitio"
+msgstr ""
 
 #: base/templates/base/search_results.html:57
 #, python-format
 msgid "1 Notícia Encontrada"
 msgid_plural "%(noticia_results|length)s Notícias Encontradas"
-msgstr[0] "1 Noticia Encontrada"
-msgstr[1] "%(noticia_results|length)s Noticias Encontradas"
+msgstr[0] ""
+msgstr[1] ""
 
 #: base/templates/base/search_results.html:77
 #, python-format
 msgid "1 Artigo de Pesquisa Encontrado"
 msgid_plural "%(artigo_results|length)s Artigos de Pesquisa Encontrados"
-msgstr[0] "1 Artículo de Investigación Encontrado"
-msgstr[1] "%(artigo_results|length)s Artículos de Investigación Encontrados"
+msgstr[0] ""
+msgstr[1] ""
 
 #: base/templates/base/search_results.html:97
 msgid "Desculpe, não encontramos resultados para"
-msgstr "Lo sentimos, no encontramos resultados para"
+msgstr ""
 
 #: base/templates/base/search_results.html:100
 msgid "Tente usar termos mais genéricos."
-msgstr "Intente usar términos más genéricos."
+msgstr ""
 
 #: base/templates/base/visitar.html:11
 msgid "Visitação"
-msgstr "Visitas"
+msgstr ""
 
 #: base/templates/base/visitar.html:20
 msgid "Planeje sua visita"
-msgstr "Planifique su visita"
+msgstr ""
 
 #: base/templates/base/visitar.html:24
 msgid "Horários de visitação"
-msgstr "Horarios de visita"
+msgstr ""
 
 #: base/templates/base/visitar.html:25
 msgid "De segunda a sexta-feira"
-msgstr "De lunes a viernes"
+msgstr ""
 
 #: base/templates/base/visitar.html:25
 msgid "Das 8h às 17h"
-msgstr "De 8h a 17h"
+msgstr ""
 
 #: base/templates/base/visitar.html:25
 msgid "Última entrada às 16:00"
-msgstr "Última entrada a las 16:00"
+msgstr ""
 
 #: base/templates/base/visitar.html:28
 msgid "Fechamento"
-msgstr "Cierre"
+msgstr ""
 
 #: base/templates/base/visitar.html:29
 msgid ""
 "O museu fecha aos sábados e domingos, bem como em feriados municipais e "
 "nacionais."
 msgstr ""
-"El museo cierra los sábados y domingos, así como en feriados municipales y "
-"nacionales."
 
 #: base/templates/base/visitar.html:36
 msgid "Ingressos"
-msgstr "Entradas"
+msgstr ""
 
 #: base/templates/base/visitar.html:37
 msgid ""
@@ -1026,35 +905,29 @@ msgid ""
 "escolhidos no calendário de agendamento. O pagamento deve ser realizado no "
 "dia da visita, podendo ser feito em dinheiro ou via Pix."
 msgstr ""
-"Las entradas se venden mediante agendamiento previo, con día y horario "
-"elegidos en el calendario de reservas. El pago debe realizarse el "
-"día de la visita, pudiendo ser en efectivo o mediante Pix."
 
 #: base/templates/base/visitar.html:38
 msgid ""
 "O número máximo de pessoas por visita é de 35 e os valores dos ingressos são:"
 msgstr ""
-"El número máximo de personas por visita es de 35 y los valores de las entradas son:"
 
 #: base/templates/base/visitar.html:40
 msgid "R$ 10,00 para estudantes"
-msgstr "R$ 10,00 para estudiantes"
+msgstr ""
 
 #: base/templates/base/visitar.html:41
 msgid "R$ 15,00 para público geral"
-msgstr "R$ 15,00 para público general"
+msgstr ""
 
 #: base/templates/base/visitar.html:43
 msgid ""
 "Todas as visitas são guiadas, garantindo uma experiência completa e "
 "educativa."
 msgstr ""
-"Todas las visitas son guiadas, garantizando una experiencia completa y "
-"educativa."
 
 #: base/templates/base/visitar.html:47
 msgid "Orientações"
-msgstr "Orientaciones"
+msgstr ""
 
 #: base/templates/base/visitar.html:48
 msgid ""
@@ -1063,44 +936,35 @@ msgid ""
 "seja enriquecedora e respeitosa com o patrimônio, os artefatos e a "
 "comunidade, pedimos a gentileza de seguir as regras abaixo."
 msgstr ""
-"Al visitar nuestro espacio, usted se conecta directamente con la rica historia, "
-"arte y cultura del pueblo Tapuia Paiacu. Para garantizar que esta experiencia "
-"sea enriquecedora y respetuosa con el patrimonio, los artefactos y la "
-"comunidad, le pedimos amablemente que siga las reglas a continuación."
 
 #: base/templates/base/visitar.html:50
 msgid "Não tocar nos objetos expostos."
-msgstr "No tocar los objetos expuestos."
+msgstr ""
 
 #: base/templates/base/visitar.html:51
 msgid "Respeitar o meio ambiente e as áreas demarcadas para visitação."
-msgstr "Respetar el medio ambiente y las áreas demarcadas para visita."
+msgstr ""
 
 #: base/templates/base/visitar.html:52
 msgid ""
 "Não é permitido o consumo de alimentos ou bebidas nas áreas de exposição."
 msgstr ""
-"No está permitido el consumo de alimentos o bebidas en las áreas de exposición."
 
 #: base/templates/base/visitar.html:53
 msgid ""
 "Não é permitido correr, sentar no chão, ou encostar nas paredes das salas de "
 "exposição."
 msgstr ""
-"No está permitido correr, sentarse en el piso o apoyarse en las paredes de las salas de "
-"exposición."
 
 #: base/templates/base/visitar.html:54
 msgid ""
 "Crianças devem estar sempre acompanhadas e sob a supervisão de um "
 "responsável."
 msgstr ""
-"Los niños deben estar siempre acompañados y bajo la supervisión de un "
-"responsable."
 
 #: base/templates/base/visitar.html:59
 msgid "Localização"
-msgstr "Ubicación"
+msgstr ""
 
 #: base/templates/base/visitar.html:61
 msgid ""
@@ -1110,11 +974,6 @@ msgid ""
 "exuberante, o museu oferece uma experiência imersiva na história e cultura "
 "dos povos indígenas Tapuias Paiacus."
 msgstr ""
-"El Museo del Indio Luiza Cantofa está ubicado en el Sítio Missão 1, nº 1001, "
-"en la zona rural de Apodi (RN), a orillas de la Laguna de Apodi, cerca del "
-"balneario de la laguna. Rodeado por un escenario de tranquilidad y naturaleza "
-"exuberante, el museo ofrece una experiencia inmersiva en la historia y cultura "
-"de los pueblos indígenas Tapuias Paiacus."
 
 #: base/templates/base/visitar.html:62
 msgid ""
@@ -1124,15 +983,10 @@ msgid ""
 "80 km de Mossoró e 340 km da capital, Natal, com acesso facilitado pela "
 "BR-405."
 msgstr ""
-"La ciudad de Apodi es reconocida por sus tradiciones y paisajes naturales, "
-"haciendo del museo un destino imperdible para quienes desean comprobar y "
-"valorar la herencia indígena de Río Grande del Norte. El lugar está a unos "
-"80 km de Mossoró y a 340 km de la capital, Natal, con fácil acceso por la "
-"BR-405."
 
 #: base/views.py:251
 msgid "O Museu - História e Missão"
-msgstr "El Museo - Historia y Misión"
+msgstr ""
 
 #: base/views.py:253
 msgid ""
@@ -1140,13 +994,10 @@ msgid ""
 "trajetória do povo indígenda, e a importância da preservação cultural. Onde "
 "estamos, como chegamos aqui."
 msgstr ""
-"Nuestra historia, misión y visión. Conozca a la fundadora Luiza Cantofa, la "
-"trayectoria del pueblo indígena y la importancia de la preservación cultural. Dónde "
-"estamos, cómo llegamos aquí."
 
 #: base/views.py:257
 msgid "Acervo - Coleções e Artefatos"
-msgstr "Acervo - Colecciones y Artefactos"
+msgstr ""
 
 #: base/views.py:259
 msgid ""
@@ -1154,13 +1005,10 @@ msgid ""
 "históricos. Informações sobre catalogação, doações, pesquisa e exposições no "
 "acervo."
 msgstr ""
-"Explore nuestra colección de artefactos, cerámicas, indumentarias y documentos "
-"históricos. Información sobre catalogación, donaciones, investigación y exposiciones en el "
-"acervo."
 
 #: base/views.py:263
 msgid "Visite-nos e Agendamento"
-msgstr "Visítenos y Agendamiento"
+msgstr ""
 
 #: base/views.py:265
 msgid ""
@@ -1168,1605 +1016,15 @@ msgid ""
 "(inteira, meia, gratuidade), regras de visitação e contato para "
 "agendamentos. Ver calendário."
 msgstr ""
-"Información sobre cómo agendar su visita, horarios disponibles, precios "
-"(general, media, gratuidad), reglas de visita y contacto para "
-"agendamientos. Ver calendario."
 
-#: projeto_museu/settings.py:98
-msgid "Portuguese"
-msgstr "Portugués"
+#: projeto_museu/settings.py:95
+msgid "Português"
+msgstr ""
 
-#: projeto_museu/settings.py:99
+#: projeto_museu/settings.py:96
 msgid "English"
-msgstr "Inglés"
-
-#: projeto_museu/settings.py:100
-msgid "Spanish"
-msgstr "Español"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/forms.py:6
-msgid "Search files"
-msgstr "Buscar archivos"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:5
-msgid "Select an image to embed"
-msgstr "Seleccionar una imagen para incrustar"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:27
-msgid "Browse for the image you want, then click 'Embed Image' to continue..."
-msgstr "Busque la imagen que desea, luego haga clic en 'Incrustar Imagen' para continuar..."
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:29
-msgid ""
-"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
-"tab."
 msgstr ""
-"No se encontraron imágenes. Suba imágenes usando la pestaña 'Subir' del "
-"cuadro de diálogo 'Botón de Imagen'."
 
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:50
-msgid "Images in: "
-msgstr "Imágenes en: "
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:62
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:80
-msgid "Embed Image"
-msgstr "Incrustar Imagen"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:146
-msgid "Play Slideshow"
-msgstr "Reproducir Presentación"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:147
-msgid "Pause Slideshow"
-msgstr "Pausar Presentación"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:148
-msgid "&lsaquo; Previous Photo"
-msgstr "&lsaquo; Foto Anterior"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:149
-msgid "Next Photo &rsaquo;"
-msgstr "Siguiente Foto &rsaquo;"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:150
-msgid "Next &rsaquo;"
-msgstr "Siguiente &rsaquo;"
-
-#: venv/lib/python3.12/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:151
-msgid "&lsaquo; Prev"
-msgstr "&lsaquo; Anterior"
-
-#: venv/lib/python3.12/site-packages/click/_termui_impl.py:608
-#, python-brace-format
-msgid "{editor}: Editing failed"
-msgstr "{editor}: La edición falló"
-
-#: venv/lib/python3.12/site-packages/click/_termui_impl.py:612
-#, python-brace-format
-msgid "{editor}: Editing failed: {e}"
-msgstr "{editor}: La edición falló: {e}"
-
-#: venv/lib/python3.12/site-packages/click/core.py:1104
-#: venv/lib/python3.12/site-packages/click/core.py:1141
-#, python-brace-format
-msgid "{text} {deprecated_message}"
-msgstr "{text} {deprecated_message}"
-
-#: venv/lib/python3.12/site-packages/click/core.py:1160
-msgid "Options"
-msgstr "Opciones"
-
-#: venv/lib/python3.12/site-packages/click/core.py:1222
-#, python-brace-format
-msgid "Got unexpected extra argument ({args})"
-msgid_plural "Got unexpected extra arguments ({args})"
-msgstr[0] "Se recibió un argumento adicional inesperado ({args})"
-msgstr[1] "Se recibieron argumentos adicionales inesperados ({args})"
-
-#: venv/lib/python3.12/site-packages/click/core.py:1241
-msgid "DeprecationWarning: The command {name!r} is deprecated.{extra_message}"
-msgstr "Advertencia de obsolescencia: El comando {name!r} está obsoleto.{extra_message}"
-
-#: venv/lib/python3.12/site-packages/click/core.py:1425
-msgid "Aborted!"
-msgstr "¡Abortado!"
-
-#: venv/lib/python3.12/site-packages/click/core.py:1799
-msgid "Commands"
-msgstr "Comandos"
-
-#: venv/lib/python3.12/site-packages/click/core.py:1830
-msgid "Missing command."
-msgstr "Comando faltante."
-
-#: venv/lib/python3.12/site-packages/click/core.py:1908
-msgid "No such command {name!r}."
-msgstr "No existe el comando {name!r}."
-
-#: venv/lib/python3.12/site-packages/click/core.py:2332
-msgid "Value must be an iterable."
-msgstr "El valor debe ser un iterable."
-
-#: venv/lib/python3.12/site-packages/click/core.py:2355
-#, python-brace-format
-msgid "Takes {nargs} values but 1 was given."
-msgid_plural "Takes {nargs} values but {len} were given."
-msgstr[0] "Toma {nargs} valores pero se dio 1."
-msgstr[1] "Toma {nargs} valores pero se dieron {len}."
-
-#: venv/lib/python3.12/site-packages/click/core.py:2505
-msgid ""
-"DeprecationWarning: The {param_type} {name!r} is deprecated.{extra_message}"
-msgstr "Advertencia de obsolescencia: El {param_type} {name!r} está obsoleto.{extra_message}"
-
-#: venv/lib/python3.12/site-packages/click/core.py:2956
-#, python-brace-format
-msgid "env var: {var}"
-msgstr "var de entorno: {var}"
-
-#: venv/lib/python3.12/site-packages/click/core.py:2959
-#, python-brace-format
-msgid "default: {default}"
-msgstr "por defecto: {default}"
-
-#: venv/lib/python3.12/site-packages/click/core.py:3023
-msgid "(dynamic)"
-msgstr "(dinámico)"
-
-#: venv/lib/python3.12/site-packages/click/decorators.py:465
-#, python-format
-msgid "%(prog)s, version %(version)s"
-msgstr "%(prog)s, versión %(version)s"
-
-#: venv/lib/python3.12/site-packages/click/decorators.py:522
-msgid "Show the version and exit."
-msgstr "Muestra la versión y sale."
-
-#: venv/lib/python3.12/site-packages/click/decorators.py:548
-msgid "Show this message and exit."
-msgstr "Muestra este mensaje y sale."
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:50
-#: venv/lib/python3.12/site-packages/click/exceptions.py:89
-#, python-brace-format
-msgid "Error: {message}"
-msgstr "Error: {message}"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:81
-#, python-brace-format
-msgid "Try '{command} {option}' for help."
-msgstr "Intente '{command} {option}' para obtener ayuda."
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:130
-#, python-brace-format
-msgid "Invalid value: {message}"
-msgstr "Valor inválido: {message}"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:132
-#, python-brace-format
-msgid "Invalid value for {param_hint}: {message}"
-msgstr "Valor inválido para {param_hint}: {message}"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:190
-msgid "Missing argument"
-msgstr "Argumento faltante"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:192
-msgid "Missing option"
-msgstr "Opción faltante"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:194
-msgid "Missing parameter"
-msgstr "Parámetro faltante"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:196
-#, python-brace-format
-msgid "Missing {param_type}"
-msgstr "Falta {param_type}"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:203
-#, python-brace-format
-msgid "Missing parameter: {param_name}"
-msgstr "Falta el parámetro: {param_name}"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:223
-#, python-brace-format
-msgid "No such option: {name}"
-msgstr "No existe tal opción: {name}"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:235
-#, python-brace-format
-msgid "Did you mean {possibility}?"
-msgid_plural "(Possible options: {possibilities})"
-msgstr[0] "¿Quiso decir {possibility}?"
-msgstr[1] "(Posibles opciones: {possibilities})"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:282
-msgid "unknown error"
-msgstr "error desconocido"
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:289
-msgid "Could not open file {filename!r}: {message}"
-msgstr "No se pudo abrir el archivo {filename!r}: {message}"
-
-#: venv/lib/python3.12/site-packages/click/parser.py:199
-msgid "Argument {name!r} takes {nargs} values."
-msgstr "El argumento {name!r} toma {nargs} valores."
-
-#: venv/lib/python3.12/site-packages/click/parser.py:381
-msgid "Option {name!r} does not take a value."
-msgstr "La opción {name!r} no toma un valor."
-
-#: venv/lib/python3.12/site-packages/click/parser.py:444
-msgid "Option {name!r} requires an argument."
-msgid_plural "Option {name!r} requires {nargs} arguments."
-msgstr[0] "La opción {name!r} requiere un argumento."
-msgstr[1] "La opción {name!r} requiere {nargs} argumentos."
-
-#: venv/lib/python3.12/site-packages/click/shell_completion.py:332
-msgid "Shell completion is not supported for Bash versions older than 4.4."
-msgstr "La finalización del shell no es compatible con versiones de Bash anteriores a la 4.4."
-
-#: venv/lib/python3.12/site-packages/click/shell_completion.py:339
-msgid "Couldn't detect Bash version, shell completion is not supported."
-msgstr "No se pudo detectar la versión de Bash, la finalización del shell no es compatible."
-
-#: venv/lib/python3.12/site-packages/click/termui.py:162
-msgid "Repeat for confirmation"
-msgstr "Repita para confirmar"
-
-#: venv/lib/python3.12/site-packages/click/termui.py:178
-msgid "Error: The value you entered was invalid."
-msgstr "Error: El valor que ingresó es inválido."
-
-#: venv/lib/python3.12/site-packages/click/termui.py:180
-#, python-brace-format
-msgid "Error: {e.message}"
-msgstr "Error: {e.message}"
-
-#: venv/lib/python3.12/site-packages/click/termui.py:191
-msgid "Error: The two entered values do not match."
-msgstr "Error: Los dos valores ingresados no coinciden."
-
-#: venv/lib/python3.12/site-packages/click/termui.py:247
-msgid "Error: invalid input"
-msgstr "Error: entrada inválida"
-
-#: venv/lib/python3.12/site-packages/click/termui.py:866
-msgid "Press any key to continue..."
-msgstr "Presione cualquier tecla para continuar..."
-
-#: venv/lib/python3.12/site-packages/click/types.py:332
-#, python-brace-format
-msgid ""
-"Choose from:\n"
-"\t{choices}"
+#: projeto_museu/settings.py:97
+msgid "Español"
 msgstr ""
-"Elija entre:\n"
-"\t{choices}"
-
-#: venv/lib/python3.12/site-packages/click/types.py:369
-msgid "{value!r} is not {choice}."
-msgid_plural "{value!r} is not one of {choices}."
-msgstr[0] "{value!r} no es {choice}."
-msgstr[1] "{value!r} no es uno de {choices}."
-
-#: venv/lib/python3.12/site-packages/click/types.py:460
-msgid "{value!r} does not match the format {format}."
-msgid_plural "{value!r} does not match the formats {formats}."
-msgstr[0] "{value!r} no coincide con el formato {format}."
-msgstr[1] "{value!r} no coincide con los formatos {formats}."
-
-#: venv/lib/python3.12/site-packages/click/types.py:482
-msgid "{value!r} is not a valid {number_type}."
-msgstr "{value!r} no es un {number_type} válido."
-
-#: venv/lib/python3.12/site-packages/click/types.py:538
-#, python-brace-format
-msgid "{value} is not in the range {range}."
-msgstr "{value} no está en el rango {range}."
-
-#: venv/lib/python3.12/site-packages/click/types.py:719
-msgid "{value!r} is not a valid boolean. Recognized values: {states}"
-msgstr "{value!r} no es un booleano válido. Valores reconocidos: {states}"
-
-#: venv/lib/python3.12/site-packages/click/types.py:747
-msgid "{value!r} is not a valid UUID."
-msgstr "{value!r} no es un UUID válido."
-
-#: venv/lib/python3.12/site-packages/click/types.py:937
-msgid "file"
-msgstr "archivo"
-
-#: venv/lib/python3.12/site-packages/click/types.py:939
-msgid "directory"
-msgstr "directorio"
-
-#: venv/lib/python3.12/site-packages/click/types.py:941
-msgid "path"
-msgstr "ruta"
-
-#: venv/lib/python3.12/site-packages/click/types.py:988
-msgid "{name} {filename!r} does not exist."
-msgstr "{name} {filename!r} no existe."
-
-#: venv/lib/python3.12/site-packages/click/types.py:997
-msgid "{name} {filename!r} is a file."
-msgstr "{name} {filename!r} es un archivo."
-
-#: venv/lib/python3.12/site-packages/click/types.py:1005
-msgid "{name} {filename!r} is a directory."
-msgstr "{name} {filename!r} es un directorio."
-
-#: venv/lib/python3.12/site-packages/click/types.py:1014
-msgid "{name} {filename!r} is not readable."
-msgstr "{name} {filename!r} no se puede leer."
-
-#: venv/lib/python3.12/site-packages/click/types.py:1023
-msgid "{name} {filename!r} is not writable."
-msgstr "{name} {filename!r} no se puede escribir."
-
-#: venv/lib/python3.12/site-packages/click/types.py:1032
-msgid "{name} {filename!r} is not executable."
-msgstr "{name} {filename!r} no es ejecutable."
-
-#: venv/lib/python3.12/site-packages/click/types.py:1099
-#, python-brace-format
-msgid "{len_type} values are required, but {len_value} was given."
-msgid_plural "{len_type} values are required, but {len_value} were given."
-msgstr[0] "Se requieren {len_type} valores, pero se dio {len_value}."
-msgstr[1] "Se requieren {len_type} valores, pero se dieron {len_value}."
-
-#: venv/lib/python3.12/site-packages/django/contrib/messages/apps.py:16
-msgid "Messages"
-msgstr "Mensajes"
-
-#: venv/lib/python3.12/site-packages/django/contrib/sitemaps/apps.py:8
-msgid "Site Maps"
-msgstr "Mapas del Sitio"
-
-#: venv/lib/python3.12/site-packages/django/contrib/staticfiles/apps.py:9
-msgid "Static Files"
-msgstr "Archivos Estáticos"
-
-#: venv/lib/python3.12/site-packages/django/contrib/syndication/apps.py:7
-msgid "Syndication"
-msgstr "Sindicación"
-
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: venv/lib/python3.12/site-packages/django/core/paginator.py:30
-msgid "…"
-msgstr "…"
-
-#: venv/lib/python3.12/site-packages/django/core/paginator.py:32
-msgid "That page number is not an integer"
-msgstr "Ese número de página no es un entero"
-
-#: venv/lib/python3.12/site-packages/django/core/paginator.py:33
-msgid "That page number is less than 1"
-msgstr "Ese número de página es menor que 1"
-
-#: venv/lib/python3.12/site-packages/django/core/paginator.py:34
-msgid "That page contains no results"
-msgstr "Esa página no contiene resultados"
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:22
-msgid "Enter a valid value."
-msgstr "Ingrese un valor válido."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:70
-msgid "Enter a valid domain name."
-msgstr "Ingrese un nombre de dominio válido."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:153
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:775
-msgid "Enter a valid URL."
-msgstr "Ingrese una URL válida."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:200
-msgid "Enter a valid integer."
-msgstr "Ingrese un entero válido."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:211
-msgid "Enter a valid email address."
-msgstr "Ingrese una dirección de correo electrónico válida."
-
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: venv/lib/python3.12/site-packages/django/core/validators.py:289
-msgid ""
-"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr "Ingrese un 'slug' válido que consista en letras, números, guiones bajos o guiones."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:297
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr "Ingrese un 'slug' válido que consista en letras Unicode, números, guiones bajos o guiones."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:309
-#: venv/lib/python3.12/site-packages/django/core/validators.py:318
-#: venv/lib/python3.12/site-packages/django/core/validators.py:332
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2220
-#, python-format
-msgid "Enter a valid %(protocol)s address."
-msgstr "Ingrese una dirección %(protocol)s válida."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:311
-msgid "IPv4"
-msgstr "IPv4"
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:320
-#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:43
-msgid "IPv6"
-msgstr "IPv6"
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:334
-msgid "IPv4 or IPv6"
-msgstr "IPv4 o IPv6"
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:375
-msgid "Enter only digits separated by commas."
-msgstr "Ingrese solo dígitos separados por comas."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:381
-#, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr "Asegúrese de que este valor sea %(limit_value)s (es %(show_value)s)."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:416
-#, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr "Asegúrese de que este valor sea menor o igual a %(limit_value)s."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:425
-#, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr "Asegúrese de que este valor sea mayor o igual a %(limit_value)s."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:434
-#, python-format
-msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr "Asegúrese de que este valor sea un múltiplo del tamaño de paso %(limit_value)s."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:441
-#, python-format
-msgid ""
-"Ensure this value is a multiple of step size %(limit_value)s, starting from "
-"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
-msgstr "Asegúrese de que este valor sea un múltiplo del tamaño de paso %(limit_value)s, comenzando desde %(offset)s, ej. %(offset)s, %(valid_value1)s, %(valid_value2)s, y así sucesivamente."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:473
-#, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] "Asegúrese de que este valor tenga al menos %(limit_value)d carácter (tiene %(show_value)d)."
-msgstr[1] "Asegúrese de que este valor tenga al menos %(limit_value)d caracteres (tiene %(show_value)d)."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:491
-#, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] "Asegúrese de que este valor tenga como máximo %(limit_value)d carácter (tiene %(show_value)d)."
-msgstr[1] "Asegúrese de que este valor tenga como máximo %(limit_value)d caracteres (tiene %(show_value)d)."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:514
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:366
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:405
-msgid "Enter a number."
-msgstr "Ingrese un número."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:516
-#, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] "Asegúrese de que no haya más de %(max)s dígito en total."
-msgstr[1] "Asegúrese de que no haya más de %(max)s dígitos en total."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:521
-#, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] "Asegúrese de que no haya más de %(max)s lugar decimal."
-msgstr[1] "Asegúrese de que no haya más de %(max)s lugares decimales."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:526
-#, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] "Asegúrese de que no haya más de %(max)s dígito antes del punto decimal."
-msgstr[1] "Asegúrese de que no haya más de %(max)s dígitos antes del punto decimal."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:597
-#, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr "La extensión de archivo '%(extension)s' no está permitida. Las extensiones permitidas son: %(allowed_extensions)s."
-
-#: venv/lib/python3.12/site-packages/django/core/validators.py:659
-msgid "Null characters are not allowed."
-msgstr "Los caracteres nulos no están permitidos."
-
-#: venv/lib/python3.12/site-packages/django/db/models/base.py:1600
-#: venv/lib/python3.12/site-packages/django/forms/models.py:908
-msgid "and"
-msgstr "y"
-
-#: venv/lib/python3.12/site-packages/django/db/models/base.py:1602
-#, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr "%(model_name)s con este %(field_labels)s ya existe."
-
-#: venv/lib/python3.12/site-packages/django/db/models/constraints.py:22
-#, python-format
-msgid "Constraint “%(name)s” is violated."
-msgstr "La restricción '%(name)s' es violada."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:134
-#, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr "El valor %(value)r no es una opción válida."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:135
-msgid "This field cannot be null."
-msgstr "Este campo no puede ser nulo."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:136
-msgid "This field cannot be blank."
-msgstr "Este campo no puede estar en blanco."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:137
-#, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr "%(model_name)s con este %(field_label)s ya existe."
-
-#. Translators: The 'lookup_type' is one of 'date', 'year' or
-#. 'month'. Eg: "Title must be unique for pub_date year"
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:141
-#, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr "%(field_label)s debe ser único para %(date_field_label)s %(lookup_type)s."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:180
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr "Campo de tipo: %(field_type)s"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1162
-#, python-format
-msgid "“%(value)s” value must be either True or False."
-msgstr "El valor '%(value)s' debe ser Verdadero o Falso (True o False)."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1163
-#, python-format
-msgid "“%(value)s” value must be either True, False, or None."
-msgstr "El valor '%(value)s' debe ser Verdadero, Falso o Nulo (True, False o None)."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1165
-msgid "Boolean (Either True or False)"
-msgstr "Booleano (Verdadero o Falso)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1215
-#, python-format
-msgid "String (up to %(max_length)s)"
-msgstr "Cadena de texto (hasta %(max_length)s)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1217
-msgid "String (unlimited)"
-msgstr "Cadena de texto (ilimitada)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1326
-msgid "Comma-separated integers"
-msgstr "Enteros separados por comas"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1427
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr "El valor '%(value)s' tiene un formato de fecha inválido. Debe tener el formato AAAA-MM-DD."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1431
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1566
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr "El valor '%(value)s' tiene el formato correcto (AAAA-MM-DD) pero es una fecha inválida."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1435
-msgid "Date (without time)"
-msgstr "Fecha (sin hora)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1562
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
-msgstr "El valor '%(value)s' tiene un formato inválido. Debe tener el formato AAAA-MM-DD HH:MM[:ss[.uuuuuu]][TZ]."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1570
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr "El valor '%(value)s' tiene el formato correcto (AAAA-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) pero es una fecha/hora inválida."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1575
-msgid "Date (with time)"
-msgstr "Fecha (con hora)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1702
-#, python-format
-msgid "“%(value)s” value must be a decimal number."
-msgstr "El valor '%(value)s' debe ser un número decimal."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1704
-msgid "Decimal number"
-msgstr "Número decimal"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1864
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
-msgstr "El valor '%(value)s' tiene un formato inválido. Debe tener el formato [DD] [[HH:]MM:]ss[.uuuuuu]."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1868
-msgid "Duration"
-msgstr "Duración"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1920
-msgid "Email address"
-msgstr "Dirección de correo electrónico"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1945
-msgid "File path"
-msgstr "Ruta de archivo"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2023
-#, python-format
-msgid "“%(value)s” value must be a float."
-msgstr "El valor '%(value)s' debe ser un flotante (float)."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2025
-msgid "Floating point number"
-msgstr "Número de punto flotante"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2065
-#, python-format
-msgid "“%(value)s” value must be an integer."
-msgstr "El valor '%(value)s' debe ser un número entero."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2067
-msgid "Integer"
-msgstr "Entero"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2163
-msgid "Big (8 byte) integer"
-msgstr "Entero grande (8 bytes)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2180
-msgid "Small integer"
-msgstr "Entero pequeño"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2188
-msgid "IPv4 address"
-msgstr "Dirección IPv4"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2219
-msgid "IP address"
-msgstr "Dirección IP"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2310
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2311
-#, python-format
-msgid "“%(value)s” value must be either None, True or False."
-msgstr "El valor '%(value)s' debe ser Nulo, Verdadero o Falso (None, True o False)."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2313
-msgid "Boolean (Either True, False or None)"
-msgstr "Booleano (Verdadero, Falso o Nulo)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2364
-msgid "Positive big integer"
-msgstr "Entero grande positivo"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2379
-msgid "Positive integer"
-msgstr "Entero positivo"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2394
-msgid "Positive small integer"
-msgstr "Entero pequeño positivo"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2410
-#, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr "Slug (hasta %(max_length)s)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2446
-msgid "Text"
-msgstr "Texto"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2526
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr "El valor '%(value)s' tiene un formato inválido. Debe tener el formato HH:MM[:ss[.uuuuuu]]."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2530
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr "El valor '%(value)s' tiene el formato correcto (HH:MM[:ss[.uuuuuu]]) pero es una hora inválida."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2534
-msgid "Time"
-msgstr "Hora"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2642
-msgid "URL"
-msgstr "URL"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2666
-msgid "Raw binary data"
-msgstr "Datos binarios sin procesar"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2731
-#, python-format
-msgid "“%(value)s” is not a valid UUID."
-msgstr "'%(value)s' no es un UUID válido."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2733
-msgid "Universally unique identifier"
-msgstr "Identificador único universal"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:244
-msgid "File"
-msgstr "Archivo"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:420
-msgid "Image"
-msgstr "Imagen"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:24
-msgid "A JSON object"
-msgstr "Un objeto JSON"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:26
-msgid "Value must be valid JSON."
-msgstr "El valor debe ser un JSON válido."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:978
-#, python-format
-msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
-msgstr "La instancia %(model)s con %(field)s %(value)r no es una opción válida."
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:981
-msgid "Foreign Key (type determined by related field)"
-msgstr "Clave foránea (tipo determinado por el campo relacionado)"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1275
-msgid "One-to-one relationship"
-msgstr "Relación uno a uno"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1332
-#, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr "Relación %(from)s-%(to)s"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1334
-#, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr "Relaciones %(from)s-%(to)s"
-
-#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1382
-msgid "Many-to-many relationship"
-msgstr "Relación muchos a muchos"
-
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
-#: venv/lib/python3.12/site-packages/django/forms/boundfield.py:185
-msgid ":?.!"
-msgstr ":?.!"
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:95
-#: venv/lib/python3.12/site-packages/flask_wtf/file.py:55
-msgid "This field is required."
-msgstr "Este campo es obligatorio."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:315
-msgid "Enter a whole number."
-msgstr "Ingrese un número entero."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:486
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1267
-msgid "Enter a valid date."
-msgstr "Ingrese una fecha válida."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:509
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1268
-msgid "Enter a valid time."
-msgstr "Ingrese una hora válida."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:536
-msgid "Enter a valid date/time."
-msgstr "Ingrese una fecha/hora válida."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:570
-msgid "Enter a valid duration."
-msgstr "Ingrese una duración válida."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:571
-#, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr "El número de días debe estar entre {min_days} y {max_days}."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:640
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr "No se envió ningún archivo. Verifique el tipo de codificación en el formulario."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:641
-msgid "No file was submitted."
-msgstr "No se envió ningún archivo."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:642
-msgid "The submitted file is empty."
-msgstr "El archivo enviado está vacío."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:644
-#, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] "Asegúrese de que este nombre de archivo tenga como máximo %(max)d carácter (tiene %(length)d)."
-msgstr[1] "Asegúrese de que este nombre de archivo tenga como máximo %(max)d caracteres (tiene %(length)d)."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:649
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr "Por favor, envíe un archivo o marque la casilla de borrar, no ambos."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:717
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr "Suba una imagen válida. El archivo que subió no era una imagen o estaba dañado."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:889
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:975
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1592
-#, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr "Seleccione una opción válida. %(value)s no es una de las opciones disponibles."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:977
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1096
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1590
-msgid "Enter a list of values."
-msgstr "Ingrese una lista de valores."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1097
-msgid "Enter a complete value."
-msgstr "Ingrese un valor completo."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1339
-msgid "Enter a valid UUID."
-msgstr "Ingrese un UUID válido."
-
-#: venv/lib/python3.12/site-packages/django/forms/fields.py:1369
-msgid "Enter a valid JSON."
-msgstr "Ingrese un JSON válido."
-
-#. Translators: This is the default suffix added to form field labels
-#: venv/lib/python3.12/site-packages/django/forms/forms.py:97
-msgid ":"
-msgstr ":"
-
-#: venv/lib/python3.12/site-packages/django/forms/forms.py:239
-#, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr "(Campo oculto %(name)s) %(error)s"
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:61
-#, python-format
-msgid ""
-"ManagementForm data is missing or has been tampered with. Missing fields: "
-"%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr "Faltan los datos del ManagementForm o han sido alterados. Campos faltantes: %(field_names)s. Puede que necesite enviar un informe de error si el problema persiste."
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:65
-#, python-format
-msgid "Please submit at most %(num)d form."
-msgid_plural "Please submit at most %(num)d forms."
-msgstr[0] "Por favor, envíe como máximo %(num)d formulario."
-msgstr[1] "Por favor, envíe como máximo %(num)d formularios."
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:70
-#, python-format
-msgid "Please submit at least %(num)d form."
-msgid_plural "Please submit at least %(num)d forms."
-msgstr[0] "Por favor, envíe al menos %(num)d formulario."
-msgstr[1] "Por favor, envíe al menos %(num)d formularios."
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:484
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:491
-msgid "Order"
-msgstr "Orden"
-
-#: venv/lib/python3.12/site-packages/django/forms/formsets.py:499
-msgid "Delete"
-msgstr "Eliminar"
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:901
-#, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr "Por favor, corrija los datos duplicados para %(field)s."
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:906
-#, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr "Por favor, corrija los datos duplicados para %(field)s, que debe ser único."
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:913
-#, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr "Por favor, corrija los datos duplicados para %(field_name)s que debe ser único para el %(lookup)s en %(date_field)s."
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:922
-msgid "Please correct the duplicate values below."
-msgstr "Por favor, corrija los valores duplicados a continuación."
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1359
-msgid "The inline value did not match the parent instance."
-msgstr "El valor en línea no coincidió con la instancia principal."
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1450
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr "Seleccione una opción válida. Esa opción no es una de las opciones disponibles."
-
-#: venv/lib/python3.12/site-packages/django/forms/models.py:1594
-#, python-format
-msgid "“%(pk)s” is not a valid value."
-msgstr "'%(pk)s' no es un valor válido."
-
-#: venv/lib/python3.12/site-packages/django/forms/utils.py:229
-#, python-format
-msgid ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr "%(datetime)s no se pudo interpretar en la zona horaria %(current_timezone)s; puede ser ambigua o no existir."
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:527
-msgid "Clear"
-msgstr "Borrar"
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:528
-msgid "Currently"
-msgstr "Actualmente"
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:529
-msgid "Change"
-msgstr "Cambiar"
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:866
-msgid "Unknown"
-msgstr "Desconocido"
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:867
-msgid "Yes"
-msgstr "Sí"
-
-#: venv/lib/python3.12/site-packages/django/forms/widgets.py:868
-msgid "No"
-msgstr "No"
-
-#. Translators: Please do not add spaces around commas.
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:873
-msgid "yes,no,maybe"
-msgstr "sí,no,tal vez"
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:903
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:920
-#, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] "%(size)d byte"
-msgstr[1] "%(size)d bytes"
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:922
-#, python-format
-msgid "%s KB"
-msgstr "%s KB"
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:924
-#, python-format
-msgid "%s MB"
-msgstr "%s MB"
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:926
-#, python-format
-msgid "%s GB"
-msgstr "%s GB"
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:928
-#, python-format
-msgid "%s TB"
-msgstr "%s TB"
-
-#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:930
-#, python-format
-msgid "%s PB"
-msgstr "%s PB"
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:74
-msgid "p.m."
-msgstr "p.m."
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:75
-msgid "a.m."
-msgstr "a.m."
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:80
-msgid "PM"
-msgstr "PM"
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:81
-msgid "AM"
-msgstr "AM"
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:153
-msgid "midnight"
-msgstr "medianoche"
-
-#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:155
-msgid "noon"
-msgstr "mediodía"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:7
-msgid "Monday"
-msgstr "Lunes"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:8
-msgid "Tuesday"
-msgstr "Martes"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:9
-msgid "Wednesday"
-msgstr "Miércoles"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:10
-msgid "Thursday"
-msgstr "Jueves"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:11
-msgid "Friday"
-msgstr "Viernes"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:12
-msgid "Saturday"
-msgstr "Sábado"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:13
-msgid "Sunday"
-msgstr "Domingo"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:16
-msgid "Mon"
-msgstr "Lun"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:17
-msgid "Tue"
-msgstr "Mar"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:18
-msgid "Wed"
-msgstr "Mié"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:19
-msgid "Thu"
-msgstr "Jue"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:20
-msgid "Fri"
-msgstr "Vie"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:21
-msgid "Sat"
-msgstr "Sáb"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:22
-msgid "Sun"
-msgstr "Dom"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:25
-msgid "January"
-msgstr "Enero"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:26
-msgid "February"
-msgstr "Febrero"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:27
-msgid "March"
-msgstr "Marzo"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:28
-msgid "April"
-msgstr "Abril"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:29
-msgid "May"
-msgstr "Mayo"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:30
-msgid "June"
-msgstr "Junio"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:31
-msgid "July"
-msgstr "Julio"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:32
-msgid "August"
-msgstr "Agosto"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:33
-msgid "September"
-msgstr "Septiembre"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:34
-msgid "October"
-msgstr "Octubre"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:35
-msgid "November"
-msgstr "Noviembre"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:36
-msgid "December"
-msgstr "Diciembre"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:39
-msgid "jan"
-msgstr "ene"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:40
-msgid "feb"
-msgstr "feb"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:41
-msgid "mar"
-msgstr "mar"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:42
-msgid "apr"
-msgstr "abr"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:43
-msgid "may"
-msgstr "may"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:44
-msgid "jun"
-msgstr "jun"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:45
-msgid "jul"
-msgstr "jul"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:46
-msgid "aug"
-msgstr "ago"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:47
-msgid "sep"
-msgstr "sep"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:48
-msgid "oct"
-msgstr "oct"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:49
-msgid "nov"
-msgstr "nov"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:50
-msgid "dec"
-msgstr "dic"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:53
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr "Ene."
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:54
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr "Feb."
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:55
-msgctxt "abbrev. month"
-msgid "March"
-msgstr "Marzo"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:56
-msgctxt "abbrev. month"
-msgid "April"
-msgstr "Abril"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:57
-msgctxt "abbrev. month"
-msgid "May"
-msgstr "Mayo"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:58
-msgctxt "abbrev. month"
-msgid "June"
-msgstr "Junio"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:59
-msgctxt "abbrev. month"
-msgid "July"
-msgstr "Julio"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:60
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr "Ago."
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:61
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr "Sep."
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:62
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr "Oct."
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:63
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr "Nov."
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:64
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr "Dic."
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:67
-msgctxt "alt. month"
-msgid "January"
-msgstr "Enero"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:68
-msgctxt "alt. month"
-msgid "February"
-msgstr "Febrero"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:69
-msgctxt "alt. month"
-msgid "March"
-msgstr "Marzo"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:70
-msgctxt "alt. month"
-msgid "April"
-msgstr "Abril"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:71
-msgctxt "alt. month"
-msgid "May"
-msgstr "Mayo"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:72
-msgctxt "alt. month"
-msgid "June"
-msgstr "Junio"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:73
-msgctxt "alt. month"
-msgid "July"
-msgstr "Julio"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:74
-msgctxt "alt. month"
-msgid "August"
-msgstr "Agosto"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:75
-msgctxt "alt. month"
-msgid "September"
-msgstr "Septiembre"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:76
-msgctxt "alt. month"
-msgid "October"
-msgstr "Octubre"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:77
-msgctxt "alt. month"
-msgid "November"
-msgstr "Noviembre"
-
-#: venv/lib/python3.12/site-packages/django/utils/dates.py:78
-msgctxt "alt. month"
-msgid "December"
-msgstr "Diciembre"
-
-#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:20
-msgid "This is not a valid IPv6 address."
-msgstr "Esta no es una dirección IPv6 válida."
-
-#: venv/lib/python3.12/site-packages/django/utils/text.py:76
-#, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr "%(truncated_text)s…"
-
-#: venv/lib/python3.12/site-packages/django/utils/text.py:287
-msgid "or"
-msgstr "o"
-
-#. Translators: This string is used as a separator between list elements
-#: venv/lib/python3.12/site-packages/django/utils/text.py:306
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:135
-msgid ", "
-msgstr ", "
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:8
-#, python-format
-msgid "%(num)d year"
-msgid_plural "%(num)d years"
-msgstr[0] "%(num)d año"
-msgstr[1] "%(num)d años"
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:9
-#, python-format
-msgid "%(num)d month"
-msgid_plural "%(num)d months"
-msgstr[0] "%(num)d mes"
-msgstr[1] "%(num)d meses"
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:10
-#, python-format
-msgid "%(num)d week"
-msgid_plural "%(num)d weeks"
-msgstr[0] "%(num)d semana"
-msgstr[1] "%(num)d semanas"
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:11
-#, python-format
-msgid "%(num)d day"
-msgid_plural "%(num)d days"
-msgstr[0] "%(num)d día"
-msgstr[1] "%(num)d días"
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:12
-#, python-format
-msgid "%(num)d hour"
-msgid_plural "%(num)d hours"
-msgstr[0] "%(num)d hora"
-msgstr[1] "%(num)d horas"
-
-#: venv/lib/python3.12/site-packages/django/utils/timesince.py:13
-#, python-format
-msgid "%(num)d minute"
-msgid_plural "%(num)d minutes"
-msgstr[0] "%(num)d minuto"
-msgstr[1] "%(num)d minutos"
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:29
-msgid "Forbidden"
-msgstr "Prohibido"
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:30
-msgid "CSRF verification failed. Request aborted."
-msgstr "La verificación CSRF falló. Solicitud abortada."
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:34
-msgid ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-"Está viendo este mensaje porque este sitio HTTPS requiere que su navegador envíe un 'Referer header', "
-"pero no se envió ninguno. Este encabezado es necesario por razones de seguridad, para asegurar que su navegador "
-"no esté siendo secuestrado por terceros."
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:40
-msgid ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
-msgstr ""
-"Si ha configurado su navegador para deshabilitar los encabezados 'Referer', por favor vuelva a habilitarlos, "
-"al menos para este sitio, o para conexiones HTTPS, o para solicitudes del 'mismo origen'."
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:45
-msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
-msgstr ""
-"Si está usando la etiqueta <meta name=\"referrer\" content=\"no-referrer\"> o incluyendo el encabezado "
-"'Referrer-Policy: no-referrer', por favor elimínelos. La protección CSRF requiere el encabezado 'Referer' "
-"para hacer una verificación estricta de referencia. Si le preocupa su privacidad, use alternativas como "
-"<a rel=\"noreferrer\" …> para enlaces a sitios de terceros."
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:54
-msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-"Está viendo este mensaje porque este sitio requiere una cookie CSRF al enviar formularios. "
-"Esta cookie es necesaria por razones de seguridad, para asegurar que su navegador no "
-"esté siendo secuestrado por terceros."
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:60
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
-msgstr ""
-"Si ha configurado su navegador para deshabilitar las cookies, por favor vuelva a habilitarlas, "
-"al menos para este sitio, o para solicitudes del 'mismo origen'."
-
-#: venv/lib/python3.12/site-packages/django/views/csrf.py:66
-msgid "More information is available with DEBUG=True."
-msgstr "Hay más información disponible con DEBUG=True."
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:44
-msgid "No year specified"
-msgstr "Ningún año especificado"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:64
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:115
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:214
-msgid "Date out of range"
-msgstr "Fecha fuera de rango"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:94
-msgid "No month specified"
-msgstr "Ningún mes especificado"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:147
-msgid "No day specified"
-msgstr "Ningún día especificado"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:194
-msgid "No week specified"
-msgstr "Ninguna semana especificada"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:353
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:384
-#, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr "No hay %(verbose_name_plural)s disponibles"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:680
-#, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
-msgstr "%(verbose_name_plural)s futuros no disponibles porque %(class_name)s.allow_future es Falso."
-
-#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:720
-#, python-format
-msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr "Cadena de fecha inválida '%(datestr)s' dado el formato '%(format)s'"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/detail.py:56
-#, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr "No se encontró ningún %(verbose_name)s que coincida con la consulta"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/list.py:70
-msgid "Page is not “last”, nor can it be converted to an int."
-msgstr "La página no es 'última' (last), ni puede ser convertida a un entero."
-
-#: venv/lib/python3.12/site-packages/django/views/generic/list.py:77
-#, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr "Página inválida (%(page_number)s): %(message)s"
-
-#: venv/lib/python3.12/site-packages/django/views/generic/list.py:173
-#, python-format
-msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr "Lista vacía y '%(class_name)s.allow_empty' es Falso."
-
-#: venv/lib/python3.12/site-packages/django/views/static.py:49
-msgid "Directory indexes are not allowed here."
-msgstr "Los índices de directorio no están permitidos aquí."
-
-#: venv/lib/python3.12/site-packages/django/views/static.py:51
-#, python-format
-msgid "“%(path)s” does not exist"
-msgstr "'%(path)s' no existe"
-
-#: venv/lib/python3.12/site-packages/django/views/static.py:68
-#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:8
-#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:11
-#, python-format
-msgid "Index of %(directory)s"
-msgstr "Índice de %(directory)s"
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:7
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:204
-msgid "The install worked successfully! Congratulations!"
-msgstr "¡La instalación funcionó correctamente! ¡Felicidades!"
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:206
-#, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr "Ver las <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" target=\"_blank\" rel=\"noopener\">notas de la versión</a> de Django %(version)s"
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:208
-#, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
-msgstr "Está viendo esta página porque <a href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener\">DEBUG=True</a> está en su archivo de configuración y no ha configurado ninguna URL."
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:217
-msgid "Django Documentation"
-msgstr "Documentación de Django"
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:218
-msgid "Topics, references, &amp; how-to’s"
-msgstr "Temas, referencias, y guías paso a paso"
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:226
-msgid "Tutorial: A Polling App"
-msgstr "Tutorial: Una aplicación de encuestas"
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:227
-msgid "Get started with Django"
-msgstr "Empiece con Django"
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:235
-msgid "Django Community"
-msgstr "Comunidad de Django"
-
-#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:236
-msgid "Connect, get help, or contribute"
-msgstr "Conéctese, obtenga ayuda o contribuya"
-
-#: venv/lib/python3.12/site-packages/flask_wtf/file.py:94
-#, python-brace-format
-msgid "File does not have an approved extension: {extensions}"
-msgstr "El archivo no tiene una extensión aprobada: {extensions}"
-
-#: venv/lib/python3.12/site-packages/flask_wtf/file.py:101
-msgid "File does not have an approved extension."
-msgstr "El archivo no tiene una extensión aprobada."
-
-#: venv/lib/python3.12/site-packages/flask_wtf/file.py:140
-#, python-brace-format
-msgid "File must be between {self.min_size}"
-msgstr "El archivo debe estar entre {self.min_size}"
