@@ -13,7 +13,7 @@
     <div class="grafismo-divider-full"></div>
 
 <div class="acervo-container">
-    <h1 class="pesquisa-header" style="text-align: center;">Nosso Acervo</h1>
+    <h1 class="pesquisa-header" style="text-align: center;">{% trans "Nosso Acervo" %}</h1>
     <p>{% trans "Explore os artefatos que materializam a resistência do Povo Tapuia Paiacu. Cada peça lítica, cada fragmento cerâmico e cada instrumento sagrado foi encontrado em Apodi e região, sendo preservado com zelo pelas famílias da comunidade. Estes objetos não são apenas vestígios do passado; são as provas vivas e pulsantes da nossa ancestralidade milenar." %}</p>
 
     <div class="acervo-grid">
@@ -27,7 +27,7 @@
                 data-img="{% static 'base/img/cachimbos.jpg' %}"
                 data-title="Cachimbos de madeira"
                 data-text="Artefato Etnográfico (madeira, geralmente cabaça ou barro). Estes cachimbos são utilizados em rituais e momentos de socialização, representando a conexão com a espiritualidade e a tradição dos Tapuia Paiacu.">
-                Ver detalhes +
+                {% trans "Ver detalhes +" %}
             </a>
 
         </div>
@@ -106,8 +106,7 @@
         </h2>
 
         <p style="font-family: 'Work Sans', sans-serif; font-size:1.25em;line-height:1.7;margin-bottom:30px;">
-       {% trans "O que você vê aqui é apenas um vislumbre da nossa história. O Museu Indígena Luiza Cantofa guarda muitas outras relíquias que só podem 
-        ser compreendidas através do olhar e da escuta presencial. Venha ver mais de perto, visite-nos presencialmente." %}
+       {% trans "O que você vê aqui é apenas um vislumbre da nossa história. O Museu Indígena Luiza Cantofa guarda muitas outras relíquias que só podem ser compreendidas através do olhar e da escuta presencial. Venha ver mais de perto, visite-nos presencialmente." %}
         </p>
         
         <a href="{% url 'agendar_visita' %}" class="btn-agendar">

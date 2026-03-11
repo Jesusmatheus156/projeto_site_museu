@@ -96,7 +96,7 @@ USE_TZ = True
 # Definir os idiomas suportados
 LANGUAGES = [
     ('pt-br', _('Portuguese')),
-    ('en', _('English')),
+    ('en-us', _('English')),
     ('es', _('Spanish')),
 ]
 
