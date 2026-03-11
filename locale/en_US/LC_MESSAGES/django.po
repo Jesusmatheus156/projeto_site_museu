@@ -884,10 +884,6 @@ msgstr "Latest News"
 msgid "Capa padrão para notícia"
 msgstr "Default cover for news"
 
-#: base/templates/base/noticias.html:48
-msgid "Publicado em"
-msgstr "Published on"
-
 #: base/templates/base/noticias.html:56
 msgid "Nenhuma notícia publicada encontrada."
 msgstr "No published news found."
