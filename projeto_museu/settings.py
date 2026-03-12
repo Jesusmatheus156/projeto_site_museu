@@ -16,6 +16,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1'
 ]
 
+
 LOGIN_URL = '/admin'  
 
 CSRF_TRUSTED_ORIGINS = [
@@ -90,20 +91,20 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Sao_Paulo'
 
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
 # Definir os idiomas suportados
 LANGUAGES = [
-    ('pt-br', _('Português')),
+    ('pt-br', _('Portuguese')),
     ('en', _('English')),
-    ('es', _('Español')),
+    ('es', _('Spanish')),
 ]
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
-
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
 
 MEDIA_URL = '/media/'
 
