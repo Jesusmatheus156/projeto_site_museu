@@ -97,9 +97,9 @@ USE_TZ = True
 
 # Definir os idiomas suportados
 LANGUAGES = [
-    ('pt-br', _('Portuguese')),
+    ('pt-br', _('Português')),
     ('en', _('English')),
-    ('es', _('Spanish')),
+    ('es', _('Español')),
 ]
 
 LOCALE_PATHS = [
